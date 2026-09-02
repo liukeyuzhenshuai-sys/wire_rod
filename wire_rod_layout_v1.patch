@@ -1,0 +1,823 @@
+diff --git a/README.md b/README.md
+--- a/README.md
++++ b/README.md
+@@ -15,7 +15,12 @@ V0.8 保留 V0.7 的语义优先、TOP_DOWN_Z、X normal/hard 双运动包络和交
+ - 支持系统启动时已经双层的 `DOUBLE_LAYER_BOOTSTRAP`；即使下层严重遮挡，每个物理盘条仍要求有正点云证据，零点不会被强行初始化成确定 ID。
+ - Web 创建下一帧时可以新增 Layer2 盘条，并一键吸附到最近第一层支撑槽。
+ 
+-新增 `D01–D10` 共 37 个双层连续帧；工程根目录当前共 182 个 PLY，子目录不放 PLY。
++## Repository layout
++
++- `doc/`：项目需求、设计、决策和状态文档。需求/设计属于受保护核心资产，修改前必须获得项目负责人明确授权。
++- `dataset/`：所有 PLY 数据集。
++- `dataset/labels/`：数据集 GT、manifest、pair、semantic、support 等标签/元数据。
++- 根目录不再存放 PLY、`labels/`、`docs/` 或 `design/`。
+ 
+ 失败案例仍可通过 **保存问题案例** 导出 ZIP。
+-断联后优先阅读：`WEB_HANDOFF.md`、`docs/IMPLEMENTATION_STATUS_V0_8.md`、`docs/DOUBLE_LAYER_SUPPORT_V0_8.md`。
++断联后优先阅读：`AGENTS.md`、`doc/GOVERNANCE.md`、`doc/status/WEB_HANDOFF.md`、`doc/status/IMPLEMENTATION_STATUS_V0_8.md`、`doc/design/DOUBLE_LAYER_SUPPORT_V0_8.md`。
+diff --git a/.gitignore b/.gitignore
+--- a/.gitignore
++++ b/.gitignore
+@@ -3,3 +3,6 @@
+ *.pyo
+ .DS_Store
+ Thumbs.db
++
++# Runtime-generated interactive frames belong under dataset/ but are not source assets.
++dataset/USER_*.ply
+diff --git a/.github/workflows/repository-governance.yml b/.github/workflows/repository-governance.yml
+new file mode 100644
+--- /dev/null
++++ b/.github/workflows/repository-governance.yml
+@@ -0,0 +1,20 @@
++name: Repository Governance
++
++on:
++  push:
++  pull_request:
++
++jobs:
++  repository-layout:
++    runs-on: ubuntu-latest
++    steps:
++      - name: Checkout
++        uses: actions/checkout@v4
++
++      - name: Set up Python
++        uses: actions/setup-python@v5
++        with:
++          python-version: "3.11"
++
++      - name: Check protected repository layout
++        run: python tests/check_repository_governance.py
+diff --git a/dataset/README.md b/dataset/README.md
+new file mode 100644
+--- /dev/null
++++ b/dataset/README.md
+@@ -0,0 +1,29 @@
++# Dataset
++
++`dataset/` is the canonical location for dataset assets used by this project.
++
++```text
++dataset/
++├── README.md
++├── labels/
++│   ├── frame_manifest.csv
++│   ├── object_gt.csv
++│   └── ...
++└── *.ply
++```
++
++Rules:
++
++- committed benchmark/generated PLY frames live directly under `dataset/`;
++- GT, labels, manifests, pair definitions and dataset metadata live under `dataset/labels/`;
++- repository-root PLY files are forbidden;
++- the legacy root-level `labels/` directory is forbidden;
++- interactive `USER_*.ply` files are runtime artifacts and are ignored by Git.
++
++Dataset file names stored in CSV metadata remain dataset-relative names such as:
++
++```text
++D01_F00_full_l1_before_l2.ply
++```
++
++They must not be rewritten to absolute paths or prefixed with `dataset/`.
+diff --git a/AGENTS.md b/AGENTS.md
+new file mode 100644
+--- /dev/null
++++ b/AGENTS.md
+@@ -0,0 +1,146 @@
++# Wire Rod Repository Governance
++
++This file contains mandatory repository-level rules for every human developer
++and every AI/coding agent working on this project.
++
++Read this file before making any non-trivial repository change.
++
++## 1. Canonical repository structure
++
++The canonical locations are:
++
++```text
++doc/
++  requirements/   approved requirements and business rules
++  design/         architecture, algorithm and detailed design
++  decisions/      approved technical/product decisions
++  status/         implementation status, handoff and validation records
++
++dataset/
++  labels/         GT, manifests, pair definitions and dataset metadata
++  *.ply           benchmark/generated point-cloud frames
++```
++
++Rules:
++
++- Formal requirement/design/decision documents MUST live under `doc/`.
++- Dataset PLY files MUST live directly under `dataset/`.
++- Dataset labels/GT/metadata MUST live under `dataset/labels/`.
++- Do not recreate legacy root directories `docs/`, `design/` or `labels/`.
++- Do not place PLY files in the repository root.
++
++## 2. Protected core assets
++
++The following paths are PROTECTED CORE ASSETS:
++
++```text
++doc/requirements/**
++doc/design/**
++doc/decisions/**
++doc/GOVERNANCE.md
++AGENTS.md
++```
++
++Protected assets are specification assets, not implementation notes.
++
++They define what the system is expected to do and MUST NOT be silently changed
++to match whatever the current code happens to do.
++
++## 3. Owner-approval gate
++
++A protected asset may be modified only when the project owner gives explicit
++approval for that document/change in the current task or conversation.
++
++Approval is scoped. It does not automatically authorize unrelated protected
++document changes.
++
++Do NOT infer document-update approval from requests such as:
++
++- fix this bug;
++- implement this feature;
++- refactor this module;
++- make the tests pass;
++- update the code;
++- the current implementation already behaves this way.
++
++If approval is absent or ambiguous, leave protected documents unchanged.
++
++## 4. Code/document conflict protocol
++
++When code, tests, configuration or runtime behavior disagrees with a protected
++document:
++
++1. DO NOT silently update the protected document.
++2. DO NOT treat current code as the new requirement automatically.
++3. Report the conflict to the project owner.
++4. Identify:
++   - document path and relevant section;
++   - code files/functions involved;
++   - documented behavior;
++   - implemented/proposed behavior;
++   - practical impact;
++   - recommended resolution.
++5. State clearly:
++
++   `DOCUMENT UPDATE REQUIRES OWNER APPROVAL`
++
++6. Wait for explicit approval before changing the protected document.
++
++Use this report header:
++
++```text
++[DOCUMENT CONFLICT]
++```
++
++## 5. Source-of-truth rule
++
++For previously approved requirements/design decisions, protected documentation
++is the baseline source of truth until the project owner explicitly approves a
++change.
++
++Code does not become the specification merely because it was implemented first.
++
++If a requested code change intentionally creates a temporary mismatch, report
++that mismatch before finalizing the work. Do not hide it.
++
++## 6. Mandatory change workflow
++
++For every non-trivial change:
++
++1. Read `AGENTS.md`.
++2. Read relevant protected documents under `doc/`.
++3. Compare the request with the documented requirement/design.
++4. Report any conflict before editing protected assets.
++5. Implement only the approved scope.
++6. Run relevant tests.
++7. Provide a unified diff.
++8. Report documentation consistency using exactly one of:
++
++```text
++DOCUMENT STATUS: CONSISTENT
++DOCUMENT STATUS: CONFLICT FOUND
++DOCUMENT STATUS: UPDATE APPROVED
++```
++
++Documentation synchronization is never automatic.
++
++## 7. Directory-governance check
++
++Run:
++
++```bash
++python tests/check_repository_governance.py
++```
++
++before pushing structural changes.
++
++The check must fail when legacy documentation/data locations are reintroduced.
++
++## 8. GitHub protection
++
++`.github/CODEOWNERS` marks protected core assets as owner-reviewed paths.
++
++`CODEOWNERS` identifies the project owner for protected paths.
++If the repository later has more than one trusted reviewer, a default-branch
++ruleset may require Code Owner review. Do not enable a rule that prevents the
++sole repository owner from merging their own approved maintenance work.
+diff --git a/doc/README.md b/doc/README.md
+new file mode 100644
+--- /dev/null
++++ b/doc/README.md
+@@ -0,0 +1,42 @@
++# 项目文档中心
++
++`doc/` 是本项目正式需求、设计、技术决策和项目状态文档的统一目录。
++
++其中 `requirements/`、`design/`、`decisions/` 属于受保护核心资产。
++
++## 目录
++
++```text
++doc/
++├── requirements/   # 需求、业务规则、产品要求
++├── design/         # 架构、算法设计、详细设计、测试设计
++├── decisions/      # 已确认的重要决策与 TBD
++├── status/         # 实现状态、交接、验证和阶段记录
++└── GOVERNANCE.md   # 文档治理规则
++```
++
++## 核心原则
++
++代码和文档不一致时，不允许为了“同步”而自动修改需求或设计。
++
++必须先报告：
++
++1. 哪份文档、哪个章节；
++2. 哪个代码文件/函数；
++3. 文档定义的行为；
++4. 当前或拟修改代码的行为；
++5. 差异和影响；
++6. 推荐修改代码还是修改文档。
++
++只有项目负责人明确允许后，才可以修改受保护文档。
++
++详细规则：
++
++- `../AGENTS.md`
++- `GOVERNANCE.md`
++
++仓库结构检查：
++
++```bash
++python tests/check_repository_governance.py
++```
+diff --git a/doc/GOVERNANCE.md b/doc/GOVERNANCE.md
+new file mode 100644
+--- /dev/null
++++ b/doc/GOVERNANCE.md
+@@ -0,0 +1,116 @@
++# 需求与设计核心资产治理规则
++
++## 1. 核心资产范围
++
++以下目录中的内容属于受保护核心资产：
++
++```text
++doc/requirements/
++doc/design/
++doc/decisions/
++```
++
++它们用于定义系统应该做什么、算法遵守什么业务约束、架构和模块如何协作，
++不能因为当前代码实现发生变化而被自动改写。
++
++## 2. 更新权限
++
++受保护核心资产只有在项目负责人明确允许时才能更新。
++
++明确允许应当指向当前修改，例如：
++
++```text
++允许更新 TRACKER_REQUIREMENTS_V1.md 中的第二层规则。
++确认按这个新逻辑修改设计文档。
++这个需求正式变更，可以同步 requirements/design。
++```
++
++下面这些指令不等同于授权修改核心文档：
++
++```text
++修一下这个 Bug。
++实现这个功能。
++把代码改好。
++让测试通过。
++按现在代码同步一下。
++```
++
++授权只对已明确说明的修改范围有效。
++
++## 3. 冲突处理
++
++一旦发现代码、测试、配置、运行结果与受保护文档不一致，必须报告：
++
++```text
++[DOCUMENT CONFLICT]
++
++文档：
++章节：
++
++文档定义：
++
++当前/拟修改代码：
++
++差异：
++
++影响：
++
++建议方案 A：修改代码，使实现重新符合文档
++建议方案 B：正式修改需求/设计文档
++
++DOCUMENT UPDATE REQUIRES OWNER APPROVAL
++```
++
++项目负责人明确选择前，禁止静默执行方案 B。
++
++## 4. 文档优先级
++
++对于已经确认的需求和设计：
++
++> 文档是基线，代码不是自动的新需求。
++
++如果代码先实现了一个新行为，它只能说明“当前实现如此”，不能自动证明需求已经变更。
++
++## 5. 修改后的状态报告
++
++每次较大的代码修改完成后，都要给出以下状态之一：
++
++```text
++DOCUMENT STATUS: CONSISTENT
++DOCUMENT STATUS: CONFLICT FOUND
++DOCUMENT STATUS: UPDATE APPROVED
++```
++
++含义：
++
++- `CONSISTENT`：修改后仍符合受保护文档；
++- `CONFLICT FOUND`：发现冲突，已报告但未修改核心文档；
++- `UPDATE APPROVED`：负责人已经明确授权，本次同步更新了核心文档。
++
++## 6. 目录规则
++
++正式需求、设计和决策只能位于 `doc/`。
++
++所有数据集 PLY 位于：
++
++```text
++dataset/
++```
++
++所有 GT、标签和数据集元数据位于：
++
++```text
++dataset/labels/
++```
++
++禁止重新创建根目录 `docs/`、`design/`、`labels/`，禁止把 PLY 放回项目根目录。
++
++## 7. 自动检查
++
++执行：
++
++```bash
++python tests/check_repository_governance.py
++```
++
++目录规则违反时必须失败。
+diff --git a/.github/CODEOWNERS b/.github/CODEOWNERS
+new file mode 100644
+--- /dev/null
++++ b/.github/CODEOWNERS
+@@ -0,0 +1,9 @@
++# Protected specification assets.
++# To make this mandatory, enable a default-branch ruleset that requires
++# pull-request review from Code Owners.
++
++/AGENTS.md @liukeyuzhenshuai-sys
++/doc/GOVERNANCE.md @liukeyuzhenshuai-sys
++/doc/requirements/** @liukeyuzhenshuai-sys
++/doc/design/** @liukeyuzhenshuai-sys
++/doc/decisions/** @liukeyuzhenshuai-sys
+diff --git a/doc/status/WEB_HANDOFF.md b/doc/status/WEB_HANDOFF.md
+--- a/doc/status/WEB_HANDOFF.md
++++ b/doc/status/WEB_HANDOFF.md
+@@ -85,14 +85,16 @@ python tests/benchmark_s13.py
+ - D01–D10：37 frames，`WRONG_ID=0`；11 个 UNCERTAIN 全来自故意构造的 D08/D09/D10 异常帧。
+ - S13 128,769 points：约 0.38 s，本机 Python 基准低于 2 s 目标。
+ ## 断联后阅读顺序
+ 
+-1. `WEB_HANDOFF.md`
+-2. `docs/IMPLEMENTATION_STATUS_V0_8.md`
+-3. `docs/DOUBLE_LAYER_SUPPORT_V0_8.md`
+-4. `docs/TOP_DOWN_Z_SUPPORT_V0_7.md`
+-5. `docs/INTERACTIVE_EDITOR_V0_5.md`
+-6. `docs/TRACKER_REQUIREMENTS_V1.md`
+-7. `docs/TRACKER_DETAILED_DESIGN_V1.md`
+-8. `tracker/matching.py`
+-9. `tracker/session.py`
+-10. `web/app.py` / `web/index.html`
++1. `AGENTS.md`
++2. `doc/GOVERNANCE.md`
++3. `doc/status/WEB_HANDOFF.md`
++4. `doc/status/IMPLEMENTATION_STATUS_V0_8.md`
++5. `doc/design/DOUBLE_LAYER_SUPPORT_V0_8.md`
++6. `doc/design/TOP_DOWN_Z_SUPPORT_V0_7.md`
++7. `doc/design/INTERACTIVE_EDITOR_V0_5.md`
++8. `doc/requirements/TRACKER_REQUIREMENTS_V1.md`
++9. `doc/design/TRACKER_DETAILED_DESIGN_V1.md`
++10. `tracker/matching.py`
++11. `tracker/session.py`
++12. `web/app.py` / `web/index.html`
+diff --git a/tracker/dataset_adapter.py b/tracker/dataset_adapter.py
+--- a/tracker/dataset_adapter.py
++++ b/tracker/dataset_adapter.py
+@@ -13,9 +13,11 @@ class SyntheticDatasetAdapter:
+       2) emulate robot NEW hints by exposing only target position + nominal D/L.
+     Evaluation reads GT after inference in a separate function.
+     """
+     def __init__(self,root):
+-        self.root=Path(root); self.labels=self.root/'labels'
++        self.project_root=Path(root)
++        self.root=self.project_root/'dataset'
++        self.labels=self.root/'labels'
+         self.objects=self._read(self.labels/'object_gt.csv')
+         self.pairs=self._read(self.labels/'frame_pairs.csv')
+         self.transitions=self._read(self.labels/'transition_gt.csv')
+         self.frame_semantics=self._read(self.labels/'frame_semantics.csv')
+diff --git a/tracker/session.py b/tracker/session.py
+--- a/tracker/session.py
++++ b/tracker/session.py
+@@ -460,10 +460,13 @@ class TrackingSession:
+ 
+ class SessionManager:
+     def __init__(self, root: Path, cfg: dict):
+-        self.root=Path(root); self.cfg=cfg; self.ds=SyntheticDatasetAdapter(root)
++        self.root=Path(root)
++        self.dataset_root=self.root/'dataset'
++        self.cfg=cfg
++        self.ds=SyntheticDatasetAdapter(root)
+         self.sessions={}; self.editor=InteractiveSceneEditor(self.root)
+-        self.frame_manifest=self._read(self.root/'labels/frame_manifest.csv')
+-        self.sequence_index=self._read(self.root/'labels/sequence_index.csv')
++        self.frame_manifest=self._read(self.dataset_root/'labels/frame_manifest.csv')
++        self.sequence_index=self._read(self.dataset_root/'labels/sequence_index.csv')
+ 
+     @staticmethod
+     def _read(p):
+@@ -636,9 +638,9 @@ class SessionManager:
+         sess.last_tracker_state_before=[t.json() for t in history]
+         created=self.editor.create(sess,request,self.cfg)
+         frame_no=sess.current_index+1
+-        # Keep every PLY flat in the dataset root for visual inspection.
++        # Keep every PLY flat inside the canonical dataset/ directory.
+         rel=Path(f'USER_{sid}_F{frame_no:03d}.ply')
+-        abs_path=self.root/rel
++        abs_path=self.dataset_root/rel
+         from .editor import write_scene_ply
+         npoints=write_scene_ply(abs_path,created['scene'])
+         inst=self.ds.load_instances(str(rel))
+diff --git a/web/app.py b/web/app.py
+--- a/web/app.py
++++ b/web/app.py
+@@ -8,6 +8,7 @@ from fastapi.staticfiles import StaticFiles
+ from pydantic import BaseModel
+ 
+ ROOT=Path(__file__).resolve().parents[1]
++DATASET=ROOT/'dataset'
+ sys.path.insert(0,str(ROOT))
+ from tracker.engine import load_config
+ from tracker.ply import load_algorithm_input
+@@ -56,7 +57,7 @@ class SaveFailureRequest(BaseModel):
+     note: str=''
+ @lru_cache(maxsize=256)
+ def _sample_cloud(file:str,max_per_instance:int=500):
+-    xyz,iid=load_algorithm_input(ROOT/file)
++    xyz,iid=load_algorithm_input(DATASET/file)
+     out=[]
+     # deterministic sampling: frame-specific seed without Python hash randomization
+     seed=sum((i+1)*ord(c) for i,c in enumerate(file)) % (2**32-1)
+@@ -249,8 +250,8 @@ def save_failure(sid:str, req:SaveFailureRequest):
+             if isinstance(obj,str): data=obj
+             else: data=json.dumps(obj,ensure_ascii=False,indent=2)
+             z.writestr(arc,data)
+-        if prev and (ROOT/prev).exists(): z.write(ROOT/prev,'previous_frame.ply')
+-        if cur and (ROOT/cur).exists(): z.write(ROOT/cur,'current_frame.ply')
++        if prev and (DATASET/prev).exists(): z.write(DATASET/prev,'previous_frame.ply')
++        if cur and (DATASET/cur).exists(): z.write(DATASET/cur,'current_frame.ply')
+     return {'ok':True,'filename':name,'download_url':f'/api/failures/{name}'}
+ @app.get('/api/failures/{name}')
+ def download_failure(name:str):
+diff --git a/code/dataset.py b/code/dataset.py
+--- a/code/dataset.py
++++ b/code/dataset.py
+@@ -2,7 +2,8 @@ import csv, json
+ from ply_io import load_algorithm_input, split_instances
+ class CoilDataset:
+     def __init__(self, root):
+-        self.root=Path(root)
++        self.project_root=Path(root)
++        self.root=self.project_root/'dataset'
+         self.labels=self.root/'labels'
+         self.manifest=self._csv(self.labels/'frame_manifest.csv')
+         self.objects=self._csv(self.labels/'object_gt.csv')
+diff --git a/code/evaluate_tracking.py b/code/evaluate_tracking.py
+--- a/code/evaluate_tracking.py
++++ b/code/evaluate_tracking.py
+@@ -13,7 +13,8 @@ Prediction CSV columns:
+ import csv, sys
+ 
+ ROOT=Path(__file__).resolve().parents[1]
+-GT_PATH=ROOT/'labels'/'transition_gt.csv'
++DATASET=ROOT/'dataset'
++GT_PATH=DATASET/'labels'/'transition_gt.csv'
+ 
+ def read_rows(path):
+     with open(path,'r',encoding='utf-8-sig',newline='') as f:
+diff --git a/code/generate_dataset.py b/code/generate_dataset.py
+--- a/code/generate_dataset.py
++++ b/code/generate_dataset.py
+@@ -102,4 +102,9 @@ def main(root,out):
+         write_ply(out/fn,xyz,col,gid,iid,layer,slot,vis)
+     print(f'generated {len(byfile)} PLY files in {out}')
+ if __name__=='__main__':
+-    ap=argparse.ArgumentParser();ap.add_argument('--root',default=str(Path(__file__).resolve().parents[1]));ap.add_argument('--out',required=True);a=ap.parse_args();main(a.root,a.out)
++    project_root=Path(__file__).resolve().parents[1]
++    ap=argparse.ArgumentParser()
++    ap.add_argument('--root',default=str(project_root))
++    ap.add_argument('--out',default=str(project_root/'dataset'))
++    a=ap.parse_args()
++    main(a.root,a.out)
+diff --git a/code/generate_double_layer_dataset.py b/code/generate_double_layer_dataset.py
+--- a/code/generate_double_layer_dataset.py
++++ b/code/generate_double_layer_dataset.py
+@@ -4,12 +4,13 @@ import csv, json, math, sys
+ import numpy as np
+ 
+ ROOT=Path(__file__).resolve().parents[1]
++DATASET=ROOT/'dataset'
+ sys.path.insert(0,str(ROOT))
+ from tracker.editor import write_scene_ply, _scale_proto, _surface_perturb_local, _edge_occlude_local, _pose_local
+ from tracker.view_model import apply_topdown_z_to_scene
+ from tracker.engine import load_config
+ CFG=load_config(ROOT/'tracker_config.json')
+-LABEL=ROOT/'labels'
++LABEL=DATASET/'labels'
+ PROTO_NPZ=np.load(ROOT/'assets'/'prototype_points.npz')
+ PROTOS={k:PROTO_NPZ[k].astype(np.float32) for k in PROTO_NPZ.files}
+ KEY_TO_SOURCE={}
+@@ -162,7 +163,7 @@ def main():
+     # idempotent cleanup
+     for n in table_names:
+         tables[n]=[r for r in tables[n] if r.get('sequence_id') not in dseq]
+-    for p in ROOT.glob('D*_F*.ply'):p.unlink()
++    for p in DATASET.glob('D*_F*.ply'):p.unlink()
+     max_pair=max([int(r['pair_id'].split('_')[-1]) for r in tables['frame_pairs.csv'] if r.get('pair_id','').startswith('pair_')]+[-1])
+     support_rows=[];generation=[];fg_new=[]
+     sup_fields=['file','sequence_id','frame_index','upper_global_id','upper_slot','lower_left_global_id','lower_right_global_id','support_center_x','support_center_y','support_center_z','upper_center_x','upper_center_y','upper_center_z','support_offset_xy_m','relation']
+@@ -170,7 +171,7 @@ def main():
+         prev_meta=None;prev_file=None;prev_upper=set();files=[]
+         for fi,spec in enumerate(sdef['frames']):
+             objects,meta,warnings,l1_shifts=gen_frame(seq,fi,spec,prev_upper)
+-            file=f'{seq}_F{fi:02d}_{spec["name"]}.ply';npts=write_scene_ply(ROOT/file,objects);files.append(file)
++            file=f'{seq}_F{fi:02d}_{spec["name"]}.ply';npts=write_scene_ply(DATASET/file,objects);files.append(file)
+             scene_name=spec['name'];view=spec.get('view','MULTI_VIEW'); by_gid={m['gid']:m for m in meta}
+             # Robot hint only for births after F0; small deterministic target error.
+             for m in meta:
+@@ -227,4 +228,4 @@ def main():
+     write_csv('support_gt.csv',support_rows,sup_fields)
+     (ROOT/'results'/'double_layer_dataset_generation.json').write_text(json.dumps({'version':'v0.8','sequences':{k:v['purpose'] for k,v in SEQUENCES.items()},'frames_added':len(generation),'frames':generation},ensure_ascii=False,indent=2),encoding='utf-8')
+-    print(f'generated D01-D10: frames={len(generation)}, total_root_ply={len(list(ROOT.glob("*.ply")))}')
++    print(f'generated D01-D10: frames={len(generation)}, total_dataset_ply={len(list(DATASET.glob("*.ply")))}')
+ if __name__=='__main__':main()
+diff --git a/code/generate_topdown_z_dataset.py b/code/generate_topdown_z_dataset.py
+--- a/code/generate_topdown_z_dataset.py
++++ b/code/generate_topdown_z_dataset.py
+@@ -4,6 +4,7 @@ import csv, json, math, sys
+ import numpy as np
+ 
+ ROOT=Path(__file__).resolve().parents[1]
++DATASET=ROOT/'dataset'
+ sys.path.insert(0,str(ROOT))
+ from tracker.ply import read_ply
+ from tracker.editor import write_scene_ply, _scale_proto, _edge_occlude_local, _pose_local
+@@ -11,6 +12,6 @@ from tracker.engine import load_config
+ 
+ CFG=load_config(ROOT/'tracker_config.json')
+-LABEL=ROOT/'labels'
++LABEL=DATASET/'labels'
+ DERIVED={
+     'Z01':{'source':'S05','mode':'TOP_DOWN_Z','purpose':'Pure -Z top-camera sequence derived from S05: yaw + nonuniform historical motion; only top-visible surface is retained.'},
+     'Z02':{'source':'C03','mode':'TOP_DOWN_Z','purpose':'Pure -Z top-camera two-edge-cluster sequence with NEW, gaps, motion and positive partial occlusion.'},
+@@ -124,7 +125,7 @@ def main():
+     semantics=[r for r in semantics if r['sequence_id'] not in zseq]
+     neighbors=[r for r in neighbors if r['sequence_id'] not in zseq]
+     catalog=[r for r in catalog if r['sequence_id'] not in zseq]
+-    for p in ROOT.glob('Z0*_F*.ply'): p.unlink()
++    for p in DATASET.glob('Z0*_F*.ply'): p.unlink()
+     src_manifest=list(manifest); src_objects=list(objects); src_semantics=list(semantics); src_neighbors=list(neighbors); src_catalog=list(catalog)
+     max_pair=max([int(r['pair_id'].split('_')[-1]) for r in pairs if r['pair_id'].startswith('pair_')]+[-1])
+     frame_gt_new=[]; generation=[]
+@@ -138,7 +139,7 @@ def main():
+             suffix=src_scene.replace(' ','_')
+             dst=f'{zid}_F{j:02d}_{"topdown" if top else "multiview"}_{suffix}.ply'
+             src_gt=[dict(r) for r in src_objects if r['file']==srcfile]
+-            arr=read_ply(ROOT/srcfile)
++            arr=read_ply(DATASET/srcfile)
+             scene,src_gt,normalization_notes=normalized_scene_from_array(arr,src_gt,j)
+             warnings=list(normalization_notes)
+             if top:
+@@ -147,7 +148,7 @@ def main():
+                 for o in scene:
+                     g=next(r for r in src_gt if int(r['global_id'])==int(o['global_id']))
+                     o['visibility']=visibility_for_topdown(g['visibility'])
+-            n=write_scene_ply(ROOT/dst,scene)
++            n=write_scene_ply(DATASET/dst,scene)
+             counts={int(o['global_id']):len(o['points']) for o in scene}
+             zrows=[]
+             for r in src_gt:
+@@ -203,6 +204,6 @@ def main():
+     write_csv('neighbor_gt.csv',neighbors,nei_fields);write_csv('complex_sequence_catalog.csv',catalog,cat_fields)
+     with open(LABEL/'frame_gt.jsonl','a',encoding='utf-8') as f:
+         for x in frame_gt_new:f.write(json.dumps(x,ensure_ascii=False)+'\n')
+     (ROOT/'results'/'topdown_dataset_generation.json').write_text(json.dumps({'sequences':DERIVED,'frames_added':len(generation),'frames':generation},ensure_ascii=False,indent=2),encoding='utf-8')
+-    print(f'generated {len(generation)} Z-view frames; total PLY={len(list(ROOT.glob("*.ply")))}')
++    print(f'generated {len(generation)} Z-view frames; total dataset PLY={len(list(DATASET.glob("*.ply")))}')
+ if __name__=='__main__':main()
+diff --git a/code/validate_dataset.py b/code/validate_dataset.py
+--- a/code/validate_dataset.py
++++ b/code/validate_dataset.py
+@@ -1,16 +1,32 @@
+ from pathlib import Path
+ import csv
+ ROOT=Path(__file__).resolve().parents[1]
+-with open(ROOT/'labels'/'object_gt.csv','r',encoding='utf-8-sig',newline='') as f:rows=list(csv.DictReader(f))
++DATASET=ROOT/'dataset'
++LABELS=DATASET/'labels'
++with open(LABELS/'object_gt.csv','r',encoding='utf-8-sig',newline='') as f:rows=list(csv.DictReader(f))
++with open(LABELS/'frame_manifest.csv','r',encoding='utf-8-sig',newline='') as f:manifest=list(csv.DictReader(f))
+ by={}
+ for r in rows:by.setdefault(r['file'],[]).append(r)
+ errors=[]
+ for fn,rs in by.items():
+     if sum(int(float(r['layer']))==1 for r in rs)>10:errors.append(fn+': layer1 > 10')
+     for r in rs:
+         if r['visibility']=='PARTIAL_VISIBLE' and r['occlusion_side'] not in ('left','right','both'):errors.append(fn+': bad partial side')
+-ply=list(ROOT.glob('*.ply'))
+-if len(ply)!=68:errors.append(f'expected 68 root PLYs, got {len(ply)}')
+-if list(ROOT.glob('*/*.ply')):errors.append('nested PLY exists')
++expected={r['file'] for r in manifest if r.get('file')}
++present={p.name for p in DATASET.glob('*.ply')}
++missing=sorted(expected-present)
++# USER_*.ply are runtime editor frames and are intentionally not in the static manifest.
++unexpected=sorted(x for x in (present-expected) if not x.startswith('USER_'))
++if missing:
++    errors.append(f'missing manifest PLYs: {len(missing)}; first={missing[:3]}')
++if unexpected:
++    errors.append(f'unexpected committed/static PLYs: {len(unexpected)}; first={unexpected[:3]}')
++if list(DATASET.glob('*/*.ply')):
++    errors.append('nested PLY exists below dataset/; committed PLYs must be flat')
++root_ply=list(ROOT.glob('*.ply'))
++if root_ply:
++    errors.append(f'root-level PLY forbidden: {len(root_ply)}')
+ print('PASS' if not errors else 'FAIL')
+ for e in errors:print(e)
++if errors:
++    raise SystemExit(1)
+diff --git a/tests/run_regression.py b/tests/run_regression.py
+--- a/tests/run_regression.py
++++ b/tests/run_regression.py
+@@ -4,7 +4,7 @@ sys.path.insert(0,str(ROOT))
+ from tracker import run_pair, evaluate_pair, load_config
+ def main():
+     cfg=load_config(ROOT/'tracker_config.json')
+-    with open(ROOT/'labels/frame_pairs.csv','r',encoding='utf-8-sig',newline='') as f: pairs=list(csv.DictReader(f))
++    with open(ROOT/'dataset/labels/frame_pairs.csv','r',encoding='utf-8-sig',newline='') as f: pairs=list(csv.DictReader(f))
+     selected=[p for p in pairs if p['recommended_for_id_eval']=='1']
+     # priority + all recommended
+     priority=['S10','S06','S07','S03','S11','S01','S02','S05','S08','S09']
+diff --git a/tests/run_topdown_regression.py b/tests/run_topdown_regression.py
+--- a/tests/run_topdown_regression.py
++++ b/tests/run_topdown_regression.py
+@@ -8,7 +8,7 @@ def main():
+     cfg=load_config(ROOT/'tracker_config.json')
+     sm=SessionManager(ROOT,cfg)
+     seqs=[s for s in sm.sequences() if s['sequence_id'].startswith('Z')]
+-    object_rows=list(csv.DictReader(open(ROOT/'labels'/'object_gt.csv',encoding='utf-8-sig')))
++    object_rows=list(csv.DictReader(open(ROOT/'dataset'/'labels'/'object_gt.csv',encoding='utf-8-sig')))
+     zero_point_gt=[{'file':r['file'],'global_id':r['global_id'],'visibility':r['visibility']} for r in object_rows if r['sequence_id'].startswith('Z') and int(float(r.get('point_count') or 0))<=0]
+     summary=[]
+     for s in seqs:
+diff --git a/tests/run_interactive_smoke.py b/tests/run_interactive_smoke.py
+--- a/tests/run_interactive_smoke.py
++++ b/tests/run_interactive_smoke.py
+@@ -18,11 +18,11 @@ req={'seed':424242,'existing':existing,'new_coils':[{'prototype':'prototype_04',
+ t0=time.perf_counter(); sess,created,ev=sm.create_next(sess.session_id,req); elapsed=(time.perf_counter()-t0)*1000
+ assert ev['wrong_id_count']==0,ev
+ assert all(int(r['point_count'])>0 for r in created['gt']), 'occlusion/full hide invariant violated'
+-assert Path(sess.current_file).parent==Path('.'), sess.current_file
++assert Path(sess.current_file).parent==Path('.'), 'session frame names stay dataset-relative'
+ partial=[r for r in created['gt'] if r['visibility'] in ('PARTIAL_VISIBLE','OCCLUDED')]
+ assert partial and all(int(r['point_count'])>0 for r in partial)
+ out={'pass':True,'sequence':'S03','created_file':sess.current_file,'generated_objects':len(created['gt']),'partial_objects':len(partial),'wrong_id':ev['wrong_id_count'],'elapsed_ms':round(elapsed,3),'warnings':created['warnings']}
+ (ROOT/'results'/'interactive_v0_4_smoke.json').write_text(json.dumps(out,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+ print(json.dumps(out,ensure_ascii=False,indent=2))
+-# Keep repository/package clean; the Web creates USER_*.ply at runtime.
+-(ROOT/sess.current_file).unlink(missing_ok=True)
++# Keep repository/package clean; the Web creates USER_*.ply under dataset/ at runtime.
++(ROOT/'dataset'/sess.current_file).unlink(missing_ok=True)
+diff --git a/tests/check_repository_governance.py b/tests/check_repository_governance.py
+new file mode 100644
+--- /dev/null
++++ b/tests/check_repository_governance.py
+@@ -0,0 +1,71 @@
++from pathlib import Path
++
++ROOT = Path(__file__).resolve().parents[1]
++DOC = ROOT / 'doc'
++DATASET = ROOT / 'dataset'
++
++
++def main():
++    errors = []
++
++    for legacy in ('docs', 'design', 'labels'):
++        if (ROOT / legacy).exists():
++            errors.append(f'legacy repository path must not exist: {legacy}/')
++
++    root_ply = sorted(ROOT.glob('*.ply'))
++    if root_ply:
++        errors.append(f'PLY files must live in dataset/: found {len(root_ply)} in repository root')
++
++    required = [
++        ROOT / 'AGENTS.md',
++        DOC / 'GOVERNANCE.md',
++        DOC / 'requirements',
++        DOC / 'design',
++        DOC / 'decisions',
++        DOC / 'status',
++        DATASET,
++        DATASET / 'labels',
++    ]
++    for path in required:
++        if not path.exists():
++            errors.append(f'missing canonical path: {path.relative_to(ROOT)}')
++
++    for ply in ROOT.rglob('*.ply'):
++        try:
++            ply.relative_to(DATASET)
++        except ValueError:
++            errors.append(f'PLY outside dataset/: {ply.relative_to(ROOT)}')
++
++    protected_name_patterns = (
++        '*REQUIREMENT*.md',
++        '*REQUIREMENTS*.md',
++        '*DESIGN*.md',
++        '*DECISION*.md',
++        '*DECISIONS*.md',
++    )
++    allowed_doc_roots = {
++        DOC / 'requirements',
++        DOC / 'design',
++        DOC / 'decisions',
++    }
++    for pattern in protected_name_patterns:
++        for path in ROOT.rglob(pattern):
++            if any(base == path.parent or base in path.parents for base in allowed_doc_roots):
++                continue
++            errors.append(f'protected-looking document outside canonical protected directories: {path.relative_to(ROOT)}')
++
++    if errors:
++        print('REPOSITORY GOVERNANCE: FAIL')
++        for err in errors:
++            print(f'- {err}')
++        raise SystemExit(1)
++
++    print('REPOSITORY GOVERNANCE: PASS')
++    print(f'- doc root: {DOC.relative_to(ROOT)}')
++    print(f'- dataset root: {DATASET.relative_to(ROOT)}')
++    print(f'- dataset PLY count: {len(list(DATASET.glob("*.ply")))}')
++    print('- protected specification directories are canonical')
++
++
++if __name__ == '__main__':
++    main()
