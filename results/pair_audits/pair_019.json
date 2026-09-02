@@ -1,0 +1,765 @@
+{
+  "run": {
+    "pair": {
+      "pair_id": "pair_019",
+      "sequence_id": "S02",
+      "pair_type": "temporal_adjacent",
+      "previous_file": "S02_F00_right_growth_3.ply",
+      "current_file": "S02_F01_right_growth_4.ply",
+      "previous_frame_index": "0",
+      "current_frame_index": "1",
+      "recommended_for_id_eval": "1"
+    },
+    "history_mode": "confirmed_gt",
+    "config": {
+      "business": {
+        "wrong_id_allowed": false,
+        "allow_uncertain": true,
+        "old_coil_removal_supported": false,
+        "layer1_max_slots": 10
+      },
+      "geometry": {
+        "diameter_range_m": [
+          1.1,
+          1.5
+        ],
+        "length_range_m": [
+          0.5,
+          1.7
+        ],
+        "center_quantile": 0.005,
+        "size_quantile": 0.01,
+        "layer2_center_z_min_m": 1.15
+      },
+      "motion_roi": {
+        "x_absolute_max_m": 2.0,
+        "x_default_m": 1.5,
+        "y_default_m": 0.4,
+        "z_default_m": 0.3
+      },
+      "matching": {
+        "diameter_gate_m": 0.36,
+        "length_gate_m": 0.38,
+        "diameter_scale_m": 0.2,
+        "length_scale_m": 0.25,
+        "yaw_scale_deg": 15.0,
+        "w_position": 0.62,
+        "w_diameter": 0.1,
+        "w_length": 0.1,
+        "w_yaw": 0.03,
+        "w_quality": 0.15,
+        "anchor_quality_min": 0.66,
+        "anchor_best_cost_max": 0.42,
+        "anchor_margin_min": 0.24,
+        "skip_history_cost": 0.9,
+        "insert_current_cost": 0.9
+      },
+      "new_coil": {
+        "position_tolerance_m": 0.5,
+        "diameter_tolerance_m": 0.25,
+        "length_tolerance_m": 0.3
+      },
+      "visualization": {
+        "sample_points_per_instance": 550
+      }
+    },
+    "history": [
+      {
+        "global_id": 9,
+        "layer": 1,
+        "slot": 9,
+        "cluster": "right",
+        "stable_diameter": 1.1899999380111694,
+        "stable_length": 1.5900001525878906,
+        "center": [
+          14.375000030994416,
+          0.0,
+          0.6349999690055848
+        ],
+        "yaw_deg": -1.0,
+        "visibility": "VISIBLE",
+        "last_instance_id": 932,
+        "confidence": 1.0
+      },
+      {
+        "global_id": 8,
+        "layer": 1,
+        "slot": 8,
+        "cluster": "right",
+        "stable_diameter": 1.2064999341964722,
+        "stable_length": 1.5600004196166992,
+        "center": [
+          13.151750094890595,
+          0.0,
+          0.6432499670982361
+        ],
+        "yaw_deg": 3.0,
+        "visibility": "VISIBLE",
+        "last_instance_id": 837,
+        "confidence": 1.0
+      },
+      {
+        "global_id": 7,
+        "layer": 1,
+        "slot": 7,
+        "cluster": "right",
+        "stable_diameter": 1.2400000095367432,
+        "stable_length": 1.6900005340576172,
+        "center": [
+          11.903500123023987,
+          0.0,
+          0.6600000047683716
+        ],
+        "yaw_deg": -2.0,
+        "visibility": "VISIBLE",
+        "last_instance_id": 521,
+        "confidence": 1.0
+      }
+    ],
+    "observations": [
+      {
+        "instance_id": 158,
+        "center": [
+          10.657777786254883,
+          -0.0029083192348480225,
+          0.6010378003120422
+        ],
+        "point_count": 8255,
+        "diameter": 1.1742077129228043,
+        "length": 1.656614773688473,
+        "yaw_deg": -1.0,
+        "quality": 0.8427127442898961,
+        "layer_guess": 1,
+        "bbox_min": [
+          9.97724723815918,
+          -0.9886296987533569,
+          -0.11460280418395996
+        ],
+        "bbox_max": [
+          11.326180458068848,
+          0.9781646132469177,
+          1.2738621234893799
+        ],
+        "raw_width_x": 1.348933219909668,
+        "raw_width_y": 1.9667942523956299
+      },
+      {
+        "instance_id": 387,
+        "center": [
+          14.364744186401367,
+          0.005554288625717163,
+          0.617456316947937
+        ],
+        "point_count": 5835,
+        "diameter": 1.152310938621893,
+        "length": 1.608451820281097,
+        "yaw_deg": 5.25,
+        "quality": 0.8295285752833715,
+        "layer_guess": 1,
+        "bbox_min": [
+          13.675736427307129,
+          -0.9515284299850464,
+          -0.0677868127822876
+        ],
+        "bbox_max": [
+          15.082450866699219,
+          0.936586856842041,
+          1.2480416297912598
+        ],
+        "raw_width_x": 1.4067144393920898,
+        "raw_width_y": 1.8881152868270874
+      },
+      {
+        "instance_id": 523,
+        "center": [
+          13.16909408569336,
+          -0.0023775696754455566,
+          0.6280795931816101
+        ],
+        "point_count": 7401,
+        "diameter": 1.2097302598693371,
+        "length": 1.5598635941149623,
+        "yaw_deg": -5.25,
+        "quality": 0.8385629103683223,
+        "layer_guess": 1,
+        "bbox_min": [
+          12.465292930603027,
+          -0.9302215576171875,
+          -0.09738367795944214
+        ],
+        "bbox_max": [
+          13.900300979614258,
+          0.9240267276763916,
+          1.3225300312042236
+        ],
+        "raw_width_x": 1.4350080490112305,
+        "raw_width_y": 1.854248285293579
+      },
+      {
+        "instance_id": 556,
+        "center": [
+          11.918883323669434,
+          0.028513848781585693,
+          0.647861897945404
+        ],
+        "point_count": 7166,
+        "diameter": 1.2384750046701765,
+        "length": 1.6132766652162793,
+        "yaw_deg": 1.0,
+        "quality": 0.837336720335133,
+        "layer_guess": 1,
+        "bbox_min": [
+          11.189990043640137,
+          -1.0118989944458008,
+          -0.06660252809524536
+        ],
+        "bbox_max": [
+          12.631937026977539,
+          1.0235923528671265,
+          1.313845157623291
+        ],
+        "raw_width_x": 1.4419469833374023,
+        "raw_width_y": 2.035491466522217
+      }
+    ],
+    "hints": [
+      {
+        "hint_id": "hint_0",
+        "diameter": 1.179999828338623,
+        "length": 1.6600008010864258,
+        "target_center": [
+          10.668500204086303,
+          0.0,
+          0.6299999141693116
+        ],
+        "expected_layer": null
+      }
+    ],
+    "candidates": [
+      {
+        "global_id": 9,
+        "instance_id": 158,
+        "accepted": false,
+        "cost": null,
+        "reasons": [
+          "OUTSIDE_X_ROI"
+        ],
+        "components": {
+          "position": 6.154087059769548,
+          "diameter": 0.006234859331039691,
+          "length": 0.07100012390998668,
+          "yaw": 0.0,
+          "quality": 0.15728725571010393
+        }
+      },
+      {
+        "global_id": 9,
+        "instance_id": 387,
+        "accepted": true,
+        "cost": 0.037143729342141996,
+        "reasons": [],
+        "components": {
+          "position": 0.003659335723944164,
+          "diameter": 0.0355115168741219,
+          "length": 0.005447424650568195,
+          "yaw": 0.17361111111111113,
+          "quality": 0.17047142471662846
+        }
+      },
+      {
+        "global_id": 9,
+        "instance_id": 523,
+        "accepted": true,
+        "cost": 0.43011748482004336,
+        "reasons": [],
+        "components": {
+          "position": 0.6468826364352316,
+          "diameter": 0.009732140015672252,
+          "length": 0.014531394505475612,
+          "yaw": 0.08027777777777777,
+          "quality": 0.1614370896316777
+        }
+      },
+      {
+        "global_id": 9,
+        "instance_id": 556,
+        "accepted": false,
+        "cost": null,
+        "reasons": [
+          "OUTSIDE_X_ROI"
+        ],
+        "components": {
+          "position": 2.6880348352836694,
+          "diameter": 0.05874580218987937,
+          "length": 0.00866873664223262,
+          "yaw": 0.017777777777777778,
+          "quality": 0.16266327966486704
+        }
+      },
+      {
+        "global_id": 8,
+        "instance_id": 158,
+        "accepted": false,
+        "cost": null,
+        "reasons": [
+          "OUTSIDE_X_ROI"
+        ],
+        "components": {
+          "position": 2.784250443109881,
+          "diameter": 0.026069688869688114,
+          "length": 0.14934933460329744,
+          "yaw": 0.07111111111111111,
+          "quality": 0.15728725571010393
+        }
+      },
+      {
+        "global_id": 8,
+        "instance_id": 387,
+        "accepted": true,
+        "cost": 0.4474856527341601,
+        "reasons": [],
+        "components": {
+          "position": 0.661520580259781,
+          "diameter": 0.0734111810345439,
+          "length": 0.03756061162147194,
+          "yaw": 0.0225,
+          "quality": 0.17047142471662846
+        }
+      },
+      {
+        "global_id": 8,
+        "instance_id": 523,
+        "accepted": true,
+        "cost": 0.035006887202781445,
+        "reasons": [],
+        "components": {
+          "position": 0.0027261391841922364,
+          "diameter": 0.0002608750988192621,
+          "length": 2.9953948680878913e-07,
+          "yaw": 0.30250000000000005,
+          "quality": 0.1614370896316777
+        }
+      },
+      {
+        "global_id": 8,
+        "instance_id": 556,
+        "accepted": true,
+        "cost": 0.45416081909903044,
+        "reasons": [],
+        "components": {
+          "position": 0.680855818764794,
+          "diameter": 0.025560128294958902,
+          "length": 0.04541373352298846,
+          "yaw": 0.017777777777777778,
+          "quality": 0.16266327966486704
+        }
+      },
+      {
+        "global_id": 7,
+        "instance_id": 158,
+        "accepted": true,
+        "cost": 0.4879274094072935,
+        "reasons": [],
+        "components": {
+          "position": 0.7283807219200353,
+          "diameter": 0.10821565734341262,
+          "length": 0.017833743926814596,
+          "yaw": 0.0044444444444444444,
+          "quality": 0.15728725571010393
+        }
+      },
+      {
+        "global_id": 7,
+        "instance_id": 387,
+        "accepted": false,
+        "cost": null,
+        "reasons": [
+          "OUTSIDE_X_ROI"
+        ],
+        "components": {
+          "position": 2.7126245794164565,
+          "diameter": 0.19223432894774034,
+          "length": 0.10640308349767727,
+          "yaw": 0.2336111111111111,
+          "quality": 0.17047142471662846
+        }
+      },
+      {
+        "global_id": 7,
+        "instance_id": 523,
+        "accepted": true,
+        "cost": 0.5034176895950471,
+        "reasons": [],
+        "components": {
+          "position": 0.7232357281200362,
+          "diameter": 0.02290644362318569,
+          "length": 0.2709699702022105,
+          "yaw": 0.04694444444444445,
+          "quality": 0.1614370896316777
+        }
+      },
+      {
+        "global_id": 7,
+        "instance_id": 556,
+        "accepted": true,
+        "cost": 0.03925449098404002,
+        "reasons": [],
+        "components": {
+          "position": 0.006823712346338431,
+          "diameter": 5.814099607630325e-05,
+          "length": 0.09418483279972503,
+          "yaw": 0.04000000000000001,
+          "quality": 0.16266327966486704
+        }
+      }
+    ],
+    "anchors": [
+      {
+        "global_id": 7,
+        "instance_id": 556,
+        "cost": 0.03925449098404002
+      },
+      {
+        "global_id": 8,
+        "instance_id": 523,
+        "cost": 0.035006887202781445
+      },
+      {
+        "global_id": 9,
+        "instance_id": 387,
+        "cost": 0.037143729342141996
+      }
+    ],
+    "anchor_audit": [
+      {
+        "instance_id": 158,
+        "best_global_id": 7,
+        "best_cost": 0.4879274094072935,
+        "second_cost": null,
+        "margin": null,
+        "quality": 0.8427127442898961,
+        "qualifies": false
+      },
+      {
+        "instance_id": 556,
+        "best_global_id": 7,
+        "best_cost": 0.03925449098404002,
+        "second_cost": 0.45416081909903044,
+        "margin": 0.4149063281149904,
+        "quality": 0.837336720335133,
+        "qualifies": true
+      },
+      {
+        "instance_id": 523,
+        "best_global_id": 8,
+        "best_cost": 0.035006887202781445,
+        "second_cost": 0.43011748482004336,
+        "margin": 0.3951105976172619,
+        "quality": 0.8385629103683223,
+        "qualifies": true
+      },
+      {
+        "instance_id": 387,
+        "best_global_id": 9,
+        "best_cost": 0.037143729342141996,
+        "second_cost": 0.4474856527341601,
+        "margin": 0.4103419233920181,
+        "quality": 0.8295285752833715,
+        "qualifies": true
+      }
+    ],
+    "dp": {
+      "1": {
+        "cost": 1.0114051075289634,
+        "shape": [
+          3,
+          4
+        ],
+        "history_order": [
+          7,
+          8,
+          9
+        ],
+        "observation_order": [
+          158,
+          556,
+          523,
+          387
+        ],
+        "actions": [
+          {
+            "action": "INSERT_CURRENT",
+            "global_id": null,
+            "instance_id": 158,
+            "cost": 0.9
+          },
+          {
+            "action": "MATCH",
+            "global_id": 7,
+            "instance_id": 556,
+            "cost": 0.03925449098404002
+          },
+          {
+            "action": "MATCH",
+            "global_id": 8,
+            "instance_id": 523,
+            "cost": 0.035006887202781445
+          },
+          {
+            "action": "MATCH",
+            "global_id": 9,
+            "instance_id": 387,
+            "cost": 0.037143729342141996
+          }
+        ]
+      }
+    },
+    "actions": [
+      {
+        "action": "INSERT_CURRENT",
+        "global_id": null,
+        "instance_id": 158,
+        "cost": 0.9
+      },
+      {
+        "action": "MATCH",
+        "global_id": 7,
+        "instance_id": 556,
+        "cost": 0.03925449098404002
+      },
+      {
+        "action": "MATCH",
+        "global_id": 8,
+        "instance_id": 523,
+        "cost": 0.035006887202781445
+      },
+      {
+        "action": "MATCH",
+        "global_id": 9,
+        "instance_id": 387,
+        "cost": 0.037143729342141996
+      }
+    ],
+    "decisions": [
+      {
+        "instance_id": 556,
+        "global_id": 7,
+        "state": "MATCHED",
+        "confidence": 0.9563838989066222,
+        "layer": 1,
+        "slot": 7,
+        "cluster": "right",
+        "reason": "ordered DP match",
+        "match_cost": 0.03925449098404002,
+        "hint_id": null
+      },
+      {
+        "instance_id": 523,
+        "global_id": 8,
+        "state": "MATCHED",
+        "confidence": 0.9611034586635762,
+        "layer": 1,
+        "slot": 8,
+        "cluster": "right",
+        "reason": "ordered DP match",
+        "match_cost": 0.035006887202781445,
+        "hint_id": null
+      },
+      {
+        "instance_id": 387,
+        "global_id": 9,
+        "state": "MATCHED",
+        "confidence": 0.9587291896198422,
+        "layer": 1,
+        "slot": 9,
+        "cluster": "right",
+        "reason": "ordered DP match",
+        "match_cost": 0.037143729342141996,
+        "hint_id": null
+      },
+      {
+        "instance_id": 158,
+        "global_id": null,
+        "state": "NEW",
+        "confidence": 0.95,
+        "layer": 1,
+        "slot": 0,
+        "cluster": "left",
+        "reason": "unexplained current instance + robot hint + legal slot growth",
+        "match_cost": null,
+        "hint_id": "hint_0"
+      }
+    ],
+    "validator_errors": [],
+    "timing_ms": {
+      "history_ms": 0.045168999804445775,
+      "load_current_ms": 1.3564209998548904,
+      "geometry_ms": 75.49588399979257,
+      "candidate_ms": 0.06597300034627551,
+      "anchor_ms": 0.030789999982516747,
+      "dp_ms": 0.04316600006859517,
+      "decision_ms": 0.1166219999504392,
+      "total_ms": 77.1584329995676
+    },
+    "total_dp_cost": 1.0114051075289634
+  },
+  "evaluation": {
+    "wrong_id": 0,
+    "matched_evaluated": 3,
+    "new_tp": 1,
+    "new_fp": 0,
+    "new_fn": 0,
+    "occ_tp": 0,
+    "occ_fp": 0,
+    "occ_fn": 0,
+    "rows": [
+      {
+        "instance_id": 556,
+        "global_id": 7,
+        "state": "MATCHED",
+        "confidence": 0.9563838989066222,
+        "layer": 1,
+        "slot": 7,
+        "cluster": "right",
+        "reason": "ordered DP match",
+        "match_cost": 0.03925449098404002,
+        "hint_id": null,
+        "gt_global_id": 7,
+        "gt_is_new": 0,
+        "eval": "OK"
+      },
+      {
+        "instance_id": 523,
+        "global_id": 8,
+        "state": "MATCHED",
+        "confidence": 0.9611034586635762,
+        "layer": 1,
+        "slot": 8,
+        "cluster": "right",
+        "reason": "ordered DP match",
+        "match_cost": 0.035006887202781445,
+        "hint_id": null,
+        "gt_global_id": 8,
+        "gt_is_new": 0,
+        "eval": "OK"
+      },
+      {
+        "instance_id": 387,
+        "global_id": 9,
+        "state": "MATCHED",
+        "confidence": 0.9587291896198422,
+        "layer": 1,
+        "slot": 9,
+        "cluster": "right",
+        "reason": "ordered DP match",
+        "match_cost": 0.037143729342141996,
+        "hint_id": null,
+        "gt_global_id": 9,
+        "gt_is_new": 0,
+        "eval": "OK"
+      },
+      {
+        "instance_id": 158,
+        "global_id": null,
+        "state": "NEW",
+        "confidence": 0.95,
+        "layer": 1,
+        "slot": 0,
+        "cluster": "left",
+        "reason": "unexplained current instance + robot hint + legal slot growth",
+        "match_cost": null,
+        "hint_id": "hint_0",
+        "gt_global_id": 6,
+        "gt_is_new": 1,
+        "eval": "NEW_OK"
+      }
+    ],
+    "gt_transition": [
+      {
+        "pair_id": "pair_019",
+        "sequence_id": "S02",
+        "pair_type": "temporal_adjacent",
+        "previous_file": "S02_F00_right_growth_3.ply",
+        "current_file": "S02_F01_right_growth_4.ply",
+        "global_id": "6",
+        "previous_instance_id": "-1",
+        "current_instance_id": "158",
+        "relation_gt": "NEW",
+        "visibility_event_gt": "BIRTH",
+        "previous_visibility": "ABSENT",
+        "current_visibility": "VISIBLE",
+        "is_new_gt": "1",
+        "dx_gt_m": "nan",
+        "dy_gt_m": "nan",
+        "dz_gt_m": "nan",
+        "displacement_gt_m": "nan",
+        "layer_gt": "1",
+        "slot_gt": "6"
+      },
+      {
+        "pair_id": "pair_019",
+        "sequence_id": "S02",
+        "pair_type": "temporal_adjacent",
+        "previous_file": "S02_F00_right_growth_3.ply",
+        "current_file": "S02_F01_right_growth_4.ply",
+        "global_id": "7",
+        "previous_instance_id": "521",
+        "current_instance_id": "556",
+        "relation_gt": "SAME_OBJECT",
+        "visibility_event_gt": "VISIBILITY_STABLE",
+        "previous_visibility": "VISIBLE",
+        "current_visibility": "VISIBLE",
+        "is_new_gt": "0",
+        "dx_gt_m": "0.0",
+        "dy_gt_m": "0.0",
+        "dz_gt_m": "0.0",
+        "displacement_gt_m": "0.0",
+        "layer_gt": "1",
+        "slot_gt": "7"
+      },
+      {
+        "pair_id": "pair_019",
+        "sequence_id": "S02",
+        "pair_type": "temporal_adjacent",
+        "previous_file": "S02_F00_right_growth_3.ply",
+        "current_file": "S02_F01_right_growth_4.ply",
+        "global_id": "8",
+        "previous_instance_id": "837",
+        "current_instance_id": "523",
+        "relation_gt": "SAME_OBJECT",
+        "visibility_event_gt": "VISIBILITY_STABLE",
+        "previous_visibility": "VISIBLE",
+        "current_visibility": "VISIBLE",
+        "is_new_gt": "0",
+        "dx_gt_m": "0.0",
+        "dy_gt_m": "0.0",
+        "dz_gt_m": "0.0",
+        "displacement_gt_m": "0.0",
+        "layer_gt": "1",
+        "slot_gt": "8"
+      },
+      {
+        "pair_id": "pair_019",
+        "sequence_id": "S02",
+        "pair_type": "temporal_adjacent",
+        "previous_file": "S02_F00_right_growth_3.ply",
+        "current_file": "S02_F01_right_growth_4.ply",
+        "global_id": "9",
+        "previous_instance_id": "932",
+        "current_instance_id": "387",
+        "relation_gt": "SAME_OBJECT",
+        "visibility_event_gt": "VISIBILITY_STABLE",
+        "previous_visibility": "VISIBLE",
+        "current_visibility": "VISIBLE",
+        "is_new_gt": "0",
+        "dx_gt_m": "0.0",
+        "dy_gt_m": "0.0",
+        "dz_gt_m": "0.0",
+        "displacement_gt_m": "0.0",
+        "layer_gt": "1",
+        "slot_gt": "9"
+      }
+    ],
+    "pass_primary": true
+  }
+}

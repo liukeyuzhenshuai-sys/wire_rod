@@ -1,0 +1,10 @@
+{
+  "file": "S13_F00_full_10_plus_8_100k.ply",
+  "instances": 18,
+  "points": 128769,
+  "load_ms": 13.213582999924256,
+  "geometry_ms": 362.35762600063026,
+  "total_ms": 375.5712090005545,
+  "target_ms": 2000,
+  "pass": true
+}

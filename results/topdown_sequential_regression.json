@@ -1,0 +1,2145 @@
+{
+  "version": "v0.8",
+  "view_model": "camera above, rays along world -Z, global XY z-buffer; not z>center crop",
+  "zero_point_gt_objects": [],
+  "total_sequences": 5,
+  "total_frames": 25,
+  "total_wrong_id": 0,
+  "total_uncertain": 0,
+  "sequences": [
+    {
+      "sequence_id": "Z01",
+      "num_frames": 4,
+      "wrong_id_total": 0,
+      "uncertain_total": 0,
+      "elapsed_ms": 201.27328500075237,
+      "frames": [
+        {
+          "frame": "Z01_F00_topdown_yaw_motion_0.ply",
+          "wrong_id": 0,
+          "frame_status": "INITIAL",
+          "uncertain": 0
+        },
+        {
+          "frame": "Z01_F01_topdown_yaw_motion_1.ply",
+          "wrong_id": 0,
+          "frame_status": "OK",
+          "uncertain": 0,
+          "semantic_reason_codes": [],
+          "topdown_layer_assignment": {
+            "applied": true,
+            "mode": "TOPDOWN_SEMANTIC_CARDINALITY_PLUS_TOP_Z",
+            "topdown_fraction": 1.0,
+            "expected_by_layer": {
+              "1": 6
+            },
+            "before": {
+              "125": 1,
+              "143": 1,
+              "372": 1,
+              "545": 1,
+              "706": 1,
+              "712": 1
+            },
+            "after": {
+              "125": 1,
+              "143": 1,
+              "372": 1,
+              "545": 1,
+              "706": 1,
+              "712": 1
+            },
+            "changed_instances": []
+          },
+          "observations": [
+            {
+              "instance_id": 712,
+              "global_id": 0,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 125,
+              "global_id": 1,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 706,
+              "global_id": 2,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 143,
+              "global_id": 3,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 372,
+              "global_id": 4,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 545,
+              "global_id": 5,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            }
+          ]
+        },
+        {
+          "frame": "Z01_F02_topdown_yaw_motion_2.ply",
+          "wrong_id": 0,
+          "frame_status": "OK",
+          "uncertain": 0,
+          "semantic_reason_codes": [],
+          "topdown_layer_assignment": {
+            "applied": true,
+            "mode": "TOPDOWN_SEMANTIC_CARDINALITY_PLUS_TOP_Z",
+            "topdown_fraction": 1.0,
+            "expected_by_layer": {
+              "1": 6
+            },
+            "before": {
+              "110": 1,
+              "337": 1,
+              "450": 1,
+              "510": 1,
+              "720": 1,
+              "801": 1
+            },
+            "after": {
+              "110": 1,
+              "337": 1,
+              "450": 1,
+              "510": 1,
+              "720": 1,
+              "801": 1
+            },
+            "changed_instances": []
+          },
+          "observations": [
+            {
+              "instance_id": 510,
+              "global_id": 0,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 450,
+              "global_id": 1,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 720,
+              "global_id": 2,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 110,
+              "global_id": 3,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 337,
+              "global_id": 4,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 801,
+              "global_id": 5,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            }
+          ]
+        },
+        {
+          "frame": "Z01_F03_topdown_yaw_motion_3.ply",
+          "wrong_id": 0,
+          "frame_status": "OK",
+          "uncertain": 0,
+          "semantic_reason_codes": [],
+          "topdown_layer_assignment": {
+            "applied": true,
+            "mode": "TOPDOWN_SEMANTIC_CARDINALITY_PLUS_TOP_Z",
+            "topdown_fraction": 1.0,
+            "expected_by_layer": {
+              "1": 6
+            },
+            "before": {
+              "132": 1,
+              "245": 1,
+              "253": 1,
+              "526": 1,
+              "693": 1,
+              "883": 1
+            },
+            "after": {
+              "132": 1,
+              "245": 1,
+              "253": 1,
+              "526": 1,
+              "693": 1,
+              "883": 1
+            },
+            "changed_instances": []
+          },
+          "observations": [
+            {
+              "instance_id": 526,
+              "global_id": 0,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 883,
+              "global_id": 1,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 245,
+              "global_id": 2,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 693,
+              "global_id": 3,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 132,
+              "global_id": 4,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 253,
+              "global_id": 5,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sequence_id": "Z02",
+      "num_frames": 6,
+      "wrong_id_total": 0,
+      "uncertain_total": 0,
+      "elapsed_ms": 399.4981859996187,
+      "frames": [
+        {
+          "frame": "Z02_F00_topdown_two_side_complex_start.ply",
+          "wrong_id": 0,
+          "frame_status": "INITIAL",
+          "uncertain": 0
+        },
+        {
+          "frame": "Z02_F01_topdown_left_new_far_gap.ply",
+          "wrong_id": 0,
+          "frame_status": "OK",
+          "uncertain": 0,
+          "semantic_reason_codes": [],
+          "topdown_layer_assignment": {
+            "applied": true,
+            "mode": "TOPDOWN_SEMANTIC_CARDINALITY_PLUS_TOP_Z",
+            "topdown_fraction": 1.0,
+            "expected_by_layer": {
+              "1": 5
+            },
+            "before": {
+              "337": 1,
+              "488": 1,
+              "541": 1,
+              "681": 1,
+              "693": 1
+            },
+            "after": {
+              "337": 1,
+              "488": 1,
+              "541": 1,
+              "681": 1,
+              "693": 1
+            },
+            "changed_instances": []
+          },
+          "observations": [
+            {
+              "instance_id": 693,
+              "global_id": 0,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 337,
+              "global_id": 1,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 541,
+              "global_id": 2,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "NEW"
+            },
+            {
+              "instance_id": 488,
+              "global_id": 8,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 681,
+              "global_id": 9,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            }
+          ]
+        },
+        {
+          "frame": "Z02_F02_topdown_right_new_partial_left.ply",
+          "wrong_id": 0,
+          "frame_status": "OK",
+          "uncertain": 0,
+          "semantic_reason_codes": [],
+          "topdown_layer_assignment": {
+            "applied": true,
+            "mode": "TOPDOWN_SEMANTIC_CARDINALITY_PLUS_TOP_Z",
+            "topdown_fraction": 1.0,
+            "expected_by_layer": {
+              "1": 6
+            },
+            "before": {
+              "328": 1,
+              "462": 1,
+              "472": 1,
+              "594": 1,
+              "796": 1,
+              "876": 1
+            },
+            "after": {
+              "328": 1,
+              "462": 1,
+              "472": 1,
+              "594": 1,
+              "796": 1,
+              "876": 1
+            },
+            "changed_instances": []
+          },
+          "observations": [
+            {
+              "instance_id": 594,
+              "global_id": 0,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 796,
+              "global_id": 1,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 328,
+              "global_id": 2,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 462,
+              "global_id": 7,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "NEW"
+            },
+            {
+              "instance_id": 876,
+              "global_id": 8,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 472,
+              "global_id": 9,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            }
+          ]
+        },
+        {
+          "frame": "Z02_F03_topdown_two_new_both_sides.ply",
+          "wrong_id": 0,
+          "frame_status": "OK",
+          "uncertain": 0,
+          "semantic_reason_codes": [],
+          "topdown_layer_assignment": {
+            "applied": true,
+            "mode": "TOPDOWN_SEMANTIC_CARDINALITY_PLUS_TOP_Z",
+            "topdown_fraction": 1.0,
+            "expected_by_layer": {
+              "1": 8
+            },
+            "before": {
+              "104": 1,
+              "144": 1,
+              "267": 1,
+              "307": 1,
+              "321": 1,
+              "343": 1,
+              "642": 1,
+              "805": 1
+            },
+            "after": {
+              "104": 1,
+              "144": 1,
+              "267": 1,
+              "307": 1,
+              "321": 1,
+              "343": 1,
+              "642": 1,
+              "805": 1
+            },
+            "changed_instances": []
+          },
+          "observations": [
+            {
+              "instance_id": 343,
+              "global_id": 0,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 805,
+              "global_id": 1,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 104,
+              "global_id": 2,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 267,
+              "global_id": 3,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "NEW"
+            },
+            {
+              "instance_id": 144,
+              "global_id": 6,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "NEW"
+            },
+            {
+              "instance_id": 642,
+              "global_id": 7,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 321,
+              "global_id": 8,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 307,
+              "global_id": 9,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            }
+          ]
+        },
+        {
+          "frame": "Z02_F04_topdown_two_side_with_occluded.ply",
+          "wrong_id": 0,
+          "frame_status": "OK",
+          "uncertain": 0,
+          "semantic_reason_codes": [],
+          "topdown_layer_assignment": {
+            "applied": true,
+            "mode": "TOPDOWN_SEMANTIC_CARDINALITY_PLUS_TOP_Z",
+            "topdown_fraction": 1.0,
+            "expected_by_layer": {
+              "1": 8
+            },
+            "before": {
+              "214": 1,
+              "271": 1,
+              "272": 1,
+              "404": 1,
+              "409": 1,
+              "612": 1,
+              "909": 1,
+              "2407": 1
+            },
+            "after": {
+              "214": 1,
+              "271": 1,
+              "272": 1,
+              "404": 1,
+              "409": 1,
+              "612": 1,
+              "909": 1,
+              "2407": 1
+            },
+            "changed_instances": []
+          },
+          "observations": [
+            {
+              "instance_id": 909,
+              "global_id": 0,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 272,
+              "global_id": 1,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 612,
+              "global_id": 2,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 214,
+              "global_id": 3,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 271,
+              "global_id": 6,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 2407,
+              "global_id": 7,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 404,
+              "global_id": 8,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 409,
+              "global_id": 9,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            }
+          ]
+        },
+        {
+          "frame": "Z02_F05_topdown_occluded_return_partial.ply",
+          "wrong_id": 0,
+          "frame_status": "OK",
+          "uncertain": 0,
+          "semantic_reason_codes": [],
+          "topdown_layer_assignment": {
+            "applied": true,
+            "mode": "TOPDOWN_SEMANTIC_CARDINALITY_PLUS_TOP_Z",
+            "topdown_fraction": 1.0,
+            "expected_by_layer": {
+              "1": 8
+            },
+            "before": {
+              "102": 1,
+              "227": 1,
+              "335": 1,
+              "436": 1,
+              "602": 1,
+              "967": 1,
+              "994": 1,
+              "998": 1
+            },
+            "after": {
+              "102": 1,
+              "227": 1,
+              "335": 1,
+              "436": 1,
+              "602": 1,
+              "967": 1,
+              "994": 1,
+              "998": 1
+            },
+            "changed_instances": []
+          },
+          "observations": [
+            {
+              "instance_id": 998,
+              "global_id": 0,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 436,
+              "global_id": 1,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 994,
+              "global_id": 2,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 102,
+              "global_id": 3,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 335,
+              "global_id": 6,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 602,
+              "global_id": 7,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 967,
+              "global_id": 8,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 227,
+              "global_id": 9,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sequence_id": "Z03",
+      "num_frames": 6,
+      "wrong_id_total": 0,
+      "uncertain_total": 0,
+      "elapsed_ms": 659.1924130007101,
+      "frames": [
+        {
+          "frame": "Z03_F00_topdown_full_l1_start.ply",
+          "wrong_id": 0,
+          "frame_status": "INITIAL",
+          "uncertain": 0
+        },
+        {
+          "frame": "Z03_F01_topdown_layer2_new_yaw.ply",
+          "wrong_id": 0,
+          "frame_status": "OK",
+          "uncertain": 0,
+          "semantic_reason_codes": [],
+          "topdown_layer_assignment": {
+            "applied": true,
+            "mode": "TOPDOWN_SEMANTIC_CARDINALITY_PLUS_TOP_Z",
+            "topdown_fraction": 1.0,
+            "expected_by_layer": {
+              "1": 10,
+              "2": 1
+            },
+            "before": {
+              "134": 1,
+              "348": 1,
+              "418": 1,
+              "503": 1,
+              "590": 1,
+              "598": 2,
+              "648": 1,
+              "660": 1,
+              "697": 1,
+              "829": 1,
+              "911": 1
+            },
+            "after": {
+              "134": 1,
+              "348": 1,
+              "418": 1,
+              "503": 1,
+              "590": 1,
+              "598": 2,
+              "648": 1,
+              "660": 1,
+              "697": 1,
+              "829": 1,
+              "911": 1
+            },
+            "top_z_rank": [
+              {
+                "instance_id": 598,
+                "top_z": 2.3113861083984375,
+                "assigned_layer": 2
+              },
+              {
+                "instance_id": 418,
+                "top_z": 1.3039608001708984,
+                "assigned_layer": 1
+              },
+              {
+                "instance_id": 697,
+                "top_z": 1.2674490213394165,
+                "assigned_layer": 1
+              },
+              {
+                "instance_id": 503,
+                "top_z": 1.2527391910552979,
+                "assigned_layer": 1
+              },
+              {
+                "instance_id": 590,
+                "top_z": 1.2495723962783813,
+                "assigned_layer": 1
+              },
+              {
+                "instance_id": 829,
+                "top_z": 1.2455291748046875,
+                "assigned_layer": 1
+              },
+              {
+                "instance_id": 348,
+                "top_z": 1.235632061958313,
+                "assigned_layer": 1
+              },
+              {
+                "instance_id": 660,
+                "top_z": 1.2347536087036133,
+                "assigned_layer": 1
+              },
+              {
+                "instance_id": 648,
+                "top_z": 1.2262444496154785,
+                "assigned_layer": 1
+              },
+              {
+                "instance_id": 134,
+                "top_z": 1.2262061834335327,
+                "assigned_layer": 1
+              },
+              {
+                "instance_id": 911,
+                "top_z": 1.2191336154937744,
+                "assigned_layer": 1
+              }
+            ],
+            "changed_instances": []
+          },
+          "observations": [
+            {
+              "instance_id": 648,
+              "global_id": 0,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 590,
+              "global_id": 1,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 697,
+              "global_id": 2,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 911,
+              "global_id": 3,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 660,
+              "global_id": 4,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 348,
+              "global_id": 5,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 418,
+              "global_id": 6,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 134,
+              "global_id": 7,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 829,
+              "global_id": 8,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 503,
+              "global_id": 9,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 598,
+              "global_id": 11,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "NEW"
+            }
+          ]
+        },
+        {
+          "frame": "Z03_F02_topdown_second_layer2_new.ply",
+          "wrong_id": 0,
+          "frame_status": "OK",
+          "uncertain": 0,
+          "semantic_reason_codes": [],
+          "topdown_layer_assignment": {
+            "applied": true,
+            "mode": "TOPDOWN_SEMANTIC_CARDINALITY_PLUS_TOP_Z",
+            "topdown_fraction": 1.0,
+            "expected_by_layer": {
+              "1": 10,
+              "2": 2
+            },
+            "before": {
+              "204": 1,
+              "261": 2,
+              "340": 1,
+              "399": 1,
+              "495": 1,
+              "544": 2,
+              "688": 1,
+              "838": 1,
+              "875": 1,
+              "903": 1,
+              "940": 1,
+              "942": 1
+            },
+            "after": {
+              "204": 1,
+              "261": 2,
+              "340": 1,
+              "399": 1,
+              "495": 1,
+              "544": 2,
+              "688": 1,
+              "838": 1,
+              "875": 1,
+              "903": 1,
+              "940": 1,
+              "942": 1
+            },
+            "top_z_rank": [
+              {
+                "instance_id": 261,
+                "top_z": 2.3274083137512207,
+                "assigned_layer": 2
+              },
+              {
+                "instance_id": 544,
+                "top_z": 2.3034160137176514,
+                "assigned_layer": 2
+              },
+              {
+                "instance_id": 838,
+                "top_z": 1.3049867153167725,
+                "assigned_layer": 1
+              },
+              {
+                "instance_id": 942,
+                "top_z": 1.25279700756073,
+                "assigned_layer": 1
+              },
+              {
+                "instance_id": 940,
+                "top_z": 1.2513563632965088,
+                "assigned_layer": 1
+              },
+              {
+                "instance_id": 399,
+                "top_z": 1.247527837753296,
+                "assigned_layer": 1
+              },
+              {
+                "instance_id": 875,
+                "top_z": 1.2348172664642334,
+                "assigned_layer": 1
+              },
+              {
+                "instance_id": 688,
+                "top_z": 1.2331546545028687,
+                "assigned_layer": 1
+              },
+              {
+                "instance_id": 903,
+                "top_z": 1.2265068292617798,
+                "assigned_layer": 1
+              },
+              {
+                "instance_id": 204,
+                "top_z": 1.2245150804519653,
+                "assigned_layer": 1
+              },
+              {
+                "instance_id": 340,
+                "top_z": 1.2238208055496216,
+                "assigned_layer": 1
+              },
+              {
+                "instance_id": 495,
+                "top_z": 1.2191210985183716,
+                "assigned_layer": 1
+              }
+            ],
+            "changed_instances": []
+          },
+          "observations": [
+            {
+              "instance_id": 204,
+              "global_id": 0,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 940,
+              "global_id": 1,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 875,
+              "global_id": 2,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 495,
+              "global_id": 3,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 340,
+              "global_id": 4,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 688,
+              "global_id": 5,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 838,
+              "global_id": 6,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 903,
+              "global_id": 7,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 399,
+              "global_id": 8,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 942,
+              "global_id": 9,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 261,
+              "global_id": 11,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 544,
+              "global_id": 13,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "NEW"
+            }
+          ]
+        },
+        {
+          "frame": "Z03_F03_topdown_layer2_new_lower_occluded.ply",
+          "wrong_id": 0,
+          "frame_status": "OK",
+          "uncertain": 0,
+          "semantic_reason_codes": [],
+          "topdown_layer_assignment": {
+            "applied": true,
+            "mode": "TOPDOWN_SEMANTIC_CARDINALITY_PLUS_TOP_Z",
+            "topdown_fraction": 1.0,
+            "expected_by_layer": {
+              "1": 10,
+              "2": 3
+            },
+            "before": {
+              "101": 1,
+              "117": 1,
+              "210": 2,
+              "236": 1,
+              "292": 1,
+              "327": 1,
+              "349": 2,
+              "384": 2,
+              "469": 1,
+              "556": 1,
+              "601": 1,
+              "827": 1,
+              "2304": 1
+            },
+            "after": {
+              "101": 1,
+              "117": 1,
+              "210": 2,
+              "236": 1,
+              "292": 1,
+              "327": 1,
+              "349": 2,
+              "384": 2,
+              "469": 1,
+              "556": 1,
+              "601": 1,
+              "827": 1,
+              "2304": 1
+            },
+            "top_z_rank": [
+              {
+                "instance_id": 210,
+                "top_z": 2.3664612770080566,
+                "assigned_layer": 2
+              },
+              {
+                "instance_id": 349,
+                "top_z": 2.3148603439331055,
+                "assigned_layer": 2
+              },
+              {
+                "instance_id": 384,
+                "top_z": 2.3002092838287354,
+                "assigned_layer": 2
+              },
+              {
+                "instance_id": 117,
+                "top_z": 1.3051763772964478,
+                "assigned_layer": 1
+              },
+              {
+                "instance_id": 2304,
+                "top_z": 1.253767490386963,
+                "assigned_layer": 1
+              },
+              {
+                "instance_id": 327,
+                "top_z": 1.2508717775344849,
+                "assigned_layer": 1
+              },
+              {
+                "instance_id": 469,
+                "top_z": 1.2477918863296509,
+                "assigned_layer": 1
+              },
+              {
+                "instance_id": 601,
+                "top_z": 1.2415573596954346,
+                "assigned_layer": 1
+              },
+              {
+                "instance_id": 101,
+                "top_z": 1.2320561408996582,
+                "assigned_layer": 1
+              },
+              {
+                "instance_id": 556,
+                "top_z": 1.227123498916626,
+                "assigned_layer": 1
+              },
+              {
+                "instance_id": 236,
+                "top_z": 1.2205071449279785,
+                "assigned_layer": 1
+              },
+              {
+                "instance_id": 827,
+                "top_z": 1.200573444366455,
+                "assigned_layer": 1
+              },
+              {
+                "instance_id": 292,
+                "top_z": 1.1949914693832397,
+                "assigned_layer": 1
+              }
+            ],
+            "changed_instances": []
+          },
+          "observations": [
+            {
+              "instance_id": 236,
+              "global_id": 0,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 469,
+              "global_id": 1,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 556,
+              "global_id": 2,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 827,
+              "global_id": 3,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 2304,
+              "global_id": 4,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 292,
+              "global_id": 5,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 117,
+              "global_id": 6,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 101,
+              "global_id": 7,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 601,
+              "global_id": 8,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 327,
+              "global_id": 9,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 349,
+              "global_id": 11,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 384,
+              "global_id": 13,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 210,
+              "global_id": 15,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "NEW"
+            }
+          ]
+        },
+        {
+          "frame": "Z03_F04_topdown_layer2_motion_lower_return.ply",
+          "wrong_id": 0,
+          "frame_status": "ABNORMAL",
+          "uncertain": 0,
+          "semantic_reason_codes": [
+            "ABNORMAL_FIRST_LAYER_SHIFT"
+          ],
+          "topdown_layer_assignment": {
+            "applied": true,
+            "mode": "TOPDOWN_SEMANTIC_CARDINALITY_PLUS_TOP_Z",
+            "topdown_fraction": 1.0,
+            "expected_by_layer": {
+              "1": 10,
+              "2": 3
+            },
+            "before": {
+              "118": 2,
+              "155": 1,
+              "269": 2,
+              "279": 1,
+              "366": 1,
+              "509": 1,
+              "568": 1,
+              "595": 2,
+              "774": 1,
+              "836": 1,
+              "837": 1,
+              "869": 1,
+              "937": 1
+            },
+            "after": {
+              "118": 2,
+              "155": 1,
+              "269": 2,
+              "279": 1,
+              "366": 1,
+              "509": 1,
+              "568": 1,
+              "595": 2,
+              "774": 1,
+              "836": 1,
+              "837": 1,
+              "869": 1,
+              "937": 1
+            },
+            "top_z_rank": [
+              {
+                "instance_id": 118,
+                "top_z": 2.3742153644561768,
+                "assigned_layer": 2
+              },
+              {
+                "instance_id": 269,
+                "top_z": 2.3107457160949707,
+                "assigned_layer": 2
+              },
+              {
+                "instance_id": 595,
+                "top_z": 2.3089993000030518,
+                "assigned_layer": 2
+              },
+              {
+                "instance_id": 509,
+                "top_z": 1.300742506980896,
+                "assigned_layer": 1
+              },
+              {
+                "instance_id": 568,
+                "top_z": 1.255725383758545,
+                "assigned_layer": 1
+              },
+              {
+                "instance_id": 366,
+                "top_z": 1.2480665445327759,
+                "assigned_layer": 1
+              },
+              {
+                "instance_id": 774,
+                "top_z": 1.2438901662826538,
+                "assigned_layer": 1
+              },
+              {
+                "instance_id": 937,
+                "top_z": 1.2367671728134155,
+                "assigned_layer": 1
+              },
+              {
+                "instance_id": 279,
+                "top_z": 1.225433588027954,
+                "assigned_layer": 1
+              },
+              {
+                "instance_id": 155,
+                "top_z": 1.2242317199707031,
+                "assigned_layer": 1
+              },
+              {
+                "instance_id": 869,
+                "top_z": 1.2175496816635132,
+                "assigned_layer": 1
+              },
+              {
+                "instance_id": 837,
+                "top_z": 1.2134957313537598,
+                "assigned_layer": 1
+              },
+              {
+                "instance_id": 836,
+                "top_z": 1.207080602645874,
+                "assigned_layer": 1
+              }
+            ],
+            "changed_instances": []
+          },
+          "observations": [
+            {
+              "instance_id": 155,
+              "global_id": 0,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 774,
+              "global_id": 1,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 837,
+              "global_id": 2,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 937,
+              "global_id": 3,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 869,
+              "global_id": 4,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 836,
+              "global_id": 5,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 509,
+              "global_id": 6,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 279,
+              "global_id": 7,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 366,
+              "global_id": 8,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 568,
+              "global_id": 9,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 269,
+              "global_id": 11,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 595,
+              "global_id": 13,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 118,
+              "global_id": 15,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            }
+          ]
+        },
+        {
+          "frame": "Z03_F05_topdown_fourth_layer2_new.ply",
+          "wrong_id": 0,
+          "frame_status": "ABNORMAL",
+          "uncertain": 0,
+          "semantic_reason_codes": [
+            "ABNORMAL_FIRST_LAYER_SHIFT"
+          ],
+          "topdown_layer_assignment": {
+            "applied": true,
+            "mode": "TOPDOWN_SEMANTIC_CARDINALITY_PLUS_TOP_Z",
+            "topdown_fraction": 1.0,
+            "expected_by_layer": {
+              "1": 10,
+              "2": 4
+            },
+            "before": {
+              "149": 1,
+              "221": 1,
+              "278": 1,
+              "285": 2,
+              "376": 2,
+              "461": 1,
+              "465": 1,
+              "497": 1,
+              "502": 1,
+              "524": 1,
+              "629": 2,
+              "904": 1,
+              "920": 1,
+              "943": 2
+            },
+            "after": {
+              "149": 1,
+              "221": 1,
+              "278": 1,
+              "285": 2,
+              "376": 2,
+              "461": 1,
+              "465": 1,
+              "497": 1,
+              "502": 1,
+              "524": 1,
+              "629": 2,
+              "904": 1,
+              "920": 1,
+              "943": 2
+            },
+            "top_z_rank": [
+              {
+                "instance_id": 629,
+                "top_z": 2.3736038208007812,
+                "assigned_layer": 2
+              },
+              {
+                "instance_id": 376,
+                "top_z": 2.323286294937134,
+                "assigned_layer": 2
+              },
+              {
+                "instance_id": 943,
+                "top_z": 2.3130741119384766,
+                "assigned_layer": 2
+              },
+              {
+                "instance_id": 285,
+                "top_z": 2.3116588592529297,
+                "assigned_layer": 2
+              },
+              {
+                "instance_id": 920,
+                "top_z": 1.2937570810317993,
+                "assigned_layer": 1
+              },
+              {
+                "instance_id": 497,
+                "top_z": 1.2608929872512817,
+                "assigned_layer": 1
+              },
+              {
+                "instance_id": 524,
+                "top_z": 1.2539645433425903,
+                "assigned_layer": 1
+              },
+              {
+                "instance_id": 461,
+                "top_z": 1.2443712949752808,
+                "assigned_layer": 1
+              },
+              {
+                "instance_id": 502,
+                "top_z": 1.2364962100982666,
+                "assigned_layer": 1
+              },
+              {
+                "instance_id": 149,
+                "top_z": 1.2288753986358643,
+                "assigned_layer": 1
+              },
+              {
+                "instance_id": 465,
+                "top_z": 1.2250161170959473,
+                "assigned_layer": 1
+              },
+              {
+                "instance_id": 904,
+                "top_z": 1.2059255838394165,
+                "assigned_layer": 1
+              },
+              {
+                "instance_id": 221,
+                "top_z": 1.2018879652023315,
+                "assigned_layer": 1
+              },
+              {
+                "instance_id": 278,
+                "top_z": 1.2018358707427979,
+                "assigned_layer": 1
+              }
+            ],
+            "changed_instances": []
+          },
+          "observations": [
+            {
+              "instance_id": 465,
+              "global_id": 0,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 461,
+              "global_id": 1,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 149,
+              "global_id": 2,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 502,
+              "global_id": 3,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 904,
+              "global_id": 4,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 278,
+              "global_id": 5,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 920,
+              "global_id": 6,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 221,
+              "global_id": 7,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 497,
+              "global_id": 8,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 524,
+              "global_id": 9,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 376,
+              "global_id": 11,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 285,
+              "global_id": 13,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 629,
+              "global_id": 15,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 943,
+              "global_id": 17,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "NEW"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sequence_id": "Z04",
+      "num_frames": 5,
+      "wrong_id_total": 0,
+      "uncertain_total": 0,
+      "elapsed_ms": 304.3852760001755,
+      "frames": [
+        {
+          "frame": "Z04_F00_topdown_same_geom_start.ply",
+          "wrong_id": 0,
+          "frame_status": "INITIAL",
+          "uncertain": 0
+        },
+        {
+          "frame": "Z04_F01_topdown_nearest_neighbor_trap.ply",
+          "wrong_id": 0,
+          "frame_status": "OK",
+          "uncertain": 0,
+          "semantic_reason_codes": [],
+          "topdown_layer_assignment": {
+            "applied": true,
+            "mode": "TOPDOWN_SEMANTIC_CARDINALITY_PLUS_TOP_Z",
+            "topdown_fraction": 1.0,
+            "expected_by_layer": {
+              "1": 6
+            },
+            "before": {
+              "305": 1,
+              "438": 1,
+              "441": 1,
+              "713": 1,
+              "786": 1,
+              "870": 1
+            },
+            "after": {
+              "305": 1,
+              "438": 1,
+              "441": 1,
+              "713": 1,
+              "786": 1,
+              "870": 1
+            },
+            "changed_instances": []
+          },
+          "observations": [
+            {
+              "instance_id": 441,
+              "global_id": 0,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 713,
+              "global_id": 1,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 870,
+              "global_id": 2,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 438,
+              "global_id": 3,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 786,
+              "global_id": 4,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 305,
+              "global_id": 5,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            }
+          ]
+        },
+        {
+          "frame": "Z04_F02_topdown_same_spec_new_after_shift.ply",
+          "wrong_id": 0,
+          "frame_status": "OK",
+          "uncertain": 0,
+          "semantic_reason_codes": [],
+          "topdown_layer_assignment": {
+            "applied": true,
+            "mode": "TOPDOWN_SEMANTIC_CARDINALITY_PLUS_TOP_Z",
+            "topdown_fraction": 1.0,
+            "expected_by_layer": {
+              "1": 7
+            },
+            "before": {
+              "270": 1,
+              "297": 1,
+              "542": 1,
+              "603": 1,
+              "626": 1,
+              "914": 1,
+              "948": 1
+            },
+            "after": {
+              "270": 1,
+              "297": 1,
+              "542": 1,
+              "603": 1,
+              "626": 1,
+              "914": 1,
+              "948": 1
+            },
+            "changed_instances": []
+          },
+          "observations": [
+            {
+              "instance_id": 948,
+              "global_id": 0,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 626,
+              "global_id": 1,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 914,
+              "global_id": 2,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 297,
+              "global_id": 3,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 270,
+              "global_id": 4,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 542,
+              "global_id": 5,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 603,
+              "global_id": 6,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "NEW"
+            }
+          ]
+        },
+        {
+          "frame": "Z04_F03_topdown_same_geom_partial_center.ply",
+          "wrong_id": 0,
+          "frame_status": "OK",
+          "uncertain": 0,
+          "semantic_reason_codes": [],
+          "topdown_layer_assignment": {
+            "applied": true,
+            "mode": "TOPDOWN_SEMANTIC_CARDINALITY_PLUS_TOP_Z",
+            "topdown_fraction": 1.0,
+            "expected_by_layer": {
+              "1": 7
+            },
+            "before": {
+              "179": 1,
+              "223": 1,
+              "381": 1,
+              "844": 1,
+              "858": 1,
+              "918": 1,
+              "939": 1
+            },
+            "after": {
+              "179": 1,
+              "223": 1,
+              "381": 1,
+              "844": 1,
+              "858": 1,
+              "918": 1,
+              "939": 1
+            },
+            "changed_instances": []
+          },
+          "observations": [
+            {
+              "instance_id": 939,
+              "global_id": 0,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 179,
+              "global_id": 1,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 223,
+              "global_id": 2,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 918,
+              "global_id": 3,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 858,
+              "global_id": 4,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 844,
+              "global_id": 5,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 381,
+              "global_id": 6,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            }
+          ]
+        },
+        {
+          "frame": "Z04_F04_topdown_same_geom_occluded.ply",
+          "wrong_id": 0,
+          "frame_status": "OK",
+          "uncertain": 0,
+          "semantic_reason_codes": [],
+          "topdown_layer_assignment": {
+            "applied": true,
+            "mode": "TOPDOWN_SEMANTIC_CARDINALITY_PLUS_TOP_Z",
+            "topdown_fraction": 1.0,
+            "expected_by_layer": {
+              "1": 7
+            },
+            "before": {
+              "325": 1,
+              "452": 1,
+              "671": 1,
+              "714": 1,
+              "800": 1,
+              "885": 1,
+              "2402": 1
+            },
+            "after": {
+              "325": 1,
+              "452": 1,
+              "671": 1,
+              "714": 1,
+              "800": 1,
+              "885": 1,
+              "2402": 1
+            },
+            "changed_instances": []
+          },
+          "observations": [
+            {
+              "instance_id": 671,
+              "global_id": 0,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 452,
+              "global_id": 1,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 2402,
+              "global_id": 2,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 714,
+              "global_id": 3,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 325,
+              "global_id": 4,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 800,
+              "global_id": 5,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 885,
+              "global_id": 6,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sequence_id": "Z05",
+      "num_frames": 4,
+      "wrong_id_total": 0,
+      "uncertain_total": 0,
+      "elapsed_ms": 246.51174000064202,
+      "frames": [
+        {
+          "frame": "Z05_F00_multiview_yaw_motion_0.ply",
+          "wrong_id": 0,
+          "frame_status": "INITIAL",
+          "uncertain": 0
+        },
+        {
+          "frame": "Z05_F01_topdown_yaw_motion_1.ply",
+          "wrong_id": 0,
+          "frame_status": "OK",
+          "uncertain": 0,
+          "semantic_reason_codes": [],
+          "topdown_layer_assignment": {
+            "applied": true,
+            "mode": "TOPDOWN_SEMANTIC_CARDINALITY_PLUS_TOP_Z",
+            "topdown_fraction": 1.0,
+            "expected_by_layer": {
+              "1": 6
+            },
+            "before": {
+              "125": 1,
+              "143": 1,
+              "372": 1,
+              "545": 1,
+              "706": 1,
+              "712": 1
+            },
+            "after": {
+              "125": 1,
+              "143": 1,
+              "372": 1,
+              "545": 1,
+              "706": 1,
+              "712": 1
+            },
+            "changed_instances": []
+          },
+          "observations": [
+            {
+              "instance_id": 712,
+              "global_id": 0,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 125,
+              "global_id": 1,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 706,
+              "global_id": 2,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 143,
+              "global_id": 3,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 372,
+              "global_id": 4,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 545,
+              "global_id": 5,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            }
+          ]
+        },
+        {
+          "frame": "Z05_F02_topdown_yaw_motion_2.ply",
+          "wrong_id": 0,
+          "frame_status": "OK",
+          "uncertain": 0,
+          "semantic_reason_codes": [],
+          "topdown_layer_assignment": {
+            "applied": true,
+            "mode": "TOPDOWN_SEMANTIC_CARDINALITY_PLUS_TOP_Z",
+            "topdown_fraction": 1.0,
+            "expected_by_layer": {
+              "1": 6
+            },
+            "before": {
+              "110": 1,
+              "337": 1,
+              "450": 1,
+              "510": 1,
+              "720": 1,
+              "801": 1
+            },
+            "after": {
+              "110": 1,
+              "337": 1,
+              "450": 1,
+              "510": 1,
+              "720": 1,
+              "801": 1
+            },
+            "changed_instances": []
+          },
+          "observations": [
+            {
+              "instance_id": 510,
+              "global_id": 0,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 450,
+              "global_id": 1,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 720,
+              "global_id": 2,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 110,
+              "global_id": 3,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 337,
+              "global_id": 4,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 801,
+              "global_id": 5,
+              "observation_mode": "TOP_DOWN_Z",
+              "state": "MATCHED"
+            }
+          ]
+        },
+        {
+          "frame": "Z05_F03_multiview_yaw_motion_3.ply",
+          "wrong_id": 0,
+          "frame_status": "OK",
+          "uncertain": 0,
+          "semantic_reason_codes": [],
+          "topdown_layer_assignment": {
+            "applied": false,
+            "mode": "GEOMETRIC_LAYER_GUESS",
+            "topdown_fraction": 0.0,
+            "expected_by_layer": {},
+            "before": {
+              "132": 1,
+              "245": 1,
+              "253": 1,
+              "526": 1,
+              "693": 1,
+              "883": 1
+            },
+            "after": {
+              "132": 1,
+              "245": 1,
+              "253": 1,
+              "526": 1,
+              "693": 1,
+              "883": 1
+            }
+          },
+          "observations": [
+            {
+              "instance_id": 526,
+              "global_id": 0,
+              "observation_mode": "MULTI_VIEW",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 883,
+              "global_id": 1,
+              "observation_mode": "MULTI_VIEW",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 245,
+              "global_id": 2,
+              "observation_mode": "MULTI_VIEW",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 693,
+              "global_id": 3,
+              "observation_mode": "MULTI_VIEW",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 132,
+              "global_id": 4,
+              "observation_mode": "MULTI_VIEW",
+              "state": "MATCHED"
+            },
+            {
+              "instance_id": 253,
+              "global_id": 5,
+              "observation_mode": "MULTI_VIEW",
+              "state": "MATCHED"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

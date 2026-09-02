@@ -1,0 +1,1382 @@
+{
+  "run": {
+    "pair": {
+      "pair_id": "pair_031",
+      "sequence_id": "S06",
+      "pair_type": "temporal_adjacent",
+      "previous_file": "S06_F00_all_visible.ply",
+      "current_file": "S06_F01_id2_partial.ply",
+      "previous_frame_index": "0",
+      "current_frame_index": "1",
+      "recommended_for_id_eval": "1"
+    },
+    "history_mode": "confirmed_gt",
+    "config": {
+      "business": {
+        "wrong_id_allowed": false,
+        "allow_uncertain": true,
+        "old_coil_removal_supported": false,
+        "layer1_max_slots": 10
+      },
+      "geometry": {
+        "diameter_range_m": [
+          1.1,
+          1.5
+        ],
+        "length_range_m": [
+          0.5,
+          1.7
+        ],
+        "center_quantile": 0.005,
+        "size_quantile": 0.01,
+        "layer2_center_z_min_m": 1.15
+      },
+      "motion_roi": {
+        "x_absolute_max_m": 2.0,
+        "x_default_m": 1.5,
+        "y_default_m": 0.4,
+        "z_default_m": 0.3
+      },
+      "matching": {
+        "diameter_gate_m": 0.36,
+        "length_gate_m": 0.38,
+        "diameter_scale_m": 0.2,
+        "length_scale_m": 0.25,
+        "yaw_scale_deg": 15.0,
+        "w_position": 0.62,
+        "w_diameter": 0.1,
+        "w_length": 0.1,
+        "w_yaw": 0.03,
+        "w_quality": 0.15,
+        "anchor_quality_min": 0.66,
+        "anchor_best_cost_max": 0.42,
+        "anchor_margin_min": 0.24,
+        "skip_history_cost": 0.9,
+        "insert_current_cost": 0.9
+      },
+      "new_coil": {
+        "position_tolerance_m": 0.5,
+        "diameter_tolerance_m": 0.25,
+        "length_tolerance_m": 0.3
+      },
+      "visualization": {
+        "sample_points_per_instance": 550
+      }
+    },
+    "history": [
+      {
+        "global_id": 0,
+        "layer": 1,
+        "slot": 0,
+        "cluster": "left",
+        "stable_diameter": 1.1899999380111694,
+        "stable_length": 1.5900001525878906,
+        "center": [
+          0.6249999690055847,
+          0.0,
+          0.6349999690055848
+        ],
+        "yaw_deg": 0.0,
+        "visibility": "VISIBLE",
+        "last_instance_id": 196,
+        "confidence": 1.0
+      },
+      {
+        "global_id": 1,
+        "layer": 1,
+        "slot": 1,
+        "cluster": "left",
+        "stable_diameter": 1.2064999341964722,
+        "stable_length": 1.5600004196166992,
+        "center": [
+          1.8482499051094055,
+          0.0,
+          0.6432499670982361
+        ],
+        "yaw_deg": 0.0,
+        "visibility": "VISIBLE",
+        "last_instance_id": 575,
+        "confidence": 1.0
+      },
+      {
+        "global_id": 2,
+        "layer": 1,
+        "slot": 2,
+        "cluster": "left",
+        "stable_diameter": 1.2400000095367432,
+        "stable_length": 1.6900005340576172,
+        "center": [
+          3.096499876976013,
+          0.0,
+          0.6600000047683716
+        ],
+        "yaw_deg": 0.0,
+        "visibility": "VISIBLE",
+        "last_instance_id": 448,
+        "confidence": 1.0
+      },
+      {
+        "global_id": 3,
+        "layer": 1,
+        "slot": 3,
+        "cluster": "left",
+        "stable_diameter": 1.179999828338623,
+        "stable_length": 1.6600008010864258,
+        "center": [
+          4.331499795913697,
+          0.0,
+          0.6299999141693116
+        ],
+        "yaw_deg": 0.0,
+        "visibility": "VISIBLE",
+        "last_instance_id": 648,
+        "confidence": 1.0
+      },
+      {
+        "global_id": 4,
+        "layer": 1,
+        "slot": 4,
+        "cluster": "left",
+        "stable_diameter": 1.2000000476837158,
+        "stable_length": 1.619999885559082,
+        "center": [
+          5.5464997339248665,
+          0.0,
+          0.640000023841858
+        ],
+        "yaw_deg": 0.0,
+        "visibility": "VISIBLE",
+        "last_instance_id": 357,
+        "confidence": 1.0
+      },
+      {
+        "global_id": 5,
+        "layer": 1,
+        "slot": 5,
+        "cluster": "left",
+        "stable_diameter": 1.1799999475479126,
+        "stable_length": 1.619999885559082,
+        "center": [
+          6.761499731540681,
+          0.0,
+          0.6299999737739563
+        ],
+        "yaw_deg": 0.0,
+        "visibility": "VISIBLE",
+        "last_instance_id": 857,
+        "confidence": 1.0
+      }
+    ],
+    "observations": [
+      {
+        "instance_id": 238,
+        "center": [
+          0.6071072220802307,
+          -6.857514381408691e-05,
+          0.6174089312553406
+        ],
+        "point_count": 5835,
+        "diameter": 1.1542929894486251,
+        "length": 1.6004416023951906,
+        "yaw_deg": 4.0,
+        "quality": 0.8295285752833715,
+        "layer_guess": 1,
+        "bbox_min": [
+          -0.08600002527236938,
+          -0.9524360299110413,
+          -0.07542109489440918
+        ],
+        "bbox_max": [
+          1.3311686515808105,
+          0.9452602863311768,
+          1.2449222803115845
+        ],
+        "raw_width_x": 1.4171686172485352,
+        "raw_width_y": 1.8976962566375732
+      },
+      {
+        "instance_id": 320,
+        "center": [
+          6.755054473876953,
+          -0.005009561777114868,
+          0.6191918253898621
+        ],
+        "point_count": 6518,
+        "diameter": 1.1524933417380954,
+        "length": 1.6118318108860397,
+        "yaw_deg": 2.0,
+        "quality": 0.8337350061612985,
+        "layer_guess": 1,
+        "bbox_min": [
+          6.087912082672119,
+          -0.9650354981422424,
+          -0.047703444957733154
+        ],
+        "bbox_max": [
+          7.448337554931641,
+          0.886750340461731,
+          1.2506858110427856
+        ],
+        "raw_width_x": 1.3604254722595215,
+        "raw_width_y": 1.8517858982086182
+      },
+      {
+        "instance_id": 616,
+        "center": [
+          5.538540363311768,
+          -0.009294122457504272,
+          0.6158223748207092
+        ],
+        "point_count": 8733,
+        "diameter": 1.2023108330348276,
+        "length": 1.622371453244972,
+        "yaw_deg": 0.5,
+        "quality": 0.8448518027638664,
+        "layer_guess": 1,
+        "bbox_min": [
+          4.880209445953369,
+          -0.9720697402954102,
+          -0.015011191368103027
+        ],
+        "bbox_max": [
+          6.228585720062256,
+          0.9549740552902222,
+          1.2494661808013916
+        ],
+        "raw_width_x": 1.3483762741088867,
+        "raw_width_y": 1.9270437955856323
+      },
+      {
+        "instance_id": 632,
+        "center": [
+          1.8645708560943604,
+          0.0013547539710998535,
+          0.6316937804222107
+        ],
+        "point_count": 7608,
+        "diameter": 1.1974110184564248,
+        "length": 1.5566490548136618,
+        "yaw_deg": -2.75,
+        "quality": 0.8396111690938188,
+        "layer_guess": 1,
+        "bbox_min": [
+          1.1979293823242188,
+          -0.9199771285057068,
+          -0.09980165958404541
+        ],
+        "bbox_max": [
+          2.5665206909179688,
+          0.9371249079704285,
+          1.3332545757293701
+        ],
+        "raw_width_x": 1.36859130859375,
+        "raw_width_y": 1.8571020364761353
+      },
+      {
+        "instance_id": 664,
+        "center": [
+          4.320844650268555,
+          -0.0030915141105651855,
+          0.601381242275238
+        ],
+        "point_count": 8255,
+        "diameter": 1.1772329950332638,
+        "length": 1.6601982092857361,
+        "yaw_deg": 0.0,
+        "quality": 0.8427127442898961,
+        "layer_guess": 1,
+        "bbox_min": [
+          3.6404926776885986,
+          -0.9883637428283691,
+          -0.11158949136734009
+        ],
+        "bbox_max": [
+          4.990087032318115,
+          0.9768187999725342,
+          1.268113136291504
+        ],
+        "raw_width_x": 1.3495943546295166,
+        "raw_width_y": 1.9651825428009033
+      },
+      {
+        "instance_id": 826,
+        "center": [
+          3.0954041481018066,
+          0.043987125158309937,
+          0.6411696672439575
+        ],
+        "point_count": 4654,
+        "diameter": 1.1027739144749589,
+        "length": 1.6218719481983768,
+        "yaw_deg": -1.0,
+        "quality": 0.8209348081581872,
+        "layer_guess": 1,
+        "bbox_min": [
+          2.4567482471466064,
+          -1.0050368309020996,
+          -0.06151938438415527
+        ],
+        "bbox_max": [
+          3.769029140472412,
+          1.0129365921020508,
+          1.3081849813461304
+        ],
+        "raw_width_x": 1.3122808933258057,
+        "raw_width_y": 2.0179734230041504
+      }
+    ],
+    "hints": [],
+    "candidates": [
+      {
+        "global_id": 0,
+        "instance_id": 238,
+        "accepted": true,
+        "cost": 0.03328591764969807,
+        "reasons": [],
+        "components": {
+          "position": 0.003580591889071975,
+          "diameter": 0.03187465439120462,
+          "length": 0.001744381985253842,
+          "yaw": 0.07111111111111111,
+          "quality": 0.17047142471662846
+        }
+      },
+      {
+        "global_id": 0,
+        "instance_id": 320,
+        "accepted": false,
+        "cost": null,
+        "reasons": [
+          "OUTSIDE_X_ROI"
+        ],
+        "components": {
+          "position": 16.704074922763887,
+          "diameter": 0.03516861909978434,
+          "length": 0.0076259408647542356,
+          "yaw": 0.017777777777777778,
+          "quality": 0.16626499383870152
+        }
+      },
+      {
+        "global_id": 0,
+        "instance_id": 616,
+        "accepted": false,
+        "cost": null,
+        "reasons": [
+          "OUTSIDE_X_ROI"
+        ],
+        "components": {
+          "position": 10.734794861427838,
+          "diameter": 0.003788953407088256,
+          "length": 0.01676641769969852,
+          "yaw": 0.0011111111111111111,
+          "quality": 0.1551481972361336
+        }
+      },
+      {
+        "global_id": 0,
+        "instance_id": 632,
+        "accepted": true,
+        "cost": 0.45046708179541267,
+        "reasons": [],
+        "components": {
+          "position": 0.683037807074747,
+          "diameter": 0.0013731028341511754,
+          "length": 0.017796731563938753,
+          "yaw": 0.033611111111111105,
+          "quality": 0.16038883090618117
+        }
+      },
+      {
+        "global_id": 0,
+        "instance_id": 664,
+        "accepted": false,
+        "cost": null,
+        "reasons": [
+          "OUTSIDE_X_ROI"
+        ],
+        "components": {
+          "position": 6.083403457541415,
+          "diameter": 0.004074870825027324,
+          "length": 0.07884427462646293,
+          "yaw": 0.0,
+          "quality": 0.15728725571010393
+        }
+      },
+      {
+        "global_id": 0,
+        "instance_id": 826,
+        "accepted": false,
+        "cost": null,
+        "reasons": [
+          "OUTSIDE_X_ROI"
+        ],
+        "components": {
+          "position": 2.724914447653032,
+          "diameter": 0.19020947954848896,
+          "length": 0.01625298168698566,
+          "yaw": 0.0044444444444444444,
+          "quality": 0.1790651918418128
+        }
+      },
+      {
+        "global_id": 1,
+        "instance_id": 238,
+        "accepted": true,
+        "cost": 0.46621034547202117,
+        "reasons": [],
+        "components": {
+          "position": 0.6920574240454748,
+          "diameter": 0.06813912699761884,
+          "length": 0.026167828232373593,
+          "yaw": 0.07111111111111111,
+          "quality": 0.17047142471662846
+        }
+      },
+      {
+        "global_id": 1,
+        "instance_id": 320,
+        "accepted": false,
+        "cost": null,
+        "reasons": [
+          "OUTSIDE_X_ROI"
+        ],
+        "components": {
+          "position": 10.707357261800087,
+          "diameter": 0.07291780072413005,
+          "length": 0.04298388993464737,
+          "yaw": 0.017777777777777778,
+          "quality": 0.16626499383870152
+        }
+      },
+      {
+        "global_id": 1,
+        "instance_id": 616,
+        "accepted": false,
+        "cost": null,
+        "reasons": [
+          "OUTSIDE_X_ROI"
+        ],
+        "components": {
+          "position": 6.0614512067195765,
+          "diameter": 0.00043871421356230655,
+          "length": 0.062242333373746156,
+          "yaw": 0.0011111111111111111,
+          "quality": 0.1551481972361336
+        }
+      },
+      {
+        "global_id": 1,
+        "instance_id": 632,
+        "accepted": true,
+        "cost": 0.02629164204133695,
+        "reasons": [],
+        "components": {
+          "position": 0.0016136975243280355,
+          "diameter": 0.0020652097332420033,
+          "length": 0.0001797063366886106,
+          "yaw": 0.033611111111111105,
+          "quality": 0.16038883090618117
+        }
+      },
+      {
+        "global_id": 1,
+        "instance_id": 664,
+        "accepted": false,
+        "cost": null,
+        "reasons": [
+          "OUTSIDE_X_ROI"
+        ],
+        "components": {
+          "position": 2.736748412675732,
+          "diameter": 0.021413843199573433,
+          "length": 0.160633552872969,
+          "yaw": 0.0,
+          "quality": 0.15728725571010393
+        }
+      },
+      {
+        "global_id": 1,
+        "instance_id": 826,
+        "accepted": true,
+        "cost": 0.4961405674233803,
+        "reasons": [],
+        "components": {
+          "position": 0.7034270963179876,
+          "diameter": 0.2689771791816941,
+          "length": 0.06124937678453347,
+          "yaw": 0.0044444444444444444,
+          "quality": 0.1790651918418128
+        }
+      },
+      {
+        "global_id": 2,
+        "instance_id": 238,
+        "accepted": false,
+        "cost": null,
+        "reasons": [
+          "OUTSIDE_X_ROI"
+        ],
+        "components": {
+          "position": 2.774411486645998,
+          "diameter": 0.1836423323096267,
+          "length": 0.12833283584824307,
+          "yaw": 0.07111111111111111,
+          "quality": 0.17047142471662846
+        }
+      },
+      {
+        "global_id": 2,
+        "instance_id": 320,
+        "accepted": false,
+        "cost": null,
+        "reasons": [
+          "OUTSIDE_X_ROI"
+        ],
+        "components": {
+          "position": 5.967558815342366,
+          "diameter": 0.19143542273057257,
+          "length": 0.09776558851639554,
+          "yaw": 0.017777777777777778,
+          "quality": 0.16626499383870152
+        }
+      },
+      {
+        "global_id": 2,
+        "instance_id": 616,
+        "accepted": false,
+        "cost": null,
+        "reasons": [
+          "OUTSIDE_X_ROI"
+        ],
+        "components": {
+          "position": 2.672696906828387,
+          "diameter": 0.0355118506348137,
+          "length": 0.07317908114501268,
+          "yaw": 0.0011111111111111111,
+          "quality": 0.1551481972361336
+        }
+      },
+      {
+        "global_id": 2,
+        "instance_id": 632,
+        "accepted": true,
+        "cost": 0.48177682637387725,
+        "reasons": [],
+        "components": {
+          "position": 0.6834248802823168,
+          "diameter": 0.045345554030985856,
+          "length": 0.2845218722648171,
+          "yaw": 0.033611111111111105,
+          "quality": 0.16038883090618117
+        }
+      },
+      {
+        "global_id": 2,
+        "instance_id": 664,
+        "accepted": true,
+        "cost": 0.47163509724628644,
+        "reasons": [],
+        "components": {
+          "position": 0.7044704482527049,
+          "diameter": 0.0984924527419996,
+          "length": 0.014210856988938798,
+          "yaw": 0.0,
+          "quality": 0.15728725571010393
+        }
+      },
+      {
+        "global_id": 2,
+        "instance_id": 826,
+        "accepted": true,
+        "cost": 0.09143763624373935,
+        "reasons": [],
+        "components": {
+          "position": 0.016033249163680017,
+          "diameter": 0.47077502914764646,
+          "length": 0.0742640673788783,
+          "yaw": 0.0044444444444444444,
+          "quality": 0.1790651918418128
+        }
+      },
+      {
+        "global_id": 3,
+        "instance_id": 238,
+        "accepted": false,
+        "cost": null,
+        "reasons": [
+          "OUTSIDE_X_ROI"
+        ],
+        "components": {
+          "position": 6.166694858410658,
+          "diameter": 0.016521039142907736,
+          "length": 0.05675677037987245,
+          "yaw": 0.07111111111111111,
+          "quality": 0.17047142471662846
+        }
+      },
+      {
+        "global_id": 3,
+        "instance_id": 320,
+        "accepted": false,
+        "cost": null,
+        "reasons": [
+          "OUTSIDE_X_ROI"
+        ],
+        "components": {
+          "position": 2.611951357806578,
+          "diameter": 0.01891517012762522,
+          "length": 0.037124025870798306,
+          "yaw": 0.017777777777777778,
+          "quality": 0.16626499383870152
+        }
+      },
+      {
+        "global_id": 3,
+        "instance_id": 616,
+        "accepted": true,
+        "cost": 0.4300047948263264,
+        "reasons": [],
+        "components": {
+          "position": 0.650305211404566,
+          "diameter": 0.012444523263851488,
+          "length": 0.02265548510356995,
+          "yaw": 0.0011111111111111111,
+          "quality": 0.1551481972361336
+        }
+      },
+      {
+        "global_id": 3,
+        "instance_id": 632,
+        "accepted": false,
+        "cost": null,
+        "reasons": [
+          "OUTSIDE_X_ROI"
+        ],
+        "components": {
+          "position": 2.704815970407391,
+          "diameter": 0.007578738532955967,
+          "length": 0.1709053353220766,
+          "yaw": 0.033611111111111105,
+          "quality": 0.16038883090618117
+        }
+      },
+      {
+        "global_id": 3,
+        "instance_id": 664,
+        "accepted": true,
+        "cost": 0.029322804202631232,
+        "reasons": [],
+        "components": {
+          "position": 0.009210508189953358,
+          "diameter": 0.0001913841634911238,
+          "length": 6.235199544793159e-07,
+          "yaw": 0.0,
+          "quality": 0.15728725571010393
+        }
+      },
+      {
+        "global_id": 3,
+        "instance_id": 826,
+        "accepted": true,
+        "cost": 0.4736161782850216,
+        "reasons": [],
+        "components": {
+          "position": 0.6925602688211736,
+          "diameter": 0.14909604430195197,
+          "length": 0.023260950760935737,
+          "yaw": 0.0044444444444444444,
+          "quality": 0.1790651918418128
+        }
+      },
+      {
+        "global_id": 4,
+        "instance_id": 238,
+        "accepted": false,
+        "cost": null,
+        "reasons": [
+          "OUTSIDE_X_ROI"
+        ],
+        "components": {
+          "position": 10.849047728356796,
+          "diameter": 0.052228379312649294,
+          "length": 0.006120423045103331,
+          "yaw": 0.07111111111111111,
+          "quality": 0.17047142471662846
+        }
+      },
+      {
+        "global_id": 4,
+        "instance_id": 320,
+        "accepted": true,
+        "cost": 0.43677975364221133,
+        "reasons": [],
+        "components": {
+          "position": 0.6541253315296461,
+          "diameter": 0.05642217774509124,
+          "length": 0.0010674791018303394,
+          "yaw": 0.017777777777777778,
+          "quality": 0.16626499383870152
+        }
+      },
+      {
+        "global_id": 4,
+        "instance_id": 616,
+        "accepted": true,
+        "cost": 0.027707053331634618,
+        "reasons": [],
+        "components": {
+          "position": 0.007063132511728951,
+          "diameter": 0.00013349322347281433,
+          "length": 8.998933262012049e-05,
+          "yaw": 0.0011111111111111111,
+          "quality": 0.1551481972361336
+        }
+      },
+      {
+        "global_id": 4,
+        "instance_id": 632,
+        "accepted": false,
+        "cost": null,
+        "reasons": [
+          "OUTSIDE_X_ROI"
+        ],
+        "components": {
+          "position": 6.025933739165457,
+          "diameter": 0.00016757680849417377,
+          "length": 0.06421324409815814,
+          "yaw": 0.033611111111111105,
+          "quality": 0.16038883090618117
+        }
+      },
+      {
+        "global_id": 4,
+        "instance_id": 664,
+        "accepted": true,
+        "cost": 0.45173350643120885,
+        "reasons": [],
+        "components": {
+          "position": 0.6842889080484348,
+          "diameter": 0.012958467159711313,
+          "length": 0.025854483686926118,
+          "yaw": 0.0,
+          "quality": 0.15728725571010393
+        }
+      },
+      {
+        "global_id": 4,
+        "instance_id": 826,
+        "accepted": false,
+        "cost": null,
+        "reasons": [
+          "OUTSIDE_X_ROI"
+        ],
+        "components": {
+          "position": 2.6822723743101875,
+          "diameter": 0.23632302446817377,
+          "length": 5.6073896407090764e-05,
+          "yaw": 0.0044444444444444444,
+          "quality": 0.1790651918418128
+        }
+      },
+      {
+        "global_id": 5,
+        "instance_id": 238,
+        "accepted": false,
+        "cost": null,
+        "reasons": [
+          "OUTSIDE_X_ROI"
+        ],
+        "components": {
+          "position": 16.83578248241118,
+          "diameter": 0.01652119236796304,
+          "length": 0.006120423045103331,
+          "yaw": 0.07111111111111111,
+          "quality": 0.17047142471662846
+        }
+      },
+      {
+        "global_id": 5,
+        "instance_id": 320,
+        "accepted": true,
+        "cost": 0.02838478948612988,
+        "reasons": [],
+        "components": {
+          "position": 0.0014732673530106577,
+          "diameter": 0.018915334079416774,
+          "length": 0.0010674791018303394,
+          "yaw": 0.017777777777777778,
+          "quality": 0.16626499383870152
+        }
+      },
+      {
+        "global_id": 5,
+        "instance_id": 616,
+        "accepted": true,
+        "cost": 0.43840747234772776,
+        "reasons": [],
+        "components": {
+          "position": 0.6674975346253014,
+          "diameter": 0.01244439028025581,
+          "length": 8.998933262012049e-05,
+          "yaw": 0.0011111111111111111,
+          "quality": 0.1551481972361336
+        }
+      },
+      {
+        "global_id": 5,
+        "instance_id": 632,
+        "accepted": false,
+        "cost": null,
+        "reasons": [
+          "OUTSIDE_X_ROI"
+        ],
+        "components": {
+          "position": 10.657782197969073,
+          "diameter": 0.0075786347545310296,
+          "length": 0.06421324409815814,
+          "yaw": 0.033611111111111105,
+          "quality": 0.16038883090618117
+        }
+      },
+      {
+        "global_id": 5,
+        "instance_id": 664,
+        "accepted": false,
+        "cost": null,
+        "reasons": [
+          "OUTSIDE_X_ROI"
+        ],
+        "components": {
+          "position": 2.6566255210348904,
+          "diameter": 0.00019140065545802704,
+          "length": 0.025854483686926118,
+          "yaw": 0.0,
+          "quality": 0.15728725571010393
+        }
+      },
+      {
+        "global_id": 5,
+        "instance_id": 826,
+        "accepted": false,
+        "cost": null,
+        "reasons": [
+          "OUTSIDE_X_ROI"
+        ],
+        "components": {
+          "position": 5.986926643524354,
+          "diameter": 0.14909650460462356,
+          "length": 5.6073896407090764e-05,
+          "yaw": 0.0044444444444444444,
+          "quality": 0.1790651918418128
+        }
+      }
+    ],
+    "anchors": [
+      {
+        "global_id": 0,
+        "instance_id": 238,
+        "cost": 0.03328591764969807
+      },
+      {
+        "global_id": 1,
+        "instance_id": 632,
+        "cost": 0.02629164204133695
+      },
+      {
+        "global_id": 2,
+        "instance_id": 826,
+        "cost": 0.09143763624373935
+      },
+      {
+        "global_id": 3,
+        "instance_id": 664,
+        "cost": 0.029322804202631232
+      },
+      {
+        "global_id": 4,
+        "instance_id": 616,
+        "cost": 0.027707053331634618
+      },
+      {
+        "global_id": 5,
+        "instance_id": 320,
+        "cost": 0.02838478948612988
+      }
+    ],
+    "anchor_audit": [
+      {
+        "instance_id": 238,
+        "best_global_id": 0,
+        "best_cost": 0.03328591764969807,
+        "second_cost": 0.46621034547202117,
+        "margin": 0.4329244278223231,
+        "quality": 0.8295285752833715,
+        "qualifies": true
+      },
+      {
+        "instance_id": 632,
+        "best_global_id": 1,
+        "best_cost": 0.02629164204133695,
+        "second_cost": 0.45046708179541267,
+        "margin": 0.42417543975407573,
+        "quality": 0.8396111690938188,
+        "qualifies": true
+      },
+      {
+        "instance_id": 826,
+        "best_global_id": 2,
+        "best_cost": 0.09143763624373935,
+        "second_cost": 0.4736161782850216,
+        "margin": 0.38217854204128227,
+        "quality": 0.8209348081581872,
+        "qualifies": true
+      },
+      {
+        "instance_id": 664,
+        "best_global_id": 3,
+        "best_cost": 0.029322804202631232,
+        "second_cost": 0.45173350643120885,
+        "margin": 0.42241070222857763,
+        "quality": 0.8427127442898961,
+        "qualifies": true
+      },
+      {
+        "instance_id": 616,
+        "best_global_id": 4,
+        "best_cost": 0.027707053331634618,
+        "second_cost": 0.4300047948263264,
+        "margin": 0.4022977414946918,
+        "quality": 0.8448518027638664,
+        "qualifies": true
+      },
+      {
+        "instance_id": 320,
+        "best_global_id": 5,
+        "best_cost": 0.02838478948612988,
+        "second_cost": 0.43677975364221133,
+        "margin": 0.40839496415608145,
+        "quality": 0.8337350061612985,
+        "qualifies": true
+      }
+    ],
+    "dp": {
+      "1": {
+        "cost": 0.23642984295517008,
+        "shape": [
+          6,
+          6
+        ],
+        "history_order": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "observation_order": [
+          238,
+          632,
+          826,
+          664,
+          616,
+          320
+        ],
+        "actions": [
+          {
+            "action": "MATCH",
+            "global_id": 0,
+            "instance_id": 238,
+            "cost": 0.03328591764969807
+          },
+          {
+            "action": "MATCH",
+            "global_id": 1,
+            "instance_id": 632,
+            "cost": 0.02629164204133695
+          },
+          {
+            "action": "MATCH",
+            "global_id": 2,
+            "instance_id": 826,
+            "cost": 0.09143763624373935
+          },
+          {
+            "action": "MATCH",
+            "global_id": 3,
+            "instance_id": 664,
+            "cost": 0.029322804202631232
+          },
+          {
+            "action": "MATCH",
+            "global_id": 4,
+            "instance_id": 616,
+            "cost": 0.027707053331634618
+          },
+          {
+            "action": "MATCH",
+            "global_id": 5,
+            "instance_id": 320,
+            "cost": 0.02838478948612988
+          }
+        ]
+      }
+    },
+    "actions": [
+      {
+        "action": "MATCH",
+        "global_id": 0,
+        "instance_id": 238,
+        "cost": 0.03328591764969807
+      },
+      {
+        "action": "MATCH",
+        "global_id": 1,
+        "instance_id": 632,
+        "cost": 0.02629164204133695
+      },
+      {
+        "action": "MATCH",
+        "global_id": 2,
+        "instance_id": 826,
+        "cost": 0.09143763624373935
+      },
+      {
+        "action": "MATCH",
+        "global_id": 3,
+        "instance_id": 664,
+        "cost": 0.029322804202631232
+      },
+      {
+        "action": "MATCH",
+        "global_id": 4,
+        "instance_id": 616,
+        "cost": 0.027707053331634618
+      },
+      {
+        "action": "MATCH",
+        "global_id": 5,
+        "instance_id": 320,
+        "cost": 0.02838478948612988
+      }
+    ],
+    "decisions": [
+      {
+        "instance_id": 238,
+        "global_id": 0,
+        "state": "MATCHED",
+        "confidence": 0.963015647055891,
+        "layer": 1,
+        "slot": 0,
+        "cluster": "left",
+        "reason": "ordered DP match",
+        "match_cost": 0.03328591764969807,
+        "hint_id": null
+      },
+      {
+        "instance_id": 632,
+        "global_id": 1,
+        "state": "MATCHED",
+        "confidence": 0.9707870643985145,
+        "layer": 1,
+        "slot": 1,
+        "cluster": "left",
+        "reason": "ordered DP match",
+        "match_cost": 0.02629164204133695,
+        "hint_id": null
+      },
+      {
+        "instance_id": 826,
+        "global_id": 2,
+        "state": "MATCHED",
+        "confidence": 0.8984026263958451,
+        "layer": 1,
+        "slot": 2,
+        "cluster": "left",
+        "reason": "ordered DP match",
+        "match_cost": 0.09143763624373935,
+        "hint_id": null
+      },
+      {
+        "instance_id": 664,
+        "global_id": 3,
+        "state": "MATCHED",
+        "confidence": 0.9674191064415208,
+        "layer": 1,
+        "slot": 3,
+        "cluster": "left",
+        "reason": "ordered DP match",
+        "match_cost": 0.029322804202631232,
+        "hint_id": null
+      },
+      {
+        "instance_id": 616,
+        "global_id": 4,
+        "state": "MATCHED",
+        "confidence": 0.9692143851870727,
+        "layer": 1,
+        "slot": 4,
+        "cluster": "left",
+        "reason": "ordered DP match",
+        "match_cost": 0.027707053331634618,
+        "hint_id": null
+      },
+      {
+        "instance_id": 320,
+        "global_id": 5,
+        "state": "MATCHED",
+        "confidence": 0.9684613450154113,
+        "layer": 1,
+        "slot": 5,
+        "cluster": "left",
+        "reason": "ordered DP match",
+        "match_cost": 0.02838478948612988,
+        "hint_id": null
+      }
+    ],
+    "validator_errors": [],
+    "timing_ms": {
+      "history_ms": 0.06314700021903263,
+      "load_current_ms": 2.142409000043699,
+      "geometry_ms": 118.88826599988533,
+      "candidate_ms": 0.16964299993560417,
+      "anchor_ms": 0.04139400016356376,
+      "dp_ms": 0.055188999795063864,
+      "decision_ms": 0.10807100034071482,
+      "total_ms": 121.47256800017203
+    },
+    "total_dp_cost": 0.23642984295517008
+  },
+  "evaluation": {
+    "wrong_id": 0,
+    "matched_evaluated": 6,
+    "new_tp": 0,
+    "new_fp": 0,
+    "new_fn": 0,
+    "occ_tp": 0,
+    "occ_fp": 0,
+    "occ_fn": 0,
+    "rows": [
+      {
+        "instance_id": 238,
+        "global_id": 0,
+        "state": "MATCHED",
+        "confidence": 0.963015647055891,
+        "layer": 1,
+        "slot": 0,
+        "cluster": "left",
+        "reason": "ordered DP match",
+        "match_cost": 0.03328591764969807,
+        "hint_id": null,
+        "gt_global_id": 0,
+        "gt_is_new": 0,
+        "eval": "OK"
+      },
+      {
+        "instance_id": 632,
+        "global_id": 1,
+        "state": "MATCHED",
+        "confidence": 0.9707870643985145,
+        "layer": 1,
+        "slot": 1,
+        "cluster": "left",
+        "reason": "ordered DP match",
+        "match_cost": 0.02629164204133695,
+        "hint_id": null,
+        "gt_global_id": 1,
+        "gt_is_new": 0,
+        "eval": "OK"
+      },
+      {
+        "instance_id": 826,
+        "global_id": 2,
+        "state": "MATCHED",
+        "confidence": 0.8984026263958451,
+        "layer": 1,
+        "slot": 2,
+        "cluster": "left",
+        "reason": "ordered DP match",
+        "match_cost": 0.09143763624373935,
+        "hint_id": null,
+        "gt_global_id": 2,
+        "gt_is_new": 0,
+        "eval": "OK"
+      },
+      {
+        "instance_id": 664,
+        "global_id": 3,
+        "state": "MATCHED",
+        "confidence": 0.9674191064415208,
+        "layer": 1,
+        "slot": 3,
+        "cluster": "left",
+        "reason": "ordered DP match",
+        "match_cost": 0.029322804202631232,
+        "hint_id": null,
+        "gt_global_id": 3,
+        "gt_is_new": 0,
+        "eval": "OK"
+      },
+      {
+        "instance_id": 616,
+        "global_id": 4,
+        "state": "MATCHED",
+        "confidence": 0.9692143851870727,
+        "layer": 1,
+        "slot": 4,
+        "cluster": "left",
+        "reason": "ordered DP match",
+        "match_cost": 0.027707053331634618,
+        "hint_id": null,
+        "gt_global_id": 4,
+        "gt_is_new": 0,
+        "eval": "OK"
+      },
+      {
+        "instance_id": 320,
+        "global_id": 5,
+        "state": "MATCHED",
+        "confidence": 0.9684613450154113,
+        "layer": 1,
+        "slot": 5,
+        "cluster": "left",
+        "reason": "ordered DP match",
+        "match_cost": 0.02838478948612988,
+        "hint_id": null,
+        "gt_global_id": 5,
+        "gt_is_new": 0,
+        "eval": "OK"
+      }
+    ],
+    "gt_transition": [
+      {
+        "pair_id": "pair_031",
+        "sequence_id": "S06",
+        "pair_type": "temporal_adjacent",
+        "previous_file": "S06_F00_all_visible.ply",
+        "current_file": "S06_F01_id2_partial.ply",
+        "global_id": "0",
+        "previous_instance_id": "196",
+        "current_instance_id": "238",
+        "relation_gt": "SAME_OBJECT",
+        "visibility_event_gt": "VISIBILITY_STABLE",
+        "previous_visibility": "VISIBLE",
+        "current_visibility": "VISIBLE",
+        "is_new_gt": "0",
+        "dx_gt_m": "0.0",
+        "dy_gt_m": "0.0",
+        "dz_gt_m": "0.0",
+        "displacement_gt_m": "0.0",
+        "layer_gt": "1",
+        "slot_gt": "0"
+      },
+      {
+        "pair_id": "pair_031",
+        "sequence_id": "S06",
+        "pair_type": "temporal_adjacent",
+        "previous_file": "S06_F00_all_visible.ply",
+        "current_file": "S06_F01_id2_partial.ply",
+        "global_id": "1",
+        "previous_instance_id": "575",
+        "current_instance_id": "632",
+        "relation_gt": "SAME_OBJECT",
+        "visibility_event_gt": "VISIBILITY_STABLE",
+        "previous_visibility": "VISIBLE",
+        "current_visibility": "VISIBLE",
+        "is_new_gt": "0",
+        "dx_gt_m": "0.0",
+        "dy_gt_m": "0.0",
+        "dz_gt_m": "0.0",
+        "displacement_gt_m": "0.0",
+        "layer_gt": "1",
+        "slot_gt": "1"
+      },
+      {
+        "pair_id": "pair_031",
+        "sequence_id": "S06",
+        "pair_type": "temporal_adjacent",
+        "previous_file": "S06_F00_all_visible.ply",
+        "current_file": "S06_F01_id2_partial.ply",
+        "global_id": "2",
+        "previous_instance_id": "448",
+        "current_instance_id": "826",
+        "relation_gt": "SAME_OBJECT",
+        "visibility_event_gt": "BECAME_PARTIAL",
+        "previous_visibility": "VISIBLE",
+        "current_visibility": "PARTIAL_VISIBLE",
+        "is_new_gt": "0",
+        "dx_gt_m": "0.0",
+        "dy_gt_m": "0.0",
+        "dz_gt_m": "0.0",
+        "displacement_gt_m": "0.0",
+        "layer_gt": "1",
+        "slot_gt": "2"
+      },
+      {
+        "pair_id": "pair_031",
+        "sequence_id": "S06",
+        "pair_type": "temporal_adjacent",
+        "previous_file": "S06_F00_all_visible.ply",
+        "current_file": "S06_F01_id2_partial.ply",
+        "global_id": "3",
+        "previous_instance_id": "648",
+        "current_instance_id": "664",
+        "relation_gt": "SAME_OBJECT",
+        "visibility_event_gt": "VISIBILITY_STABLE",
+        "previous_visibility": "VISIBLE",
+        "current_visibility": "VISIBLE",
+        "is_new_gt": "0",
+        "dx_gt_m": "0.0",
+        "dy_gt_m": "0.0",
+        "dz_gt_m": "0.0",
+        "displacement_gt_m": "0.0",
+        "layer_gt": "1",
+        "slot_gt": "3"
+      },
+      {
+        "pair_id": "pair_031",
+        "sequence_id": "S06",
+        "pair_type": "temporal_adjacent",
+        "previous_file": "S06_F00_all_visible.ply",
+        "current_file": "S06_F01_id2_partial.ply",
+        "global_id": "4",
+        "previous_instance_id": "357",
+        "current_instance_id": "616",
+        "relation_gt": "SAME_OBJECT",
+        "visibility_event_gt": "VISIBILITY_STABLE",
+        "previous_visibility": "VISIBLE",
+        "current_visibility": "VISIBLE",
+        "is_new_gt": "0",
+        "dx_gt_m": "0.0",
+        "dy_gt_m": "0.0",
+        "dz_gt_m": "0.0",
+        "displacement_gt_m": "0.0",
+        "layer_gt": "1",
+        "slot_gt": "4"
+      },
+      {
+        "pair_id": "pair_031",
+        "sequence_id": "S06",
+        "pair_type": "temporal_adjacent",
+        "previous_file": "S06_F00_all_visible.ply",
+        "current_file": "S06_F01_id2_partial.ply",
+        "global_id": "5",
+        "previous_instance_id": "857",
+        "current_instance_id": "320",
+        "relation_gt": "SAME_OBJECT",
+        "visibility_event_gt": "VISIBILITY_STABLE",
+        "previous_visibility": "VISIBLE",
+        "current_visibility": "VISIBLE",
+        "is_new_gt": "0",
+        "dx_gt_m": "0.0",
+        "dy_gt_m": "0.0",
+        "dz_gt_m": "0.0",
+        "displacement_gt_m": "0.0",
+        "layer_gt": "1",
+        "slot_gt": "5"
+      }
+    ],
+    "pass_primary": true
+  }
+}

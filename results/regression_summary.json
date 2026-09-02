@@ -1,0 +1,13 @@
+{
+  "pairs": 114,
+  "wrong_id_total": 0,
+  "validator_failures": 0,
+  "new_tp": 61,
+  "new_fp": 0,
+  "new_fn": 0,
+  "occ_tp": 8,
+  "occ_fp": 3,
+  "occ_fn": 0,
+  "uncertain_total": 3,
+  "max_total_ms": 1143.104
+}

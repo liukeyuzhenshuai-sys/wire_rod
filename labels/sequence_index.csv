@@ -1,0 +1,43 @@
+﻿sequence_id,relation_mode,num_frames,first_file,last_file,purpose
+C01,temporal_adjacent,5,C01_F00_left_complex_start.ply,C01_F04_settling_rebound.ply,"Complex left-cluster loading: every historical coil moves; NEW may have large gap, yaw and imperfect target; rolling/partial observations are combined."
+C02,temporal_adjacent,5,C02_F00_right_complex_start.ply,C02_F04_right_settling.ply,"Complex right-cluster loading: mirrored edge growth with large NEW gaps, negative yaw, all-history motion and partial visibility."
+C03,temporal_adjacent,6,C03_F00_two_side_complex_start.ply,C03_F05_occluded_return_partial.ply,"Two edge clusters grow alternately; both clusters move, NEW gaps/yaw vary, partial/occluded history appears, and the middle free region stays semantically normal."
+C04,temporal_adjacent,5,C04_F00_same_geom_start.ply,C04_F04_same_geom_occluded.ply,"Adversarial same-geometry sequence: all objects share one prototype, entire cluster shifts by more than half a spacing, then a same-spec NEW appears; nearest-neighbor should fail but order semantics must protect identity."
+C05,temporal_adjacent,5,C05_F00_combo_start.ply,C05_F04_combo_recovered.ply,Combined difficult loading: historical occlusion and a far-gap yawed NEW occur in the same frame while every visible old coil moves; then the missing ID returns and loading continues.
+C06,temporal_adjacent,6,C06_F00_full_l1_start.ply,C06_F05_fourth_layer2_new.ply,Full first layer with progressive second-layer loading. New upper coils have yaw and target error; first-layer coils move slightly and visibility degrades/recovers without layer changes.
+C07,temporal_adjacent,5,C07_F00_multi_new_start.ply,C07_F04_multi_new_occlusion_return.ply,"Multi-birth two-side loading: two NEW coils may arrive simultaneously, both with yaw/large gaps, while all old coils move and later one history becomes occluded."
+C08,temporal_adjacent,5,C08_F00_hint_motion_start.ply,C08_F04_large_motion_rebound.ply,Robot-hint tolerance and large-motion stress: NEW actual positions differ substantially from approximate targets; all histories can shift close to ROI limits with Y/Z drift and yaw.
+C09,temporal_adjacent,5,C09_F00_visibility_complex_start.ply,C09_F04_visibility_recovered.ply,"Heavy visibility stress without removal: multiple old coils move, become side-partial or fully occluded, then recover; a yawed NEW is inserted during recovery."
+C10,temporal_adjacent,5,C10_F00_rebound_start.ply,C10_F04_rebound_final_settle.ply,"Non-monotonic settling sequence: historical coils move in X/Y, change yaw, reverse direction, then receive a far-gap NEW. This tests that tracking is not a one-direction velocity model."
+P00,independent_prototypes,7,P00_F00_prototype_00.ply,P00_F06_prototype_06.ply,Independent normalized real prototypes; not a temporal sequence.
+P01,paired_to_baseline,12,P01_F00_baseline.ply,P01_F11_degraded.ply,Single-coil observation variants. Compare every F01..F11 to F00 baseline; do not interpret F01->F02 as physical elapsed time.
+P02,paired_to_baseline,6,P02_F00_edgeOcc_baseline.ply,P02_F05_rollHeavy_noHole.ply,Focused side-occlusion/rolling sanity variants. Compare every F01..F05 to F00 baseline.
+S01,temporal_adjacent,4,S01_F00_left_growth_3.ply,S01_F03_left_growth_6.ply,Layer-1 left cluster grows toward center; one NEW per step.
+S02,temporal_adjacent,3,S02_F00_right_growth_3.ply,S02_F02_right_growth_5.ply,Layer-1 right cluster grows toward center; one NEW per step.
+S03,temporal_adjacent,5,S03_F00_two_sides_4.ply,S03_F04_two_sides_8.ply,Both edge clusters grow toward center; normal large free region remains between clusters.
+S04,paired_to_baseline,4,S04_F00_internal_gap_02cm.ply,S04_F03_internal_gap_45cm.ply,"Internal-gap parameter sweep; frames are controlled variants, not a real temporal loading process."
+S05,temporal_adjacent,4,S05_F00_yaw_motion_0.ply,S05_F03_yaw_motion_3.ply,Existing IDs undergo X movement plus explicit yaw / rolling-observation change.
+S06,temporal_adjacent,5,S06_F00_all_visible.ply,S06_F04_recovered.ply,Visibility lifecycle: visible -> partial -> fully occluded -> partial return -> recovered.
+S07,temporal_adjacent,2,S07_F00_baseline.ply,S07_F01_new_plus_occluded.ply,NEW and a historical OCCLUDED ID occur together.
+S08,temporal_adjacent,3,S08_F00_two_layer_base.ply,S08_F02_two_layer_rollobs.ply,Two-layer scene; add one layer-2 coil then observation changes; layer never changes.
+S09,temporal_adjacent,2,S09_F00_before_two_new.ply,S09_F01_two_new_simultaneous.ply,"Two NEW coils appear simultaneously, one from each side cluster."
+S10,temporal_adjacent,3,S10_F00_same_geometry_stress_0.ply,S10_F02_same_geometry_stress_2.ply,Same/similar geometry identity-swap stress; order semantics must protect IDs.
+S11,temporal_adjacent,2,S11_F00_L1_full_10.ply,S11_F01_L1_full_then_L2_new.ply,Layer 1 is full at 10; subsequent NEW enters layer 2.
+S12,paired_to_baseline,4,S12_F00_view_clean.ply,S12_F03_view_degraded.ply,Cross-view observation stress. Compare top/side/degraded variants to clean baseline.
+S13,independent_stress,1,S13_F00_full_10_plus_8_100k.ply,S13_F00_full_10_plus_8_100k.ply,"Single 10+8, >100k-point performance/capacity snapshot; no previous frame included."
+S14,independent_stress,1,S14_F00_combo_new_yaw_occ_gap.ply,S14_F00_combo_new_yaw_occ_gap.ply,Single combined hard snapshot; useful for geometry/semantic inspection but not standalone temporal ID evaluation.
+Z01,temporal_adjacent,4,Z01_F00_topdown_yaw_motion_0.ply,Z01_F03_topdown_yaw_motion_3.ply,Pure -Z top-camera sequence derived from S05: yaw + nonuniform historical motion; only top-visible surface is retained.
+Z02,temporal_adjacent,6,Z02_F00_topdown_two_side_complex_start.ply,Z02_F05_topdown_occluded_return_partial.ply,"Pure -Z top-camera two-edge-cluster sequence with NEW, gaps, motion and positive partial occlusion."
+Z03,temporal_adjacent,6,Z03_F00_topdown_full_l1_start.ply,Z03_F05_topdown_fourth_layer2_new.ply,Pure -Z top-camera full L1 to L2 loading sequence; global z-buffer makes upper coils physically occlude lower projected surfaces.
+Z04,temporal_adjacent,5,Z04_F00_topdown_same_geom_start.ply,Z04_F04_topdown_same_geom_occluded.ply,"Pure -Z top-camera adversarial same-geometry / nearest-neighbor trap sequence; identity must come from semantics, not full-cylinder geometry."
+Z05,temporal_adjacent,4,Z05_F00_multiview_yaw_motion_0.ply,Z05_F03_multiview_yaw_motion_3.ply,"View-switch sequence: multi-view -> top-only -Z -> top-only -Z -> multi-view, testing persistent identity across acquisition-mode changes."
+D01,temporal_adjacent,4,D01_F00_full_l1_before_l2.ply,D01_F03_upper_settle_l1_locked.ply,Full L1 -> start L2 from left. L1 freezes; upper identity is support pair.
+D02,temporal_adjacent,4,D02_F00_full_l1_before_right_l2.ply,D02_F03_right_new_support6.ply,"Full L1 -> L2 grows from right; verifies upper slot is support valley, not append index."
+D03,temporal_adjacent,4,D03_F00_full_l1.ply,D03_F03_multi_new_support3_5.ply,Alternating non-contiguous upper support slots with multi-NEW. Discrete support topology dominates.
+D04,temporal_adjacent,4,D04_F00_full_l1_multiview.ply,D04_F03_top_upper_motion.ply,L2 loading under pure TOP_DOWN_Z. Upper coils physically clip lower top surfaces while every physical coil remains positively observed.
+D05,temporal_adjacent,3,D05_F00_bootstrap_double_layer.ply,D05_F02_bootstrap_followup.ply,Initial frame is already double-layer (multi-view). Bootstrap must infer 10-slot foundation and support-valley upper IDs without history.
+D06,temporal_adjacent,3,D06_F00_bootstrap_topdown_heavy.ply,D06_F02_topdown_all_eight_settle.ply,Hard bootstrap: initial frame already double-layer and TOP_DOWN_Z with seven upper coils; many foundation coils retain only narrow positive top strips.
+D07,temporal_adjacent,3,D07_F00_support_identity_start.ply,D07_F02_support_offsets_rebound.ply,Support topology identity stress: upper coils move/yaw within their valleys; L1 remains a locked reference lattice.
+D08,temporal_adjacent,3,D08_F00_locked_foundation_start.ply,D08_F02_foundation_returns.ply,"Collapse-risk diagnostic: once L2 is active, a first-layer foundation coil shifts beyond the hard lock. Must surface ABNORMAL, never silently relearn foundation."
+D09,temporal_adjacent,3,D09_F00_upper_support_start.ply,D09_F02_upper_back_on_support.ply,Upper off-support abnormality: historical upper coil leaves its support valley. Must report support topology abnormality instead of hopping ID to adjacent valley.
+D10,temporal_adjacent,6,D10_F00_full_l1.ply,D10_F05_illegal_ninth_support8.ply,"L2 capacity lifecycle: grow to realistic maximum 8, then intentionally request a ninth upper coil to verify capacity abnormality."

@@ -1,0 +1,1 @@
+CASE_001: user-authored failure. Legacy solver skipped historical ID2 with zero current points and shifted later IDs. V0.6 must never create a normal zero-point OCCLUDED/hidden-coil explanation; wrong_id must remain 0 and anomalous ROI may become UNCERTAIN.

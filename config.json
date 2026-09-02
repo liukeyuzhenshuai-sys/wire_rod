@@ -1,0 +1,120 @@
+{
+  "dataset_version": "v0.8-double-layer-handoff",
+  "generator_seed": 20260818,
+  "coordinate_convention": {
+    "x": "primary rolling / semantic ordering direction",
+    "y": "coil axis direction",
+    "z": "height"
+  },
+  "first_layer": {
+    "max_slots": 10,
+    "allowed_growth": [
+      "left_to_center",
+      "right_to_center",
+      "both_edges_to_center"
+    ],
+    "middle_free_region_can_be_normal": true,
+    "layer_change_allowed": false
+  },
+  "point_input_for_algorithm": [
+    "x",
+    "y",
+    "z",
+    "instance_id"
+  ],
+  "point_fields_gt_only": [
+    "global_id",
+    "layer",
+    "slot",
+    "visibility"
+  ],
+  "point_fields_visualization_only": [
+    "red",
+    "green",
+    "blue"
+  ],
+  "visibility_codes": {
+    "VISIBLE": 1,
+    "PARTIAL_VISIBLE": 2,
+    "OCCLUDED": 3,
+    "VIEW_PARTIAL": 4
+  },
+  "hard_rules": [
+    "Do not use RGB or embedded global_id as tracking input.",
+    "Rolling observation mismatch is not axial rigid rotation.",
+    "Rolling mismatch does not create a large contiguous hole.",
+    "Partial occlusion is side-based; center band is preserved.",
+    "Yaw is an explicit Z-axis rotation and is independent of rolling observation mismatch.",
+    "Layer-1 has at most 10 slots and can contain two edge-grown clusters separated by a normal large free region.",
+    "OCCLUDED requires a positive current instance; zero-point historical observations are abnormal and are not normal occlusion.",
+    "TOP_DOWN_Z is generated with a global XY z-buffer for rays along world -Z; it is not a naive z>center crop.",
+    "Identity and motion anomaly are separate: semantic-unique identity may remain MATCHED inside the hard X envelope while motion is marked ABNORMAL.",
+    "Second-layer loading is legal only after layer-1 is full with 10 coils.",
+    "When second-layer loading is active, layer-1 is a locked support foundation; significant layer-1 motion is an abnormal/collapse-risk condition.",
+    "Second-layer semantic slot k is the support valley between layer-1 slots k and k+1.",
+    "Double-layer bootstrap requires positive current point evidence for every layer-1 coil; severe partial visibility is allowed, zero-point inferred coils are not committed."
+  ],
+  "generator_parameters": {
+    "clean_point_noise_sigma_m": 0.008,
+    "roll_mild_radial_amp_m": 0.015,
+    "roll_mild_keep_prob": 0.92,
+    "roll_mild_resample_frac": 0.06,
+    "roll_heavy_radial_amp_m": 0.03,
+    "roll_heavy_keep_prob": 0.79,
+    "roll_heavy_resample_frac": 0.1,
+    "degraded_radial_amp_m": 0.022,
+    "degraded_keep_prob": 0.82,
+    "degraded_resample_frac": 0.05,
+    "edge_occlusion_max_edge_width_fraction": 0.36,
+    "edge_occlusion_center_preserve_fraction": [
+      0.38,
+      0.62
+    ]
+  },
+  "topdown_view": {
+    "mode": "TOP_DOWN_Z",
+    "ray_direction": [
+      0,
+      0,
+      -1
+    ],
+    "xy_cell_m": 0.05,
+    "surface_thickness_m": 0.055,
+    "positive_visibility_required": true,
+    "note": "Synthetic Z sequences preserve at least a small top-facing observation for every historical coil per current operating assumption."
+  },
+  "motion_envelope": {
+    "x_normal_max_m": 2.0,
+    "x_hard_max_m": 2.4,
+    "inside_hard_policy": "semantic-unique identity may be MATCHED with ABNORMAL_X_MOTION; beyond hard => UNCERTAIN"
+  },
+  "business": {
+    "layer2_max_slots": 9,
+    "layer2_max_coils": 8
+  },
+  "double_layer": {
+    "enabled": true,
+    "requires_full_layer1": true,
+    "layer1_required_slots": 10,
+    "upper_slot_definition": "slot k is supported by layer1 slots k and k+1",
+    "layer1_foundation_normal_xy_m": 0.08,
+    "layer1_foundation_hard_xy_m": 0.15,
+    "layer1_foundation_normal_z_m": 0.08,
+    "layer1_foundation_hard_z_m": 0.15,
+    "layer1_foundation_normal_yaw_deg": 6.0,
+    "layer1_foundation_hard_yaw_deg": 12.0,
+    "freeze_layer1_trackstate_when_active": true,
+    "support_slot_max_center_error_m": 0.42,
+    "support_slot_hard_center_error_m": 0.65,
+    "bootstrap_layer1_count": 10,
+    "bootstrap_require_positive_observation": true,
+    "bootstrap_upper_by_top_z": true,
+    "bootstrap_mode_signal_required": true,
+    "layer1_foundation_topdown_normal_xy_m": 0.12,
+    "layer1_foundation_topdown_hard_xy_m": 0.2,
+    "layer1_foundation_topdown_normal_z_m": 0.15,
+    "layer1_foundation_topdown_hard_z_m": 0.22,
+    "layer1_foundation_topdown_ignore_yaw": true,
+    "foundation_motion_interpretation": "Locked L1: translation is collapse-risk evidence; top-down partial-view centroid/yaw bias is not treated as physical movement unless it breaches top-down displacement envelopes."
+  }
+}

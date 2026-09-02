@@ -1,0 +1,136 @@
+{
+  "business": {
+    "wrong_id_allowed": false,
+    "allow_uncertain": true,
+    "old_coil_removal_supported": false,
+    "layer1_max_slots": 10,
+    "layer2_max_slots": 9,
+    "layer2_max_coils": 8
+  },
+  "geometry": {
+    "diameter_range_m": [
+      1.1,
+      1.5
+    ],
+    "length_range_m": [
+      0.5,
+      1.7
+    ],
+    "center_quantile": 0.005,
+    "size_quantile": 0.01,
+    "layer2_center_z_min_m": 1.15
+  },
+  "motion_roi": {
+    "x_absolute_max_m": 2.0,
+    "x_default_m": 1.5,
+    "y_default_m": 0.4,
+    "z_default_m": 0.3,
+    "x_hard_max_m": 2.4,
+    "y_absolute_max_m": 0.4,
+    "z_absolute_max_m": 0.3
+  },
+  "matching": {
+    "diameter_gate_m": 0.36,
+    "length_gate_m": 0.38,
+    "diameter_scale_m": 0.2,
+    "length_scale_m": 0.25,
+    "yaw_scale_deg": 15.0,
+    "w_position": 0.62,
+    "w_diameter": 0.1,
+    "w_length": 0.1,
+    "w_yaw": 0.03,
+    "w_quality": 0.15,
+    "anchor_quality_min": 0.66,
+    "anchor_best_cost_max": 0.42,
+    "anchor_margin_min": 0.24,
+    "skip_history_cost": 0.9,
+    "insert_current_cost": 0.9,
+    "rank_lock_dx_std_max_m": 0.4,
+    "rank_lock_dx_span_max_m": 0.85
+  },
+  "new_coil": {
+    "position_tolerance_m": 0.5,
+    "diameter_tolerance_m": 0.25,
+    "length_tolerance_m": 0.3
+  },
+  "visualization": {
+    "sample_points_per_instance": 550
+  },
+  "initialization": {
+    "cluster_split_gap_m": 2.2,
+    "right_only_min_mean_x_m": 9.0,
+    "truck_mid_x_m": 7.5
+  },
+  "track_update": {
+    "stable_geometry_alpha": 0.05,
+    "stable_geometry_quality_min": 0.8
+  },
+  "gap": {
+    "contact_threshold_m": 0.06,
+    "clear_gap_threshold_m": 0.15
+  },
+  "visibility": {
+    "occluded_point_ratio_max": 0.52,
+    "partial_point_ratio_max": 0.78,
+    "rule": "OCCLUDED requires nonzero current instance points; zero points => UNOBSERVED",
+    "view_partial_state": "VIEW_PARTIAL"
+  },
+  "semantic": {
+    "uncertain_pair_cost": 8.0,
+    "relaxed_pair_penalty": 0.25,
+    "abnormal_motion_penalty": 0.55,
+    "abnormal_motion_confidence": 0.64,
+    "new_hint_weight": 0.6,
+    "hypothesis_margin_min": 0.2
+  },
+  "topdown_view": {
+    "mode": "TOP_DOWN_Z",
+    "ray_direction": [
+      0,
+      0,
+      -1
+    ],
+    "xy_cell_m": 0.05,
+    "surface_thickness_m": 0.055,
+    "min_visible_points_per_instance": 80,
+    "min_visible_ratio_per_instance": 0.025,
+    "rule": "global XY z-buffer keeps only top-facing surface; current business model forbids fully invisible historical coils"
+  },
+  "topdown_detection": {
+    "enabled": true,
+    "z_span_quantile": 0.01,
+    "z_span_to_diameter_max": 0.72,
+    "z_span_to_diameter_strong": 0.58,
+    "top_z_quantile": 0.995,
+    "max_z_center_correction_m": 0.55,
+    "quality_factor": 0.96,
+    "center_rule": "for detected TOP_DOWN_Z, geometric center Z = robust top Z - observed horizontal diameter/2",
+    "frame_consensus_enabled": true,
+    "frame_consensus_fraction": 0.55
+  },
+  "double_layer": {
+    "enabled": true,
+    "requires_full_layer1": true,
+    "layer1_required_slots": 10,
+    "upper_slot_definition": "slot k is supported by layer1 slots k and k+1",
+    "layer1_foundation_normal_xy_m": 0.08,
+    "layer1_foundation_hard_xy_m": 0.15,
+    "layer1_foundation_normal_z_m": 0.08,
+    "layer1_foundation_hard_z_m": 0.15,
+    "layer1_foundation_normal_yaw_deg": 6.0,
+    "layer1_foundation_hard_yaw_deg": 12.0,
+    "freeze_layer1_trackstate_when_active": true,
+    "support_slot_max_center_error_m": 0.42,
+    "support_slot_hard_center_error_m": 0.65,
+    "bootstrap_layer1_count": 10,
+    "bootstrap_require_positive_observation": true,
+    "bootstrap_upper_by_top_z": true,
+    "bootstrap_mode_signal_required": true,
+    "layer1_foundation_topdown_normal_xy_m": 0.12,
+    "layer1_foundation_topdown_hard_xy_m": 0.2,
+    "layer1_foundation_topdown_normal_z_m": 0.15,
+    "layer1_foundation_topdown_hard_z_m": 0.22,
+    "layer1_foundation_topdown_ignore_yaw": true,
+    "foundation_motion_interpretation": "Locked L1: translation is collapse-risk evidence; top-down partial-view centroid/yaw bias is not treated as physical movement unless it breaches top-down displacement envelopes."
+  }
+}

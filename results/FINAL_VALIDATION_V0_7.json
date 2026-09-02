@@ -1,0 +1,26 @@
+{
+  "version": "topdown_motion_guard_v0.7",
+  "web_port": 9999,
+  "dataset_ply_root_count": 145,
+  "dataset_ply_below_root_count": 0,
+  "topdown_sequences": [
+    "Z01",
+    "Z02",
+    "Z03",
+    "Z04",
+    "Z05"
+  ],
+  "topdown_frame_count": 25,
+  "tests": {
+    "failure_case_90ea": "PASS; WRONG_ID=0; ID5 MATCHED + ABNORMAL_X_MOTION inside hard envelope",
+    "motion_envelope": "PASS; 2.0m normal / 2.4m hard; beyond hard => UNCERTAIN",
+    "pairwise": "87 pairs; WRONG_ID=0; validator_failure=0",
+    "complex_continuous": "C01-C10; 52 frames; WRONG_ID=0",
+    "topdown_continuous": "Z01-Z05; 25 frames; WRONG_ID=0; UNCERTAIN=0; zero_point_gt=0",
+    "interactive_smoke": "PASS; wrong_id=0",
+    "benchmark": "128769 points; total ~0.411s; target <2s; PASS"
+  },
+  "occlusion_rule": "OCCLUDED requires positive current instance evidence; zero-point hidden coils are not a normal explanation",
+  "topdown_rule": "global XY z-buffer along world -Z; not z>center crop",
+  "identity_safety": "UNCERTAIN/ABNORMAL preferred over wrong Global ID"
+}

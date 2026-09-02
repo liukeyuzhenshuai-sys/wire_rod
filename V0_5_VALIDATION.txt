@@ -1,0 +1,25 @@
+V0.5 validation
+================
+
+Web JS syntax: PASS (node --check)
+Python compile: PASS
+API interactive flow: PASS
+  S03 start -> last preset frame -> editor seed -> preview-next -> create-next
+  existing move + yaw + roll_mild + NEW yaw + partial left occlusion
+  result Wrong ID = 0
+
+Pairwise regression:
+  pairs = 87
+  wrong_id_total = 0
+  validator_failures = 0
+
+Complex sequential regression:
+  C01-C10
+  frames = 52
+  wrong_id_total = 0
+
+Legacy interactive smoke: PASS
+
+Important semantic rule:
+  OCCLUDED requires nonzero current partial points.
+  Zero current points => UNOBSERVED.

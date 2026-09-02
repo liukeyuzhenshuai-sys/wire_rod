@@ -1,0 +1,8 @@
+﻿prototype_index,source_file,point_count_original,point_count_after_outlier_filter,robust_diameter_extent_m,robust_length_extent_m,normalization
+0,mask_10_f.ply,5852,5835,1.1249,1.59,source X -> scene Y; source Y -> scene X; robust center recentered
+1,mask_12_f.ply,7636,7608,1.14,1.56,source X -> scene Y; source Y -> scene X; robust center recentered
+2,mask_14_f.ply,7381,7339,1.16,1.69,source X -> scene Y; source Y -> scene X; robust center recentered
+3,mask_1_f.ply,8270,8255,1.135,1.66,source X -> scene Y; source Y -> scene X; robust center recentered
+4,mask_5_f.ply,8740,8733,1.14,1.62,source X -> scene Y; source Y -> scene X; robust center recentered
+5,mask_6_f.ply,6523,6518,1.12,1.62,source X -> scene Y; source Y -> scene X; robust center recentered
+6,mask_7_f.ply,7166,7117,1.185,1.57,source X -> scene Y; source Y -> scene X; robust center recentered

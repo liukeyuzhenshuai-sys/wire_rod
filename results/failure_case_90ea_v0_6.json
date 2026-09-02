@@ -1,0 +1,59 @@
+{
+  "case": "failure_20260818_163534_90ea5def0107_004",
+  "frame_status": "ABNORMAL",
+  "semantic_reason_codes": [
+    "ABNORMAL_X_MOTION_SEMANTIC_RESCUE"
+  ],
+  "wrong_committed": [],
+  "rows": [
+    {
+      "global_id": 0,
+      "instance_id": 109,
+      "state": "MATCHED",
+      "visibility": "VISIBLE",
+      "reason": "semantic order/cardinality lock + geometry validation passed"
+    },
+    {
+      "global_id": 1,
+      "instance_id": 613,
+      "state": "MATCHED",
+      "visibility": "VISIBLE",
+      "reason": "semantic order/cardinality lock + geometry validation passed"
+    },
+    {
+      "global_id": 2,
+      "instance_id": 850,
+      "state": "MATCHED",
+      "visibility": "VISIBLE",
+      "reason": "semantic order/cardinality lock + geometry validation passed"
+    },
+    {
+      "global_id": 3,
+      "instance_id": 744,
+      "state": "MATCHED",
+      "visibility": "VISIBLE",
+      "reason": "semantic order/cardinality lock + geometry validation passed"
+    },
+    {
+      "global_id": 4,
+      "instance_id": 533,
+      "state": "MATCHED",
+      "visibility": "VISIBLE",
+      "reason": "semantic order/cardinality lock + geometry validated with controlled relaxation: SEMANTIC_EXTENDED_X_ROI"
+    },
+    {
+      "global_id": 5,
+      "instance_id": 292,
+      "state": "MATCHED",
+      "visibility": "VISIBLE",
+      "reason": "semantic order/cardinality lock + geometry validated with controlled relaxation: ABNORMAL_X_MOTION_SEMANTIC_RESCUE; dx=2.245m exceeds normal_limit=2.000m by 0.245m (12.3%); within hard_limit=2.400m"
+    },
+    {
+      "global_id": 6,
+      "instance_id": 700,
+      "state": "NEW",
+      "visibility": "VISIBLE",
+      "reason": "robot NEW hint + legal inward slot growth + semantic cardinality"
+    }
+  ]
+}

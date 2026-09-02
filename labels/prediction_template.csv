@@ -1,0 +1,4 @@
+﻿pair_id,current_instance_id,pred_global_id,pred_state,confidence
+pair_000,123,7,MATCHED,0.98
+pair_000,456,,UNCERTAIN,0.40
+pair_000,-1,2,OCCLUDED,0.90

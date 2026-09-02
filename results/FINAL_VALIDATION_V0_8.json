@@ -1,0 +1,115 @@
+{
+  "version": "double_layer_support_v0.8",
+  "timestamp": "2026-08-18",
+  "root_ply_count": 182,
+  "subdirectory_ply_count": 0,
+  "d_series_frames": 37,
+  "z_series_frames": 25,
+  "pairwise": {
+    "pairs": 114,
+    "wrong_id_total": 0,
+    "validator_failures": 0,
+    "new_tp": 61,
+    "new_fp": 0,
+    "new_fn": 0,
+    "occ_tp": 8,
+    "occ_fp": 3,
+    "occ_fn": 0,
+    "uncertain_total": 3,
+    "max_total_ms": 1143.104
+  },
+  "complex": {
+    "sequences": 10,
+    "frames": 52,
+    "wrong_id": 0
+  },
+  "topdown": {
+    "sequences": 5,
+    "frames": 25,
+    "wrong_id": 0,
+    "uncertain": 0,
+    "zero_point_gt": 0
+  },
+  "double_layer": {
+    "sequence_count": 10,
+    "frame_count": 37,
+    "wrong_id_total": 0,
+    "uncertain_total": 11,
+    "failures": [],
+    "pass": true
+  },
+  "double_layer_assertions": [
+    {
+      "name": "D05_double_layer_bootstrap",
+      "pass": true,
+      "l1": 10,
+      "l2": 3
+    },
+    {
+      "name": "D06_double_layer_bootstrap",
+      "pass": true,
+      "l1": 10,
+      "l2": 7
+    },
+    {
+      "name": "D08_ABNORMAL_FIRST_LAYER_SHIFT_HARD",
+      "pass": true,
+      "file": "D08_F01_foundation_hard_shift.ply",
+      "reason_codes": [
+        "ABNORMAL_FIRST_LAYER_SHIFT_HARD"
+      ]
+    },
+    {
+      "name": "D08_recovery",
+      "pass": true,
+      "last_status": "OK"
+    },
+    {
+      "name": "D09_ABNORMAL_LAYER2_SUPPORT_SLOT_MISSING",
+      "pass": true,
+      "file": "D09_F01_upper_off_support.ply",
+      "reason_codes": [
+        "ABNORMAL_LAYER2_SUPPORT_SLOT_MISSING"
+      ]
+    },
+    {
+      "name": "D09_recovery",
+      "pass": true,
+      "last_status": "OK"
+    },
+    {
+      "name": "D10_ABNORMAL_LAYER2_CAPACITY",
+      "pass": true,
+      "file": "D10_F05_illegal_ninth_support8.ply",
+      "reason_codes": [
+        "ABNORMAL_LAYER2_CAPACITY"
+      ]
+    },
+    {
+      "name": "D_series_positive_visibility",
+      "pass": true,
+      "violations": []
+    }
+  ],
+  "benchmark_s13": {
+    "file": "S13_F00_full_10_plus_8_100k.ply",
+    "instances": 18,
+    "points": 128769,
+    "load_ms": 13.213582999924256,
+    "geometry_ms": 362.35762600063026,
+    "total_ms": 375.5712090005545,
+    "target_ms": 2000,
+    "pass": true
+  },
+  "interactive_smoke": {
+    "pass": true,
+    "sequence": "S03",
+    "created_file": "USER_358717c583a0_F005.ply",
+    "generated_objects": 9,
+    "partial_objects": 2,
+    "wrong_id": 0,
+    "elapsed_ms": 185.082,
+    "warnings": []
+  },
+  "release_pass": true
+}

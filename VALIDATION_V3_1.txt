@@ -1,0 +1,13 @@
+V3.1 HANDOFF VALIDATION
+Root PLY count: 68
+Object GT rows: 299
+Evaluation frame pairs: 45
+Transition GT rows: 196
+Neighbor GT rows: 212
+All PLY files are flat in dataset root: PASS
+First-layer <=10 check: PASS
+Partial occlusion side label check: PASS
+Self-contained source_real_coils.zip included: PASS
+Self-contained scene_spec.csv included: PASS
+Structural checks: PASS
+Byte-for-byte self-contained regeneration (68/68 SHA-256): PASS

@@ -1,0 +1,29 @@
+V3 RECOMMENDED VISUAL INSPECTION ORDER
+
+1) First inspect the corrected behavior:
+   P02_F00_edgeOcc_baseline.ply
+   P02_F01_edgeOcc_left_mild.ply
+   P02_F02_edgeOcc_right_mild.ply
+   P02_F03_edgeOcc_both_mild.ply
+   P02_F04_edgeOcc_both_heavy.ply
+   P02_F05_rollHeavy_noHole.ply
+
+Expected: occlusion affects only outer left/right portions; no random middle stripe is punched out. The roll-heavy file should remain globally complete while its surface sampling differs.
+
+2) Then inspect single-coil observation sequence P01_F00..F11.
+
+3) Inspect semantic loading layouts:
+   S01_* left growth
+   S02_* right growth
+   S03_* two-edge growth with normal middle free region
+   S04_* internal gap stress
+
+4) Inspect tracking-hard cases:
+   S06_* partial/full occlusion and recovery
+   S07_* NEW + occlusion
+   S10_* same-geometry ID swap stress
+   S14_* combined hard case
+
+5) Capacity/performance:
+   S11_* layer-1 maximum 10
+   S13_F00_full_10_plus_8_100k.ply

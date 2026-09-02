@@ -1,0 +1,31 @@
+{
+  "version": "v0.8",
+  "normal_x_max_m": 2.0,
+  "hard_x_max_m": 2.4,
+  "inside_hard_envelope": {
+    "frame_status": "ABNORMAL",
+    "gid5": {
+      "state": "MATCHED",
+      "delta_xyz": [
+        2.245418329238891,
+        0.04089584469795221,
+        0.0007859909534454479
+      ],
+      "reason": "semantic order/cardinality lock + geometry validated with controlled relaxation: ABNORMAL_X_MOTION_SEMANTIC_RESCUE; dx=2.245m exceeds normal_limit=2.000m by 0.245m (12.3%); within hard_limit=2.400m",
+      "confidence": null
+    }
+  },
+  "beyond_hard_envelope": {
+    "frame_status": "UNCERTAIN",
+    "gid5": {
+      "state": "UNCERTAIN",
+      "delta_xyz": [
+        2.545417566299438,
+        0.04089584469795221,
+        0.0007859909534454479
+      ],
+      "reason": "semantic rank is unique but geometric safety validation failed: OUTSIDE_X_HARD_ROI; dx=2.545m exceeds hard_limit=2.400m by 0.145m (6.1%)",
+      "confidence": null
+    }
+  }
+}

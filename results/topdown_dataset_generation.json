@@ -1,0 +1,450 @@
+{
+  "sequences": {
+    "Z01": {
+      "source": "S05",
+      "mode": "TOP_DOWN_Z",
+      "purpose": "Pure -Z top-camera sequence derived from S05: yaw + nonuniform historical motion; only top-visible surface is retained."
+    },
+    "Z02": {
+      "source": "C03",
+      "mode": "TOP_DOWN_Z",
+      "purpose": "Pure -Z top-camera two-edge-cluster sequence with NEW, gaps, motion and positive partial occlusion."
+    },
+    "Z03": {
+      "source": "C06",
+      "mode": "TOP_DOWN_Z",
+      "purpose": "Pure -Z top-camera full L1 to L2 loading sequence; global z-buffer makes upper coils physically occlude lower projected surfaces."
+    },
+    "Z04": {
+      "source": "C04",
+      "mode": "TOP_DOWN_Z",
+      "purpose": "Pure -Z top-camera adversarial same-geometry / nearest-neighbor trap sequence; identity must come from semantics, not full-cylinder geometry."
+    },
+    "Z05": {
+      "source": "S05",
+      "mode": "MIXED",
+      "purpose": "View-switch sequence: multi-view -> top-only -Z -> top-only -Z -> multi-view, testing persistent identity across acquisition-mode changes."
+    }
+  },
+  "frames_added": 25,
+  "frames": [
+    {
+      "file": "Z01_F00_topdown_yaw_motion_0.ply",
+      "source_file": "S05_F00_yaw_motion_0.ply",
+      "topdown": true,
+      "num_points": 23167,
+      "warnings": [],
+      "object_counts": {
+        "0": 3366,
+        "1": 4352,
+        "2": 3476,
+        "3": 3907,
+        "4": 4505,
+        "5": 3561
+      }
+    },
+    {
+      "file": "Z01_F01_topdown_yaw_motion_1.ply",
+      "source_file": "S05_F01_yaw_motion_1.ply",
+      "topdown": true,
+      "num_points": 22434,
+      "warnings": [],
+      "object_counts": {
+        "0": 3277,
+        "1": 4098,
+        "2": 3368,
+        "3": 3850,
+        "4": 4375,
+        "5": 3466
+      }
+    },
+    {
+      "file": "Z01_F02_topdown_yaw_motion_2.ply",
+      "source_file": "S05_F02_yaw_motion_2.ply",
+      "topdown": true,
+      "num_points": 21066,
+      "warnings": [],
+      "object_counts": {
+        "0": 3148,
+        "1": 4105,
+        "2": 3460,
+        "3": 3172,
+        "4": 3860,
+        "5": 3321
+      }
+    },
+    {
+      "file": "Z01_F03_topdown_yaw_motion_3.ply",
+      "source_file": "S05_F03_yaw_motion_3.ply",
+      "topdown": true,
+      "num_points": 20842,
+      "warnings": [],
+      "object_counts": {
+        "0": 3189,
+        "1": 4094,
+        "2": 3394,
+        "3": 3197,
+        "4": 3631,
+        "5": 3337
+      }
+    },
+    {
+      "file": "Z02_F00_topdown_two_side_complex_start.ply",
+      "source_file": "C03_F00_two_side_complex_start.ply",
+      "topdown": true,
+      "num_points": 15638,
+      "warnings": [],
+      "object_counts": {
+        "0": 3393,
+        "1": 4359,
+        "8": 4355,
+        "9": 3531
+      }
+    },
+    {
+      "file": "Z02_F01_topdown_left_new_far_gap.ply",
+      "source_file": "C03_F01_left_new_far_gap.ply",
+      "topdown": true,
+      "num_points": 18767,
+      "warnings": [],
+      "object_counts": {
+        "0": 3370,
+        "1": 4117,
+        "2": 3628,
+        "8": 4113,
+        "9": 3539
+      }
+    },
+    {
+      "file": "Z02_F02_topdown_right_new_partial_left.ply",
+      "source_file": "C03_F02_right_new_partial_left.ply",
+      "topdown": true,
+      "num_points": 19723,
+      "warnings": [],
+      "object_counts": {
+        "0": 3414,
+        "1": 2855,
+        "2": 2929,
+        "7": 3392,
+        "8": 3564,
+        "9": 3569
+      }
+    },
+    {
+      "file": "Z02_F03_topdown_two_new_both_sides.ply",
+      "source_file": "C03_F03_two_new_both_sides.ply",
+      "topdown": true,
+      "num_points": 29245,
+      "warnings": [],
+      "object_counts": {
+        "0": 3239,
+        "1": 4233,
+        "2": 3438,
+        "3": 3936,
+        "6": 3763,
+        "7": 3198,
+        "8": 4045,
+        "9": 3393
+      }
+    },
+    {
+      "file": "Z02_F04_topdown_two_side_with_occluded.ply",
+      "source_file": "C03_F04_two_side_with_occluded.ply",
+      "topdown": true,
+      "num_points": 27771,
+      "warnings": [],
+      "object_counts": {
+        "0": 3185,
+        "1": 4122,
+        "2": 3406,
+        "3": 3893,
+        "6": 3572,
+        "7": 2093,
+        "8": 4090,
+        "9": 3410
+      }
+    },
+    {
+      "file": "Z02_F05_topdown_occluded_return_partial.ply",
+      "source_file": "C03_F05_occluded_return_partial.ply",
+      "topdown": true,
+      "num_points": 29216,
+      "warnings": [],
+      "object_counts": {
+        "0": 3405,
+        "1": 4342,
+        "2": 3561,
+        "3": 3967,
+        "6": 3718,
+        "7": 2231,
+        "8": 4368,
+        "9": 3624
+      }
+    },
+    {
+      "file": "Z03_F00_topdown_full_l1_start.ply",
+      "source_file": "C06_F00_full_l1_start.ply",
+      "topdown": true,
+      "num_points": 38074,
+      "warnings": [],
+      "object_counts": {
+        "0": 3374,
+        "1": 4314,
+        "2": 3528,
+        "3": 3956,
+        "4": 4550,
+        "5": 3499,
+        "6": 3653,
+        "7": 3335,
+        "8": 4319,
+        "9": 3546
+      }
+    },
+    {
+      "file": "Z03_F01_topdown_layer2_new_yaw.ply",
+      "source_file": "C06_F01_layer2_new_yaw.ply",
+      "topdown": true,
+      "num_points": 36961,
+      "warnings": [],
+      "object_counts": {
+        "0": 3365,
+        "1": 2030,
+        "2": 1484,
+        "3": 3849,
+        "4": 4325,
+        "5": 3543,
+        "6": 3684,
+        "7": 3390,
+        "8": 4326,
+        "9": 3561,
+        "20": 3404
+      }
+    },
+    {
+      "file": "Z03_F02_topdown_second_layer2_new.ply",
+      "source_file": "C06_F02_second_layer2_new.ply",
+      "topdown": true,
+      "num_points": 36745,
+      "warnings": [],
+      "object_counts": {
+        "0": 3381,
+        "1": 2377,
+        "2": 1746,
+        "3": 1018,
+        "4": 2492,
+        "5": 3328,
+        "6": 3598,
+        "7": 3366,
+        "8": 4384,
+        "9": 3497,
+        "20": 3205,
+        "21": 4353
+      }
+    },
+    {
+      "file": "Z03_F03_topdown_layer2_new_lower_occluded.ply",
+      "source_file": "C06_F03_layer2_new_lower_occluded.ply",
+      "topdown": true,
+      "num_points": 35355,
+      "warnings": [],
+      "object_counts": {
+        "0": 3196,
+        "1": 2407,
+        "2": 1628,
+        "3": 1546,
+        "4": 1452,
+        "5": 1589,
+        "6": 1800,
+        "7": 3152,
+        "8": 4162,
+        "9": 3455,
+        "20": 3275,
+        "21": 4123,
+        "22": 3570
+      }
+    },
+    {
+      "file": "Z03_F04_topdown_layer2_motion_lower_return.ply",
+      "source_file": "C06_F04_layer2_motion_lower_return.ply",
+      "topdown": true,
+      "num_points": 36278,
+      "warnings": [],
+      "object_counts": {
+        "0": 3373,
+        "1": 2724,
+        "2": 1536,
+        "3": 1764,
+        "4": 1314,
+        "5": 1921,
+        "6": 1633,
+        "7": 3300,
+        "8": 4380,
+        "9": 3532,
+        "20": 3285,
+        "21": 4114,
+        "22": 3402
+      }
+    },
+    {
+      "file": "Z03_F05_topdown_fourth_layer2_new.ply",
+      "source_file": "C06_F05_fourth_layer2_new.ply",
+      "topdown": true,
+      "num_points": 37422,
+      "warnings": [],
+      "object_counts": {
+        "0": 3393,
+        "1": 2749,
+        "2": 1584,
+        "3": 1811,
+        "4": 2269,
+        "5": 1799,
+        "6": 1628,
+        "7": 1042,
+        "8": 2882,
+        "9": 3586,
+        "20": 3142,
+        "21": 4157,
+        "22": 3428,
+        "23": 3952
+      }
+    },
+    {
+      "file": "Z04_F00_topdown_same_geom_start.ply",
+      "source_file": "C04_F00_same_geom_start.ply",
+      "topdown": true,
+      "num_points": 25799,
+      "warnings": [],
+      "object_counts": {
+        "0": 4316,
+        "1": 4274,
+        "2": 4304,
+        "3": 4277,
+        "4": 4341,
+        "5": 4287
+      }
+    },
+    {
+      "file": "Z04_F01_topdown_nearest_neighbor_trap.ply",
+      "source_file": "C04_F01_nearest_neighbor_trap.ply",
+      "topdown": true,
+      "num_points": 20601,
+      "warnings": [],
+      "object_counts": {
+        "0": 3492,
+        "1": 3396,
+        "2": 3477,
+        "3": 3421,
+        "4": 3338,
+        "5": 3477
+      }
+    },
+    {
+      "file": "Z04_F02_topdown_same_spec_new_after_shift.ply",
+      "source_file": "C04_F02_same_spec_new_after_shift.ply",
+      "topdown": true,
+      "num_points": 24926,
+      "warnings": [],
+      "object_counts": {
+        "0": 3342,
+        "1": 3457,
+        "2": 3392,
+        "3": 3466,
+        "4": 3356,
+        "5": 3469,
+        "6": 4444
+      }
+    },
+    {
+      "file": "Z04_F03_topdown_same_geom_partial_center.ply",
+      "source_file": "C04_F03_same_geom_partial_center.ply",
+      "topdown": true,
+      "num_points": 23256,
+      "warnings": [],
+      "object_counts": {
+        "0": 3488,
+        "1": 3397,
+        "2": 3558,
+        "3": 2310,
+        "4": 3573,
+        "5": 3455,
+        "6": 3475
+      }
+    },
+    {
+      "file": "Z04_F04_topdown_same_geom_occluded.ply",
+      "source_file": "C04_F04_same_geom_occluded.ply",
+      "topdown": true,
+      "num_points": 27009,
+      "warnings": [],
+      "object_counts": {
+        "0": 4124,
+        "1": 4097,
+        "2": 2615,
+        "3": 4036,
+        "4": 4042,
+        "5": 3954,
+        "6": 4141
+      }
+    },
+    {
+      "file": "Z05_F00_multiview_yaw_motion_0.ply",
+      "source_file": "S05_F00_yaw_motion_0.ply",
+      "topdown": false,
+      "num_points": 44288,
+      "warnings": [],
+      "object_counts": {
+        "0": 5835,
+        "1": 7608,
+        "2": 7339,
+        "3": 8255,
+        "4": 8733,
+        "5": 6518
+      }
+    },
+    {
+      "file": "Z05_F01_topdown_yaw_motion_1.ply",
+      "source_file": "S05_F01_yaw_motion_1.ply",
+      "topdown": true,
+      "num_points": 22434,
+      "warnings": [],
+      "object_counts": {
+        "0": 3277,
+        "1": 4098,
+        "2": 3368,
+        "3": 3850,
+        "4": 4375,
+        "5": 3466
+      }
+    },
+    {
+      "file": "Z05_F02_topdown_yaw_motion_2.ply",
+      "source_file": "S05_F02_yaw_motion_2.ply",
+      "topdown": true,
+      "num_points": 21066,
+      "warnings": [],
+      "object_counts": {
+        "0": 3148,
+        "1": 4105,
+        "2": 3460,
+        "3": 3172,
+        "4": 3860,
+        "5": 3321
+      }
+    },
+    {
+      "file": "Z05_F03_multiview_yaw_motion_3.ply",
+      "source_file": "S05_F03_yaw_motion_3.ply",
+      "topdown": false,
+      "num_points": 41258,
+      "warnings": [],
+      "object_counts": {
+        "0": 5687,
+        "1": 7389,
+        "2": 7163,
+        "3": 7114,
+        "4": 7572,
+        "5": 6333
+      }
+    }
+  ]
+}

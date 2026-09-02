@@ -1,0 +1,98 @@
+{
+  "version": "web_complex_v0.3",
+  "complex_sequences": 10,
+  "complex_frames": 52,
+  "complex_wrong_id_total": 0,
+  "per_sequence": [
+    {
+      "sequence_id": "C01",
+      "frames": 5,
+      "wrong_id": 0,
+      "new_pred": 3,
+      "occluded_pred": 0,
+      "uncertain_pred": 0,
+      "elapsed_ms": 440.967
+    },
+    {
+      "sequence_id": "C02",
+      "frames": 5,
+      "wrong_id": 0,
+      "new_pred": 3,
+      "occluded_pred": 0,
+      "uncertain_pred": 0,
+      "elapsed_ms": 440.571
+    },
+    {
+      "sequence_id": "C03",
+      "frames": 6,
+      "wrong_id": 0,
+      "new_pred": 4,
+      "occluded_pred": 1,
+      "uncertain_pred": 0,
+      "elapsed_ms": 691.025
+    },
+    {
+      "sequence_id": "C04",
+      "frames": 5,
+      "wrong_id": 0,
+      "new_pred": 1,
+      "occluded_pred": 1,
+      "uncertain_pred": 0,
+      "elapsed_ms": 553.732
+    },
+    {
+      "sequence_id": "C05",
+      "frames": 5,
+      "wrong_id": 0,
+      "new_pred": 2,
+      "occluded_pred": 1,
+      "uncertain_pred": 0,
+      "elapsed_ms": 435.77
+    },
+    {
+      "sequence_id": "C06",
+      "frames": 6,
+      "wrong_id": 0,
+      "new_pred": 4,
+      "occluded_pred": 1,
+      "uncertain_pred": 1,
+      "elapsed_ms": 1353.603
+    },
+    {
+      "sequence_id": "C07",
+      "frames": 5,
+      "wrong_id": 0,
+      "new_pred": 4,
+      "occluded_pred": 1,
+      "uncertain_pred": 0,
+      "elapsed_ms": 608.805
+    },
+    {
+      "sequence_id": "C08",
+      "frames": 5,
+      "wrong_id": 0,
+      "new_pred": 2,
+      "occluded_pred": 0,
+      "uncertain_pred": 0,
+      "elapsed_ms": 465.555
+    },
+    {
+      "sequence_id": "C09",
+      "frames": 5,
+      "wrong_id": 0,
+      "new_pred": 1,
+      "occluded_pred": 1,
+      "uncertain_pred": 0,
+      "elapsed_ms": 483.479
+    },
+    {
+      "sequence_id": "C10",
+      "frames": 5,
+      "wrong_id": 0,
+      "new_pred": 1,
+      "occluded_pred": 0,
+      "uncertain_pred": 0,
+      "elapsed_ms": 459.854
+    }
+  ]
+}

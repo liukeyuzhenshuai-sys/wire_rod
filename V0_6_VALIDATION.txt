@@ -1,0 +1,36 @@
+Semantic Guard V0.6 validation
+Date: 2026-08-18
+
+Target user failure regression:
+- failure_20260818_163534_90ea5def0107_004
+- frame_status: UNCERTAIN
+- WRONG committed Global ID: 0
+- ID0~ID4: MATCHED to correct current instances
+- ID5: UNCERTAIN with positive current instance292 evidence; reason OUTSIDE_X_ABSOLUTE_ROI
+- NEW6: NEW correct
+
+Recommended pairwise regression:
+- 87 pairs
+- WRONG_ID = 0
+- validator failures = 0
+- NEW TP/FP/FN = 39/0/0
+- legacy OCC TP/FP/FN = 8/1/0
+- UNCERTAIN = 1
+
+Complex continuous regression:
+- C01-C10
+- 52 frames
+- cumulative WRONG_ID = 0
+- some legacy sequences now intentionally emit more UNCERTAIN because zero-point hidden-history explanations are no longer normal production semantics
+
+Interactive editor smoke:
+- pass=true
+- generated objects=9
+- partial objects=2
+- wrong_id=0
+
+Core policy:
+- semantic order/cardinality before geometry
+- OCCLUDED requires positive current point evidence
+- no normal SKIP_HISTORY
+- UNCERTAIN/ABNORMAL preferred over wrong Global ID

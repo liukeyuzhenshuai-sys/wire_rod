@@ -1,0 +1,257 @@
+{
+  "run": {
+    "pair": {
+      "pair_id": "pair_011",
+      "sequence_id": "P02",
+      "pair_type": "baseline_variant",
+      "previous_file": "P02_F00_edgeOcc_baseline.ply",
+      "current_file": "P02_F01_edgeOcc_left_mild.ply",
+      "previous_frame_index": "0",
+      "current_frame_index": "1",
+      "recommended_for_id_eval": "1"
+    },
+    "history_mode": "confirmed_gt",
+    "config": {
+      "business": {
+        "wrong_id_allowed": false,
+        "allow_uncertain": true,
+        "old_coil_removal_supported": false,
+        "layer1_max_slots": 10
+      },
+      "geometry": {
+        "diameter_range_m": [
+          1.1,
+          1.5
+        ],
+        "length_range_m": [
+          0.5,
+          1.7
+        ],
+        "center_quantile": 0.005,
+        "size_quantile": 0.01,
+        "layer2_center_z_min_m": 1.15
+      },
+      "motion_roi": {
+        "x_absolute_max_m": 2.0,
+        "x_default_m": 1.5,
+        "y_default_m": 0.4,
+        "z_default_m": 0.3
+      },
+      "matching": {
+        "diameter_gate_m": 0.36,
+        "length_gate_m": 0.38,
+        "diameter_scale_m": 0.2,
+        "length_scale_m": 0.25,
+        "yaw_scale_deg": 15.0,
+        "w_position": 0.62,
+        "w_diameter": 0.1,
+        "w_length": 0.1,
+        "w_yaw": 0.03,
+        "w_quality": 0.15,
+        "anchor_quality_min": 0.66,
+        "anchor_best_cost_max": 0.42,
+        "anchor_margin_min": 0.24,
+        "skip_history_cost": 0.9,
+        "insert_current_cost": 0.9
+      },
+      "new_coil": {
+        "position_tolerance_m": 0.5,
+        "diameter_tolerance_m": 0.25,
+        "length_tolerance_m": 0.3
+      },
+      "visualization": {
+        "sample_points_per_instance": 550
+      }
+    },
+    "history": [
+      {
+        "global_id": 2,
+        "layer": 1,
+        "slot": 2,
+        "cluster": "single",
+        "stable_diameter": 1.2400000095367432,
+        "stable_length": 1.6900005340576172,
+        "center": [
+          5.0,
+          0.0,
+          0.6600000047683716
+        ],
+        "yaw_deg": 0.0,
+        "visibility": "VISIBLE",
+        "last_instance_id": 315,
+        "confidence": 1.0
+      }
+    ],
+    "observations": [
+      {
+        "instance_id": 315,
+        "center": [
+          5.027349472045898,
+          0.027440130710601807,
+          0.6458391547203064
+        ],
+        "point_count": 6438,
+        "diameter": 1.1711688759358898,
+        "length": 1.6146639566707417,
+        "yaw_deg": -2.5,
+        "quality": 0.8332657100805895,
+        "layer_guess": 1,
+        "bbox_min": [
+          4.360763072967529,
+          -1.0132484436035156,
+          -0.06769108772277832
+        ],
+        "bbox_max": [
+          5.697535514831543,
+          0.9990339279174805,
+          1.3003628253936768
+        ],
+        "raw_width_x": 1.3367724418640137,
+        "raw_width_y": 2.012282371520996
+      }
+    ],
+    "hints": [],
+    "candidates": [
+      {
+        "global_id": 2,
+        "instance_id": 315,
+        "accepted": true,
+        "cost": 0.051274012469491065,
+        "reasons": [],
+        "components": {
+          "position": 0.00726655393308058,
+          "diameter": 0.11844312381946309,
+          "length": 0.09080959827789888,
+          "yaw": 0.027777777777777776,
+          "quality": 0.16673428991941053
+        }
+      }
+    ],
+    "anchors": [
+      {
+        "global_id": 2,
+        "instance_id": 315,
+        "cost": 0.051274012469491065
+      }
+    ],
+    "anchor_audit": [
+      {
+        "instance_id": 315,
+        "best_global_id": 2,
+        "best_cost": 0.051274012469491065,
+        "second_cost": null,
+        "margin": null,
+        "quality": 0.8332657100805895,
+        "qualifies": true
+      }
+    ],
+    "dp": {
+      "1": {
+        "cost": 0.051274012469491065,
+        "shape": [
+          1,
+          1
+        ],
+        "history_order": [
+          2
+        ],
+        "observation_order": [
+          315
+        ],
+        "actions": [
+          {
+            "action": "MATCH",
+            "global_id": 2,
+            "instance_id": 315,
+            "cost": 0.051274012469491065
+          }
+        ]
+      }
+    },
+    "actions": [
+      {
+        "action": "MATCH",
+        "global_id": 2,
+        "instance_id": 315,
+        "cost": 0.051274012469491065
+      }
+    ],
+    "decisions": [
+      {
+        "instance_id": 315,
+        "global_id": 2,
+        "state": "MATCHED",
+        "confidence": 0.9430288750338989,
+        "layer": 1,
+        "slot": 2,
+        "cluster": "single",
+        "reason": "ordered DP match",
+        "match_cost": 0.051274012469491065,
+        "hint_id": null
+      }
+    ],
+    "validator_errors": [],
+    "timing_ms": {
+      "history_ms": 0.027516000045579858,
+      "load_current_ms": 0.34254899992447463,
+      "geometry_ms": 17.816603000028408,
+      "candidate_ms": 0.014784000086365268,
+      "anchor_ms": 0.01716900032988633,
+      "dp_ms": 0.05088799980512704,
+      "decision_ms": 0.04866099970968207,
+      "total_ms": 18.32113099999333
+    },
+    "total_dp_cost": 0.051274012469491065
+  },
+  "evaluation": {
+    "wrong_id": 0,
+    "matched_evaluated": 1,
+    "new_tp": 0,
+    "new_fp": 0,
+    "new_fn": 0,
+    "occ_tp": 0,
+    "occ_fp": 0,
+    "occ_fn": 0,
+    "rows": [
+      {
+        "instance_id": 315,
+        "global_id": 2,
+        "state": "MATCHED",
+        "confidence": 0.9430288750338989,
+        "layer": 1,
+        "slot": 2,
+        "cluster": "single",
+        "reason": "ordered DP match",
+        "match_cost": 0.051274012469491065,
+        "hint_id": null,
+        "gt_global_id": 2,
+        "gt_is_new": 0,
+        "eval": "OK"
+      }
+    ],
+    "gt_transition": [
+      {
+        "pair_id": "pair_011",
+        "sequence_id": "P02",
+        "pair_type": "baseline_variant",
+        "previous_file": "P02_F00_edgeOcc_baseline.ply",
+        "current_file": "P02_F01_edgeOcc_left_mild.ply",
+        "global_id": "2",
+        "previous_instance_id": "315",
+        "current_instance_id": "315",
+        "relation_gt": "SAME_OBJECT",
+        "visibility_event_gt": "BECAME_PARTIAL",
+        "previous_visibility": "VISIBLE",
+        "current_visibility": "PARTIAL_VISIBLE",
+        "is_new_gt": "0",
+        "dx_gt_m": "0.0",
+        "dy_gt_m": "0.0",
+        "dz_gt_m": "0.0",
+        "displacement_gt_m": "0.0",
+        "layer_gt": "1",
+        "slot_gt": "2"
+      }
+    ],
+    "pass_primary": true
+  }
+}

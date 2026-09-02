@@ -1,0 +1,512 @@
+{
+  "version": "double_layer_v0.8",
+  "sequences": [
+    {
+      "sequence_id": "D01",
+      "wrong_total": 0,
+      "uncertain_total": 0,
+      "frames": [
+        {
+          "file": "D01_F00_full_l1_before_l2.ply",
+          "frame_status": "INITIAL",
+          "wrong_id_count": 0,
+          "uncertain_count": 0,
+          "reason_codes": [],
+          "second_layer_active": false,
+          "layer1_tracks": 10,
+          "layer2_tracks": 0
+        },
+        {
+          "file": "D01_F01_l2_new_support0.ply",
+          "frame_status": "OK",
+          "wrong_id_count": 0,
+          "uncertain_count": 0,
+          "reason_codes": [],
+          "second_layer_active": true,
+          "layer1_tracks": 10,
+          "layer2_tracks": 1
+        },
+        {
+          "file": "D01_F02_l2_new_support1.ply",
+          "frame_status": "OK",
+          "wrong_id_count": 0,
+          "uncertain_count": 0,
+          "reason_codes": [],
+          "second_layer_active": true,
+          "layer1_tracks": 10,
+          "layer2_tracks": 2
+        },
+        {
+          "file": "D01_F03_upper_settle_l1_locked.ply",
+          "frame_status": "OK",
+          "wrong_id_count": 0,
+          "uncertain_count": 0,
+          "reason_codes": [],
+          "second_layer_active": true,
+          "layer1_tracks": 10,
+          "layer2_tracks": 2
+        }
+      ]
+    },
+    {
+      "sequence_id": "D02",
+      "wrong_total": 0,
+      "uncertain_total": 0,
+      "frames": [
+        {
+          "file": "D02_F00_full_l1_before_right_l2.ply",
+          "frame_status": "INITIAL",
+          "wrong_id_count": 0,
+          "uncertain_count": 0,
+          "reason_codes": [],
+          "second_layer_active": false,
+          "layer1_tracks": 10,
+          "layer2_tracks": 0
+        },
+        {
+          "file": "D02_F01_right_new_support8.ply",
+          "frame_status": "OK",
+          "wrong_id_count": 0,
+          "uncertain_count": 0,
+          "reason_codes": [],
+          "second_layer_active": true,
+          "layer1_tracks": 10,
+          "layer2_tracks": 1
+        },
+        {
+          "file": "D02_F02_right_new_support7.ply",
+          "frame_status": "OK",
+          "wrong_id_count": 0,
+          "uncertain_count": 0,
+          "reason_codes": [],
+          "second_layer_active": true,
+          "layer1_tracks": 10,
+          "layer2_tracks": 2
+        },
+        {
+          "file": "D02_F03_right_new_support6.ply",
+          "frame_status": "OK",
+          "wrong_id_count": 0,
+          "uncertain_count": 0,
+          "reason_codes": [],
+          "second_layer_active": true,
+          "layer1_tracks": 10,
+          "layer2_tracks": 3
+        }
+      ]
+    },
+    {
+      "sequence_id": "D03",
+      "wrong_total": 0,
+      "uncertain_total": 0,
+      "frames": [
+        {
+          "file": "D03_F00_full_l1.ply",
+          "frame_status": "INITIAL",
+          "wrong_id_count": 0,
+          "uncertain_count": 0,
+          "reason_codes": [],
+          "second_layer_active": false,
+          "layer1_tracks": 10,
+          "layer2_tracks": 0
+        },
+        {
+          "file": "D03_F01_new_support1.ply",
+          "frame_status": "OK",
+          "wrong_id_count": 0,
+          "uncertain_count": 0,
+          "reason_codes": [],
+          "second_layer_active": true,
+          "layer1_tracks": 10,
+          "layer2_tracks": 1
+        },
+        {
+          "file": "D03_F02_new_support7.ply",
+          "frame_status": "OK",
+          "wrong_id_count": 0,
+          "uncertain_count": 0,
+          "reason_codes": [],
+          "second_layer_active": true,
+          "layer1_tracks": 10,
+          "layer2_tracks": 2
+        },
+        {
+          "file": "D03_F03_multi_new_support3_5.ply",
+          "frame_status": "OK",
+          "wrong_id_count": 0,
+          "uncertain_count": 0,
+          "reason_codes": [],
+          "second_layer_active": true,
+          "layer1_tracks": 10,
+          "layer2_tracks": 4
+        }
+      ]
+    },
+    {
+      "sequence_id": "D04",
+      "wrong_total": 0,
+      "uncertain_total": 0,
+      "frames": [
+        {
+          "file": "D04_F00_full_l1_multiview.ply",
+          "frame_status": "INITIAL",
+          "wrong_id_count": 0,
+          "uncertain_count": 0,
+          "reason_codes": [],
+          "second_layer_active": false,
+          "layer1_tracks": 10,
+          "layer2_tracks": 0
+        },
+        {
+          "file": "D04_F01_top_new_support2.ply",
+          "frame_status": "OK",
+          "wrong_id_count": 0,
+          "uncertain_count": 0,
+          "reason_codes": [],
+          "second_layer_active": true,
+          "layer1_tracks": 10,
+          "layer2_tracks": 1
+        },
+        {
+          "file": "D04_F02_top_new_support3.ply",
+          "frame_status": "OK",
+          "wrong_id_count": 0,
+          "uncertain_count": 0,
+          "reason_codes": [],
+          "second_layer_active": true,
+          "layer1_tracks": 10,
+          "layer2_tracks": 2
+        },
+        {
+          "file": "D04_F03_top_upper_motion.ply",
+          "frame_status": "OK",
+          "wrong_id_count": 0,
+          "uncertain_count": 0,
+          "reason_codes": [],
+          "second_layer_active": true,
+          "layer1_tracks": 10,
+          "layer2_tracks": 2
+        }
+      ]
+    },
+    {
+      "sequence_id": "D05",
+      "wrong_total": 0,
+      "uncertain_total": 0,
+      "frames": [
+        {
+          "file": "D05_F00_bootstrap_double_layer.ply",
+          "frame_status": "INITIAL",
+          "wrong_id_count": 0,
+          "uncertain_count": 0,
+          "reason_codes": [],
+          "second_layer_active": true,
+          "layer1_tracks": 10,
+          "layer2_tracks": 3
+        },
+        {
+          "file": "D05_F01_bootstrap_then_new_support7.ply",
+          "frame_status": "OK",
+          "wrong_id_count": 0,
+          "uncertain_count": 0,
+          "reason_codes": [],
+          "second_layer_active": true,
+          "layer1_tracks": 10,
+          "layer2_tracks": 4
+        },
+        {
+          "file": "D05_F02_bootstrap_followup.ply",
+          "frame_status": "OK",
+          "wrong_id_count": 0,
+          "uncertain_count": 0,
+          "reason_codes": [],
+          "second_layer_active": true,
+          "layer1_tracks": 10,
+          "layer2_tracks": 4
+        }
+      ]
+    },
+    {
+      "sequence_id": "D06",
+      "wrong_total": 0,
+      "uncertain_total": 0,
+      "frames": [
+        {
+          "file": "D06_F00_bootstrap_topdown_heavy.ply",
+          "frame_status": "INITIAL",
+          "wrong_id_count": 0,
+          "uncertain_count": 0,
+          "reason_codes": [],
+          "second_layer_active": true,
+          "layer1_tracks": 10,
+          "layer2_tracks": 7
+        },
+        {
+          "file": "D06_F01_topdown_add_eighth.ply",
+          "frame_status": "OK",
+          "wrong_id_count": 0,
+          "uncertain_count": 0,
+          "reason_codes": [],
+          "second_layer_active": true,
+          "layer1_tracks": 10,
+          "layer2_tracks": 8
+        },
+        {
+          "file": "D06_F02_topdown_all_eight_settle.ply",
+          "frame_status": "OK",
+          "wrong_id_count": 0,
+          "uncertain_count": 0,
+          "reason_codes": [],
+          "second_layer_active": true,
+          "layer1_tracks": 10,
+          "layer2_tracks": 8
+        }
+      ]
+    },
+    {
+      "sequence_id": "D07",
+      "wrong_total": 0,
+      "uncertain_total": 0,
+      "frames": [
+        {
+          "file": "D07_F00_support_identity_start.ply",
+          "frame_status": "INITIAL",
+          "wrong_id_count": 0,
+          "uncertain_count": 0,
+          "reason_codes": [],
+          "second_layer_active": true,
+          "layer1_tracks": 10,
+          "layer2_tracks": 4
+        },
+        {
+          "file": "D07_F01_support_offsets.ply",
+          "frame_status": "OK",
+          "wrong_id_count": 0,
+          "uncertain_count": 0,
+          "reason_codes": [],
+          "second_layer_active": true,
+          "layer1_tracks": 10,
+          "layer2_tracks": 4
+        },
+        {
+          "file": "D07_F02_support_offsets_rebound.ply",
+          "frame_status": "OK",
+          "wrong_id_count": 0,
+          "uncertain_count": 0,
+          "reason_codes": [],
+          "second_layer_active": true,
+          "layer1_tracks": 10,
+          "layer2_tracks": 4
+        }
+      ]
+    },
+    {
+      "sequence_id": "D08",
+      "wrong_total": 0,
+      "uncertain_total": 1,
+      "frames": [
+        {
+          "file": "D08_F00_locked_foundation_start.ply",
+          "frame_status": "INITIAL",
+          "wrong_id_count": 0,
+          "uncertain_count": 0,
+          "reason_codes": [],
+          "second_layer_active": true,
+          "layer1_tracks": 10,
+          "layer2_tracks": 2
+        },
+        {
+          "file": "D08_F01_foundation_hard_shift.ply",
+          "frame_status": "ABNORMAL",
+          "wrong_id_count": 0,
+          "uncertain_count": 1,
+          "reason_codes": [
+            "ABNORMAL_FIRST_LAYER_SHIFT_HARD"
+          ],
+          "second_layer_active": true,
+          "layer1_tracks": 10,
+          "layer2_tracks": 2
+        },
+        {
+          "file": "D08_F02_foundation_returns.ply",
+          "frame_status": "OK",
+          "wrong_id_count": 0,
+          "uncertain_count": 0,
+          "reason_codes": [],
+          "second_layer_active": true,
+          "layer1_tracks": 10,
+          "layer2_tracks": 2
+        }
+      ]
+    },
+    {
+      "sequence_id": "D09",
+      "wrong_total": 0,
+      "uncertain_total": 1,
+      "frames": [
+        {
+          "file": "D09_F00_upper_support_start.ply",
+          "frame_status": "INITIAL",
+          "wrong_id_count": 0,
+          "uncertain_count": 0,
+          "reason_codes": [],
+          "second_layer_active": true,
+          "layer1_tracks": 10,
+          "layer2_tracks": 1
+        },
+        {
+          "file": "D09_F01_upper_off_support.ply",
+          "frame_status": "ABNORMAL",
+          "wrong_id_count": 0,
+          "uncertain_count": 1,
+          "reason_codes": [
+            "ABNORMAL_LAYER2_SUPPORT_SLOT_MISSING"
+          ],
+          "second_layer_active": true,
+          "layer1_tracks": 10,
+          "layer2_tracks": 1
+        },
+        {
+          "file": "D09_F02_upper_back_on_support.ply",
+          "frame_status": "OK",
+          "wrong_id_count": 0,
+          "uncertain_count": 0,
+          "reason_codes": [],
+          "second_layer_active": true,
+          "layer1_tracks": 10,
+          "layer2_tracks": 1
+        }
+      ]
+    },
+    {
+      "sequence_id": "D10",
+      "wrong_total": 0,
+      "uncertain_total": 9,
+      "frames": [
+        {
+          "file": "D10_F00_full_l1.ply",
+          "frame_status": "INITIAL",
+          "wrong_id_count": 0,
+          "uncertain_count": 0,
+          "reason_codes": [],
+          "second_layer_active": false,
+          "layer1_tracks": 10,
+          "layer2_tracks": 0
+        },
+        {
+          "file": "D10_F01_multi_new_0_7.ply",
+          "frame_status": "OK",
+          "wrong_id_count": 0,
+          "uncertain_count": 0,
+          "reason_codes": [],
+          "second_layer_active": true,
+          "layer1_tracks": 10,
+          "layer2_tracks": 2
+        },
+        {
+          "file": "D10_F02_multi_new_1_6.ply",
+          "frame_status": "OK",
+          "wrong_id_count": 0,
+          "uncertain_count": 0,
+          "reason_codes": [],
+          "second_layer_active": true,
+          "layer1_tracks": 10,
+          "layer2_tracks": 4
+        },
+        {
+          "file": "D10_F03_multi_new_2_5.ply",
+          "frame_status": "OK",
+          "wrong_id_count": 0,
+          "uncertain_count": 0,
+          "reason_codes": [],
+          "second_layer_active": true,
+          "layer1_tracks": 10,
+          "layer2_tracks": 6
+        },
+        {
+          "file": "D10_F04_multi_new_3_4_reach8.ply",
+          "frame_status": "OK",
+          "wrong_id_count": 0,
+          "uncertain_count": 0,
+          "reason_codes": [],
+          "second_layer_active": true,
+          "layer1_tracks": 10,
+          "layer2_tracks": 8
+        },
+        {
+          "file": "D10_F05_illegal_ninth_support8.ply",
+          "frame_status": "ABNORMAL",
+          "wrong_id_count": 0,
+          "uncertain_count": 9,
+          "reason_codes": [
+            "ABNORMAL_LAYER2_CAPACITY"
+          ],
+          "second_layer_active": true,
+          "layer1_tracks": 10,
+          "layer2_tracks": 8
+        }
+      ]
+    }
+  ],
+  "assertions": [
+    {
+      "name": "D05_double_layer_bootstrap",
+      "pass": true,
+      "l1": 10,
+      "l2": 3
+    },
+    {
+      "name": "D06_double_layer_bootstrap",
+      "pass": true,
+      "l1": 10,
+      "l2": 7
+    },
+    {
+      "name": "D08_ABNORMAL_FIRST_LAYER_SHIFT_HARD",
+      "pass": true,
+      "file": "D08_F01_foundation_hard_shift.ply",
+      "reason_codes": [
+        "ABNORMAL_FIRST_LAYER_SHIFT_HARD"
+      ]
+    },
+    {
+      "name": "D08_recovery",
+      "pass": true,
+      "last_status": "OK"
+    },
+    {
+      "name": "D09_ABNORMAL_LAYER2_SUPPORT_SLOT_MISSING",
+      "pass": true,
+      "file": "D09_F01_upper_off_support.ply",
+      "reason_codes": [
+        "ABNORMAL_LAYER2_SUPPORT_SLOT_MISSING"
+      ]
+    },
+    {
+      "name": "D09_recovery",
+      "pass": true,
+      "last_status": "OK"
+    },
+    {
+      "name": "D10_ABNORMAL_LAYER2_CAPACITY",
+      "pass": true,
+      "file": "D10_F05_illegal_ninth_support8.ply",
+      "reason_codes": [
+        "ABNORMAL_LAYER2_CAPACITY"
+      ]
+    },
+    {
+      "name": "D_series_positive_visibility",
+      "pass": true,
+      "violations": []
+    }
+  ],
+  "summary": {
+    "sequence_count": 10,
+    "frame_count": 37,
+    "wrong_id_total": 0,
+    "uncertain_total": 11,
+    "failures": [],
+    "pass": true
+  }
+}

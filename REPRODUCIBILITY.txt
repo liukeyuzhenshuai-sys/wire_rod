@@ -1,0 +1,13 @@
+V3.1 REPRODUCIBILITY CHECK
+
+Self-contained generator command tested:
+python code/generate_dataset.py --root <package_root> --out <empty_output_dir>
+
+Result:
+- regenerated PLY count: 68
+- reference PLY count: 68
+- SHA-256 mismatches: 0
+- byte-for-byte reproduction: PASS
+
+The generator depends only on Python, NumPy, assets/source_real_coils.zip and assets/scene_spec.csv.
+It does not require V2, the previous chat, Open3D, pandas, or network access.

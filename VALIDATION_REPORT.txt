@@ -1,0 +1,12 @@
+V3 VALIDATION REPORT
+PLY files in one flat directory: 68
+Scene object records: 299
+Max point-count scene: S13_F00_full_10_plus_8_100k.ply = 128769 points
+Layer-1 hard capacity <= 10: PASS
+PARTIAL_VISIBLE uses only left/right/both edge occlusion metadata: PASS
+Rolling simulator code path uses no rigid rotation around local Y and no continuous angular wedge deletion: PASS
+Yaw remains explicit rotation around scene Z: PASS
+All PLY files are directly under dataset root: PASS
+Focused P02 edge-occlusion sanity sequence included: PASS
+
+No structural validation errors detected.
